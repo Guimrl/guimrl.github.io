@@ -78,10 +78,15 @@
     font-size: 30px;
 }
 
+#social-container li:hover {
+    transform: scale(1.5);
+}
+
 #email-container {
     display: flex;
     justify-content: center;
 }
+
 #email-container ion-icon,
 #email-container a {
     flex: 1 1 0;
@@ -98,6 +103,15 @@
     font-size: 20px;
     margin-right: 5px;
     max-width: 20px;
+}
+
+#email-container a:hover {
+    color: var(--main-color);
+    transition: all 0.3s linear;
+}
+
+#email-container ion-icon:hover {
+    transform: scale(1.5);
 }
 
 /* About container */
@@ -128,6 +142,7 @@
 
 #btn-projects:hover {
     background-color: transparent;
+    color: #0b5ed7;
 }
 
 #skills-section-title {
@@ -199,7 +214,7 @@
         max-width: 100%;
         line-height: 26px;
     }
-     
+
     #btn-projects {
         margin: 20px auto;
     }

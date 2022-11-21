@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,14 +8,27 @@
     <title>Portfólio Guilherme Amaral</title>
     <!-- Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Roboto:ital,wght@0,300;0,700;0,900;1,300;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Roboto:ital,wght@0,300;0,700;0,900;1,300;1,700;1,900&display=swap"
+        rel="stylesheet">
     <!--Dev Icon Fonts-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-          
+    <!-- CSS only -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
     <!--CSS-->
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js"></script>
 </head>
+
 <body>
     <main id="container">
         <aside id="bio-container">
@@ -23,22 +37,100 @@
             <p>Olá, meu nome é Guilherme Amaral e sou <span class="highlight">Desenvolvedor FullStack</span></p>
             <p id="welcome-text">Seja bem-vindo!</p>
             <ul id="social-container">
-                <li><a href="https://www.linkedin.com/in/guimrl/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-                <li><a href="https://github.com/Guimrl" target="_blank"><ion-icon name="logo-github"></ion-icon></a></li>
-                <li><a href="https://www.instagram.com/guimrll/" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                <li><a href="https://www.linkedin.com/in/guimrl/" target="_blank">
+                        <ion-icon name="logo-linkedin"></ion-icon>
+                    </a></li>
+                <li><a href="https://github.com/Guimrl" target="_blank">
+                        <ion-icon name="logo-github"></ion-icon>
+                    </a></li>
+                <li><a href="https://www.instagram.com/guimrll/" target="_blank">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a></li>
             </ul>
             <div id="email-container">
-                <ion-icon name="mail-outline"></ion-icon><a href="mailto:gui.amaral123@outlook.com">gui.amaral123@outlook.com</a>
+                <ion-icon name="mail-outline"></ion-icon><a
+                    href="mailto:gui.amaral123@outlook.com">gui.amaral123@outlook.com</a>
             </div>
         </aside>
-        <section id="about-container">
+
+        <section id="about-container"">
             <h1 id="name">Guilherme Amaral</h1>
             <p id="title"><span class="highlight">Desenvolvedor FullStack</span></p>
-            <p class="description">Entusiasta e Amante da programação, 
+            <p class="description">Entusiasta e Amante da programação,
                 cursando Análise e Desenvolvimento de Sistemas na universidade de ensino Estácio de Sá,
                 atualmente no 3° semestre.<br></p>
-            <p class="description">Atuo tanto no <span class="highlight">front</span> como no <span class="highlight">back-end</span>, estudo todos os dias buscando aprimorar meus conhecimentos e habilidades para me tornar cada vez melhor no que faço.</p>
-            <a href="https://github.com/Guimrl?tab=repositories" id="btn-projects"><ion-icon name="share-social-outline"></ion-icon>Ver projetos</a>
+            <p class="description">Atuo tanto no <span class="highlight">front</span> como no <span
+                    class="highlight">back-end</span>, estudo todos os dias buscando aprimorar meus conhecimentos e
+                habilidades para me tornar cada vez melhor no que faço.</p>
+            <!--INCIO ROW-->
+            <div class="row pt-3">
+                <!--INICIO DA COL-->
+                <div class="col-md-6 pt-3 pb-3" id="conteudo">
+                    <div class="card" style="width: 18rem;">
+                        <img src="img/projeto1.png" class="card-img-top" alt="Site da Gran Toro">
+                        <div class="card-body">
+                            <h5 class="card-title text-dark"><span class="highlight">Gran Toro</span></h5>
+                            <p class="card-text text-dark">Web site desenvolvido para a banda Gran Toro. O design e as
+                                cores utilizadas correspondem à identidade visual da mesma. Aguardando um posicionamento
+                                da banda para publicação oficial em domínio próprio</p>
+                            <a href="http://grantoro.epizy.com/" class="btn btn-primary">Ver Site</a>
+                        </div>
+                    </div>
+                </div>
+                <!--FIM DA COL-->
+
+                <!--INCIO DA COL-->
+                <div class="col-md-6 pt-3 pb-3" id="conteudo">
+                    <div class="card" style="width: 18rem;">
+                        <img src="img/projeto2.png" class="card-img-top" alt="Jogo Mortynight-run">
+                        <div class="card-body">
+                            <h5 class="card-title text-dark"><span class="highlight">Mortynight Run</span></h5>
+                            <p class="card-text text-dark">Jogo para navegador inspirado na série de TV Rick and Morty,
+                                o objetivo é clicar nos Mortys enquanto o cronômetro não estiver zerado
+                            </p>
+                            <a href="https://guimrl.github.io/mortynight-run/" class="btn btn-primary">Ver Site</a>
+                        </div>
+                    </div>
+                </div>
+                <!--FIM DA COL-->
+            </div>
+            <!--FIM DA ROW-->
+
+            <!--INCIO ROW-->
+            <div class="row pb-3">
+                <!--INICIO DA COL-->
+                <div class="col-md-6 pt-3 pb-3" id="conteudo">
+                    <div class="card" style="width: 18rem;">
+                        <img src="img/projeto3.png" class="card-img-top" alt="Site da Gran Toro">
+                        <div class="card-body">
+                            <h5 class="card-title text-dark"><span class="highlight">Orçamento Pessoal</span></h5>
+                            <p class="card-text text-dark">Trata-se de uma aplicação web de controle de gastos
+                                com design minimalista, o objetivo do site é armazenar os gastos em localStorage,
+                                o site conta também com uma sessão de busca com os respectivos filtros e listagem
+                                dos gastos.</p>
+                            <a href="https://guimrl.github.io/orcamento-pessoal/" class="btn btn-primary">Ver Site</a>
+                        </div>
+                    </div>
+                </div>
+                <!--FIM DA COL-->
+
+                <!--INCIO DA COL-->
+                <div class="col-md-6 pt-3 pb-3" id="conteudo">
+                    <div class="card" style="width: 18rem;">
+                        <img src="img/projeto4.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-dark"><span class="highlight">To-do list</span></h5>
+                            <p class="card-text text-dark">Aplicativo de gerenciamento de tarefas. Ele permite que os usuários
+                                gerenciem suas tarefas a partir de um smartphone, tablet e computador.
+                            </p>
+                            <a href="https://guimrl.github.io/to-do-list-poo/" class="btn btn-primary">Ver Site</a>
+                        </div>
+                    </div>
+                </div>
+                <!--FIM DA COL-->
+            </div>
+            <!--FIM DA ROW-->
+
             <h2 id="skills-section-title">Skills</h2>
             <p class="description">Conheça as tecnologias que domino:</p>
             <div id="skills-container">
@@ -78,9 +170,10 @@
             </div>
         </section>
     </main>
-    
+
     <!--Ion Icons-->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>

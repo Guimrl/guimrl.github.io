@@ -7,10 +7,11 @@
 
 :root {
     --main-color: #0b5ed7;
-    --main-text-color: #ffffff;
+    --main-text-color: #333333;
+    --bio-text-color: #ffffff;
     --bio-bg-color: #333333;
     --bio-border-color: #30363D;
-    --about-bg-color: #2c2c32;
+    --about-bg-color: ##ffffff;
 }
 
 .highlight {
@@ -27,6 +28,7 @@
     flex: 1 1 20%;
     min-height: 100vh;
     background-color: var(--bio-bg-color);
+    color: var(--bio-text-color);
     text-align: center;
     padding: 40px 12px;
     border-right: 5px solid var(--bio-border-color);
@@ -86,7 +88,7 @@
 }
 
 #email-container a {
-    color: var(--main-text-color);
+    color: var(--bio-text-color);
     text-decoration: none;
     max-width: 225px;
 }
@@ -112,22 +114,6 @@
 .description {
     max-width: 75%;
     margin-bottom: 10px;
-}
-
-#btn-projects {
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: none;
-    text-align: center;
-    color: var(--main-text-color);
-    background-color: var(--main-color);
-    border: 2px solid var(--main-color);
-    border-radius: 5px;
-    transition: .5s;
-    margin: 25px 0;
-    padding: 12px 10px;
-    width: 150px;
-    display: flex;
 }
 
 #btn-projects ion-icon,
@@ -184,49 +170,49 @@
     }
   
     #bio-container {
-      justify-content: center;
-      border-right: none;
-      border-bottom: 5px solid var(--bio-border-color);
-      height: 100%;
-      background-repeat: none;
-          background-size: cover;
-          background-position: center;
-          background-attachment: fixed;
+        justify-content: center;
+        border-right: none;
+        border-bottom: 5px solid var(--bio-border-color);
+        height: 100%;
+        background-repeat: none;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
     }
   
     #bio-container h2 {
-      display: none;
+        display: none;
     }
   
     #bio-container p {
-      max-width: 60%;
-      margin: 10px auto;
+        max-width: 60%;
+        margin: 10px auto;
     }
   
     #about-container {
-      text-align: center;
-      padding: 30px;
+        text-align: center;
+        padding: 30px;
     }
   
     #about-container .description {
-      margin: 10px auto;
-      max-width: 100%;
-      line-height: 26px;
+        margin: 10px auto;
+        max-width: 100%;
+        line-height: 26px;
     }
   
     #btn-projects {
-      margin: 20px auto;
+        margin: 20px auto;
     }
   
     .skills-box {
-      flex: 1 1 100%;
-      max-width: 100%;
-      margin-bottom: 40px;
-      text-align: left;
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin-bottom: 40px;
+        text-align: left;
     }
   
     .skills-box i {
-      font-size: 60px;
+        font-size: 60px;
     }
   
   }

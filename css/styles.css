@@ -34,7 +34,7 @@
     color: var(--main-text-color);
 }
 
-/* #darkBtn {
+#darkBtn {
     width: 100px;
     height: 45px;
     border: 5px solid black;
@@ -44,7 +44,7 @@
     position: fixed;
     top: 4%;
     right: 2%;
-} */
+}
 
 #bio-container {
     flex: 1 1 20%;
@@ -216,6 +216,14 @@
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
+    }
+    #darkBtn {
+        width: 100px;
+        height: 45px;
+        border: 5px solid black;
+        border-radius: 60px;
+        position: relative;
+        cursor: pointer;
     }
   
     #bio-container h2 {

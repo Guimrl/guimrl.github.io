@@ -5,26 +5,18 @@
     box-sizing: border-box;
 }
 
-body {
-    transition: background 0.2s linear;
+html {
+    transition: 1.5s linear;
 }
 
 :root {
     --main-color: #0b5ed7;
+    --negative: #ffffff;
     --main-text-color: #333333;
     --bio-text-color: #ffffff;
     --bio-bg-color: #333333;
     --bio-border-color: #30363D;
-    --about-bg-color: ##ffffff;
-}
-
-.dark-mode {
-    --main-color: #0b5ed7;
-    --main-text-color: #ffffff;
-    --bio-text-color: #ffffff;
-    --bio-bg-color: #333333;
-    --bio-border-color: #30363D;
-    --about-bg-color: #30363D;
+    --about-bg-color: #ffffff;
 }
 
 .highlight {
@@ -39,25 +31,52 @@ body {
 }
 
 /* Botão muda de tema */
-#darkBtn {
-    width: 100px;
-    height: 45px;
-    border: 5px solid black;
-    /* border-radius: 60px; */
-    position: absolute;
-    /* cursor: pointer; */
-    top: 4%;
-    right: 2%;
+
+input {
+    display: none;
 }
 
-.label {
-    background-color: #111;
+.dark-mode {
+    background-color: var(--about-bg-color);
     border-radius: 50px;
     cursor: pointer;
 
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: space-between;
+
+    padding: 5px;
+    position: relative;
+    height: 26px;
+    width: 50px;
+    
+    transform: scale(1.5);
+}    
+
+.dark-mode .ball {
+    background-color: var(--bio-bg-color);
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+
+    height: 22px;
+    width: 22px;
+
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .dark-mode .ball {
+    transform: translateX(24px);
+}
+
+.fa-moon {
+    color: #f1c40f;
+}
+
+.fa-sun {
+    color: #f39c12;
 }
 
 #bio-container {
@@ -77,9 +96,7 @@ body {
     padding: 50px;
 }
 
-#bio-container h2 {
-    margin-bottom: 25px;
-}
+
 #bio-container p {
     margin-bottom: 20px;
 }
@@ -230,57 +247,6 @@ body {
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
-    }
-    /* #darkBtn {
-        width: 100px;
-        height: 45px;
-        border: 5px solid black;
-        border-radius: 50px;
-        position: relative;
-        cursor: pointer;
-    } */
-
-    .dark-mode {
-        background-color: #111;
-        border-radius: 50px;
-        cursor: pointer;
-
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-        padding: 5px;
-        position: relative;
-        height: 26px;
-        width: 50px;
-        
-        transform: scale(1.5);
-    }    
-
-    .dark-mode .ball {
-        background-color: #fff;
-        border-radius: 50%;
-        position: absolute;
-        top: 2px;
-        left: 2px;
-
-        height: 22px;
-        width: 22px;
-
-        transform: translateX(0px);
-        transition: transform 0.2s linear;
-    }
-
-    .checkbox:checked + .dark-mode .ball {
-        transform: translateX(24px);
-    }
-
-    .fa-moon {
-        color: #f1c40f;
-    }
-
-    .fa-sun {
-        color: #f39c12;
     }
   
     #bio-container h2 {

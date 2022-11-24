@@ -27,16 +27,7 @@ html {
 .neon {
     color: var(--main-color);
     font-weight: bold;
-    animation: neon 2s normal 3 linear;
-}
-
-@keyframes neon {
-    from {
-        filter: drop-shadow(0 0 0 var(--main-color));
-    }
-    to {
-        filter: drop-shadow(0 0 20px var(--main-color));
-    }
+    animation: neon 2s normal 3 ease-in-out;
 }
 
 #container {
@@ -45,18 +36,7 @@ html {
     color: var(--main-text-color);
 }
 
-/* parallax css */
-/* #caixa {
-    border: 1px solid red;
-    height: 100%;
-    height: 85vh;
-    background-repeat: none;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-} */
-
-/* Botão muda de tema */
+/* botão muda de tema*/
 
 input {
     display: none;
@@ -75,9 +55,9 @@ input {
     position: relative;
     height: 26px;
     width: 50px;
-    
+
     transform: scale(1.5);
-}    
+}
 
 .dark-mode .ball {
     background-color: var(--bio-bg-color);
@@ -98,11 +78,11 @@ input {
 }
 
 .fa-moon {
-    color: #f1c40f;
+    color: #F1C40F;
 }
 
 .fa-sun {
-    color: #f39c12;
+    color: #F39C12;
 }
 
 #bio-container {
@@ -116,13 +96,11 @@ input {
 }
 
 #about-container {
-    /* border: 1px solid red; */
     flex: 1 1 80%;
     min-height: 100vh;
     background-color: var(--about-bg-color);
     padding: 50px;
 }
-
 
 #bio-container p {
     margin-bottom: 20px;
@@ -140,10 +118,9 @@ input {
 }
 
 #social-container {
-    display:flex;
-    list-style: none;
+    display: flex;
     justify-content: center;
-    border-bottom: 1px solid var(--border-color);
+    list-style: none;
     margin-bottom: 25px;
     padding-bottom: 25px;
 }
@@ -153,7 +130,20 @@ input {
     max-width: 60px;
 }
 
+#social-container .linkedin {
+    animation: hover-icon 1s 2 alternate;
+}
+
+#social-container .github {
+    animation: hover-icon 1s 0.3s 2 alternate;
+}
+
+#social-container .insta {
+    animation: hover-icon 1s 0.6s 2 alternate;
+}
+
 #social-container li a {
+    justify-content: center;
     color: var(--main-color);
     font-size: 30px;
 }
@@ -179,15 +169,10 @@ input {
 }
 
 #email-container ion-icon {
-    color:var(--main-color);
+    color: var(--main-color);
     font-size: 20px;
     margin-right: 5px;
     max-width: 20px;
-}
-
-#email-container a:hover {
-    color: var(--main-color);
-    transition: all 0.3s linear;
 }
 
 #email-container ion-icon:hover {
@@ -195,7 +180,8 @@ input {
     cursor: pointer;
 }
 
-/* About container */
+/* about container */
+
 #name {
     font-size: 42px;
     margin-bottom: 15px;
@@ -207,16 +193,10 @@ input {
     margin-bottom: 15px;
 }
 
-/* scroll reveal*/
 .description {
     max-width: 75%;
     margin-bottom: 10px;
     /* visibility: hidden; */
-}
-
-#btn-projects ion-icon,
-#btn-projects span {
-    flex: 1 1 0;
 }
 
 #btn-projects ion-icon {
@@ -226,7 +206,7 @@ input {
 
 #btn-projects:hover {
     background-color: transparent;
-    color: #0b5ed7;
+    color: #0B5ED7;
 }
 
 #skills-section-title {
@@ -261,13 +241,30 @@ input {
     margin-right: 10px;
 }
 
-/* Mobile */
-@media(max-width: 600px) {
+/* Animações */
 
+@keyframes neon {
+    from {
+        filter: drop-shadow(0 0 0 var(--main-color));
+    } to {
+        filter: drop-shadow(0 0 20px var(--main-color));
+    }
+}
+
+@keyframes hover-icon {
+    from {
+        transform: scale(1.0);
+    } to {
+        transform: scale(1.5);
+    }
+}
+
+/* mobile */
+@media(max-width: 600px) {
     #container {
         flex-direction: column;
     }
-  
+
     #bio-container {
         justify-content: center;
         border-right: none;
@@ -278,40 +275,35 @@ input {
         background-position: center;
         background-attachment: fixed;
     }
-  
-    #bio-container h2 {
-        display: none;
-    }
-  
+
     #bio-container p {
         max-width: 60%;
         margin: 10px auto;
     }
-  
+
     #about-container {
         text-align: center;
         padding: 30px;
     }
-  
+
     #about-container .description {
         margin: 10px auto;
         max-width: 100%;
         line-height: 26px;
     }
-
+    
     #btn-projects {
         margin: 20px auto;
     }
-  
+
     .skills-box {
         flex: 1 1 100%;
         max-width: 100%;
         margin-bottom: 40px;
         text-align: left;
     }
-  
+
     .skills-box i {
         font-size: 60px;
     }
-  
-  }
+}

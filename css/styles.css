@@ -24,6 +24,21 @@ html {
     font-weight: bold;
 }
 
+.neon {
+    color: var(--main-color);
+    font-weight: bold;
+    animation: neon 2s normal 3 linear;
+}
+
+@keyframes neon {
+    from {
+        filter: drop-shadow(0 0 0 var(--main-color));
+    }
+    to {
+        filter: drop-shadow(0 0 20px var(--main-color));
+    }
+}
+
 #container {
     display: flex;
     flex-direction: row;
@@ -191,9 +206,12 @@ input {
     font-weight: bold;
     margin-bottom: 15px;
 }
+
+/* scroll reveal*/
 .description {
     max-width: 75%;
     margin-bottom: 10px;
+    /* visibility: hidden; */
 }
 
 #btn-projects ion-icon,

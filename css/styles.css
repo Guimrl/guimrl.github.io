@@ -180,6 +180,10 @@ input {
     cursor: pointer;
 }
 
+#email-container a:hover {
+    color: var(--main-color);
+}
+
 /* about container */
 
 #name {

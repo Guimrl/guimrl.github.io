@@ -6,7 +6,7 @@ const lightTheme = {
     '--negative-color': '#F39C12',
     '--main-text-color': '#262626',
     '--bio-text-color': '#FFFFFF',
-    '--bio-bg-color': '#333333',
+    '--bio-bg-color': '#363636',
     '--bio-border-color': '#30363D',
     '--about-bg-color': '#FFFFFF'
 }
@@ -16,7 +16,7 @@ const darkTheme = {
     '--negative-color': '#0b5ed7',
     '--main-text-color': '#EEEEEE',
     '--bio-text-color': '#EEEEEE',
-    '--bio-bg-color': '#363636',
+    '--bio-bg-color': '#333333',
     '--bio-border-color': '#30363D',
     '--about-bg-color': '#262626'
 }

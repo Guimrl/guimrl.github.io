@@ -5,8 +5,10 @@
     box-sizing: border-box;
 }
 
-html {
-    transition: 1.5s linear;
+html,
+body {
+    transition: 1, 6s linear;
+    height: 100%;
 }
 
 :root {
@@ -34,55 +36,15 @@ html {
     display: flex;
     flex-direction: row;
     color: var(--main-text-color);
+    /* width: 100%; */
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
-
-/* botão muda de tema*/
 
 input {
     display: none;
-}
-
-.dark-mode {
-    background-color: var(--about-bg-color);
-    border-radius: 50px;
-    cursor: pointer;
-
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-
-    padding: 5px;
-    position: relative;
-    height: 26px;
-    width: 50px;
-
-    transform: scale(1.5);
-}
-
-.dark-mode .ball {
-    background-color: var(--bio-bg-color);
-    border-radius: 50%;
-    position: absolute;
-    top: 2px;
-    left: 2px;
-
-    height: 22px;
-    width: 22px;
-
-    transform: translateX(0px);
-    transition: transform 0.2s linear;
-}
-
-.checkbox:checked + .dark-mode .ball {
-    transform: translateX(24px);
-}
-
-.fa-moon {
-    color: #F1C40F;
-}
-
-.fa-sun {
-    color: #F39C12;
 }
 
 #bio-container {
@@ -184,6 +146,51 @@ input {
     color: var(--main-color);
 }
 
+/* dark mode */
+.dark-mode {
+    background-color: var(--about-bg-color);
+    border-radius: 50px;
+    cursor: pointer;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 5px;
+    position: relative;
+    height: 26px;
+    width: 50px;
+
+    transform: scale(1.5);
+}
+
+.dark-mode .ball {
+    background-color: var(--bio-bg-color);
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+
+    height: 22px;
+    width: 22px;
+
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked+.dark-mode .ball {
+    transform: translateX(24px);
+}
+
+.fa-moon {
+    color: #F1C40F;
+}
+
+.fa-sun {
+    color: #F39C12;
+}
+
+
 /* about container */
 
 #name {
@@ -206,11 +213,12 @@ input {
 #btn-projects ion-icon {
     font-size: 20px;
     max-width: 20px;
+    color: var(--main-color);
 }
 
 #btn-projects:hover {
     background-color: transparent;
-    color: #0B5ED7;
+    color: var(--main-color);
 }
 
 #skills-section-title {
@@ -250,7 +258,9 @@ input {
 @keyframes neon {
     from {
         filter: drop-shadow(0 0 0 var(--main-color));
-    } to {
+    }
+
+    to {
         filter: drop-shadow(0 0 20px var(--main-color));
     }
 }
@@ -259,16 +269,86 @@ input {
     0% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-25px);
     }
+
     100% {
         transform: translateY(0);
     }
 }
 
+.portfolio {
+    position: relative;
+    width: 500px;
+}
+
+.portfolio img {
+    width: 100%;
+}
+
+.portfolio {
+    padding: 50px;
+    overflow: hidden;
+}
+
+/* texto */
+.portfolio p {
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    color: transparent;
+    transition: all 0.2s;
+    line-height: 23px;
+    font-weight: bold;
+}
+
+/* texto hover */
+.portfolio:hover p {
+    color: var(--main-text-color);
+    bottom: 30%;
+    visibility: visible;
+}
+
+/* botao */
+.portfolio:hover .portfolio-inner p a {
+    border: 1px solid var(--main-color);
+    display: block;
+    font-size: 13px;
+    width: 80px;
+    padding: 5px;
+    margin: 0 auto;
+    font-weight: bold;
+}
+
+/* animacao hover */
+.portfolio-inner:hover img {
+    transform: scale(1.3);
+    transition: all 0.5s;
+    filter: grayscale(0%);
+    opacity: 0.3;
+}
+
+/* cinza */
+.portfolio-inner img {
+    filter: grayscale(100%)
+}
+
+/* botao */
+.portfolio-inner a {
+    border-radius: 10px;
+    font-size: 15px;
+    border: 1px solid transparent;
+    padding: 10px;
+}
+
 /* mobile */
-@media(max-width: 600px) {
+@media(max-width: 750px) {
     #container {
         flex-direction: column;
     }
@@ -299,7 +379,7 @@ input {
         max-width: 100%;
         line-height: 26px;
     }
-    
+
     #btn-projects {
         margin: 20px auto;
     }

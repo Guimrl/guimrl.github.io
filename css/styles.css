@@ -195,13 +195,13 @@ input {
 
 #name {
     font-size: 42px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 
 #title {
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 
 .description {
@@ -223,8 +223,7 @@ input {
 
 #skills-section-title {
     border-top: 1px solid var(--border-color);
-    padding-top: 20px;
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 32px;
 }
 
@@ -297,7 +296,7 @@ input {
 .portfolio p {
     visibility: hidden;
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     text-align: center;
     width: 100%;
@@ -353,6 +352,14 @@ input {
         flex-direction: column;
     }
 
+    #caixa {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
     #bio-container {
         justify-content: center;
         border-right: none;
@@ -378,6 +385,18 @@ input {
         margin: 10px auto;
         max-width: 100%;
         line-height: 26px;
+    }
+
+    .portfolio-inner img {
+        filter: grayscale(0%)
+    }
+
+    .portfolio img {
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin-bottom: 40px;
+        text-align: left;
+        font-size: 60px;
     }
 
     #btn-projects {

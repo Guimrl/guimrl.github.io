@@ -5,14 +5,16 @@
     box-sizing: border-box;
 }
 
-html,
-body {
-    transition: 1, 6s linear;
+html, body {
     height: 100%;
 }
 
+a:nth-of-type(1) {
+
+}
+
 :root {
-    --main-color: #59407f;
+    --main-color: #0b5ed7;
     --negative: #ffffff;
     --main-text-color: #333333;
     --bio-text-color: #333333;
@@ -36,11 +38,18 @@ body {
     display: flex;
     flex-direction: row;
     color: var(--main-text-color);
-    /* width: 100%; */
     min-height: 100vh;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+}
+
+#caixa {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 input {
@@ -192,7 +201,6 @@ input {
     color: var(--main-color);
 }
 
-
 /* about container */
 
 #name {
@@ -203,12 +211,13 @@ input {
 #title {
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-bottom: 25px;
 }
 
 .description {
-    max-width: 75%;
-    margin-bottom: 10px;
+    max-width: 70%;
+    margin-bottom: 20px;
+    text-align: center;
     /* visibility: hidden; */
 }
 
@@ -402,7 +411,7 @@ input {
     }
 
     #container-projetos {
-        box-sizing: border-box;
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -469,23 +478,11 @@ input {
         font-size: 60px;
     }
 
-    /* #footer{
-        list-style: none;
-        font-weight: bold;
-    }
-
-    #footer a {
-        text-decoration: none;
-        max-width: 225px;
-    }
-
-    #footer:hover a{
-        color: var(--main-color);
-    }
-
     #social-footer {
+        color: var(--main-color);
         display: flex;
         justify-content: center;
+        align-items: center;
         list-style: none;
         margin-bottom: 25px;
         padding-top: 30px ;
@@ -493,18 +490,28 @@ input {
         bottom: 10%;
     }
 
-    #social-footer li {
-        flex: 1 1 0;
-        max-width: 60px;
+    #footer p a {
+        text-decoration: none;
+        font-weight: bold;
+        color: var(--main-color);
     }
 
-    #social-footer li a {
-        justify-content: center;
+    #social-footer li {
         color: var(--main-color);
-        font-size: 30px;
+        flex: 1 1 0;
+        justify-content: center;
+        max-width: 20%;
+        font-size: 40px;
+    }
+
+    #social-container ion-icon {
+        color: var(--main-color);
+        font-size: 20px;
+        margin-right: 5px;
+        max-width: 20px;
     }
     
     #social-footer li:hover {
         transform: scale(1.5);
-    } */
+    } 
 }

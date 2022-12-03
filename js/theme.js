@@ -2,7 +2,7 @@ const input = document.querySelector('input');
 const root = document.documentElement;
 
 const lightTheme = {
-    '--main-color': '#59407f',
+    '--main-color': '#0b5ed7',
     '--negative-color': '#F39C12',
     '--main-text-color': '#262626',
     '--bio-text-color': '#FFFFFF',

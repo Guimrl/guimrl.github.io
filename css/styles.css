@@ -374,15 +374,13 @@ input {
 }
 
 #social-footer {
-    color: var(--main-color);
     display: flex;
     justify-content: center;
-    align-items: center;
+    text-align: center;
     list-style: none;
     margin-bottom: 25px;
     padding-top: 30px ;
-    padding-bottom: 25px;
-    bottom: 10%;
+    padding-bottom: 5px;
 }
 
 #footer p a {
@@ -394,7 +392,6 @@ input {
 #social-footer li {
     color: var(--main-color);
     flex: 1 1 0;
-    justify-content: center;
     max-width: 20%;
     font-size: 40px;
 }
@@ -403,9 +400,12 @@ input {
     color: var(--main-color);
 }
 
-#social-footer li:hover {
-    transform: scale(1.5);
-} 
+.text-footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 25px;
+}
 
 /* mobile */
 @media(max-width: 750px) {

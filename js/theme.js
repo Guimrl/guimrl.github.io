@@ -2,12 +2,12 @@ const input = document.querySelector('input');
 const root = document.documentElement;
 
 const lightTheme = {
-    '--main-color': '#0b5ed7',
+    '--main-color': '#59407f',
     '--negative-color': '#F39C12',
     '--main-text-color': '#262626',
     '--bio-text-color': '#FFFFFF',
-    '--bio-bg-color': '#363636',
-    '--bio-border-color': '#30363D',
+    '--bio-bg-color': '#eeeeee',
+    '--bio-border-color': '#eeeeee',
     '--about-bg-color': '#FFFFFF'
 }
 

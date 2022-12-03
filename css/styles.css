@@ -12,12 +12,12 @@ body {
 }
 
 :root {
-    --main-color: #0b5ed7;
+    --main-color: #59407f;
     --negative: #ffffff;
     --main-text-color: #333333;
-    --bio-text-color: #ffffff;
-    --bio-bg-color: #333333;
-    --bio-border-color: #30363D;
+    --bio-text-color: #333333;
+    --bio-bg-color: #eeeeee;
+    --bio-border-color: #eeeeee;
     --about-bg-color: #ffffff;
 }
 
@@ -51,7 +51,7 @@ input {
     flex: 1 1 20%;
     min-height: 100vh;
     background-color: var(--bio-bg-color);
-    color: var(--bio-text-color);
+    color: var(--main-text-color);
     text-align: center;
     padding: 40px 12px;
     border-right: 5px solid var(--bio-border-color);
@@ -126,7 +126,7 @@ input {
 }
 
 #email-container a {
-    color: var(--bio-text-color);
+    color: var(--main-text-color);
     text-decoration: none;
     max-width: 225px;
 }
@@ -153,6 +153,7 @@ input {
     border-radius: 50px;
     cursor: pointer;
 
+
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
@@ -166,7 +167,7 @@ input {
 }
 
 .dark-mode .ball {
-    background-color: var(--bio-bg-color);
+    background-color: var(--main-color);
     border-radius: 50%;
     position: absolute;
     top: 2px;
@@ -184,11 +185,11 @@ input {
 }
 
 .fa-moon {
-    color: #F1C40F;
+    color: var(--main-color);
 }
 
 .fa-sun {
-    color: #F39C12;
+    color: var(--main-color);
 }
 
 
@@ -282,12 +283,24 @@ input {
     }
 }
 
+#container-projetos {
+    display: flex;
+    flex-direction: row;
+    color: var(--main-text-color);
+    /* width: 100%; */
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
 .portfolio {
-    position:relative;
+    position: relative;
     width: 480px;
     display: block;
     float: left;
-    padding: 45px;
+    padding: 35px;
+    padding-bottom: 5px;
     overflow: hidden;
 }
 
@@ -351,6 +364,29 @@ input {
     padding: 5px;
 }
 
+/* #footer {
+    display: none;
+}
+
+#social-footer {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-bottom: 25px;
+    padding-top: 30px ;
+    padding-bottom: 25px;
+}
+
+#social-footer li a {
+    justify-content: center;
+    color: var(--main-color);
+    font-size: 30px;
+}
+
+#social-footer li:hover {
+    transform: scale(1.5);
+} */
+
 /* mobile */
 @media(max-width: 750px) {
     #container {
@@ -365,15 +401,19 @@ input {
         justify-content: center;
     }
 
+    #container-projetos {
+        box-sizing: border-box;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
     #bio-container {
         justify-content: center;
         border-right: none;
         border-bottom: 5px solid var(--bio-border-color);
         height: 100%;
-        background-repeat: none;
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
     }
 
     #bio-container p {
@@ -392,18 +432,14 @@ input {
         line-height: 26px;
     }
 
+    .portfolio {
+        padding-bottom: 5px;
+        padding-top: 0px;
+    }
+
     .portfolio p {
-        visibility: hidden;
-        position: absolute;
-        top: 30%;
-        left: 50%;
-        text-align: center;
-        width: 100%;
-        transform: translate(-50%, -50%);
-        color: transparent;
-        transition: all 0.2s;
-        line-height: 23px;
-        font-weight: bold;
+        top: 35%;
+        width: 70%;
     }
 
     .portfolio-inner img {
@@ -432,4 +468,43 @@ input {
     .skills-box i {
         font-size: 60px;
     }
+
+    /* #footer{
+        list-style: none;
+        font-weight: bold;
+    }
+
+    #footer a {
+        text-decoration: none;
+        max-width: 225px;
+    }
+
+    #footer:hover a{
+        color: var(--main-color);
+    }
+
+    #social-footer {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        margin-bottom: 25px;
+        padding-top: 30px ;
+        padding-bottom: 25px;
+        bottom: 10%;
+    }
+
+    #social-footer li {
+        flex: 1 1 0;
+        max-width: 60px;
+    }
+
+    #social-footer li a {
+        justify-content: center;
+        color: var(--main-color);
+        font-size: 30px;
+    }
+    
+    #social-footer li:hover {
+        transform: scale(1.5);
+    } */
 }

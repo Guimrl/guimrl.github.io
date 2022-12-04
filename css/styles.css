@@ -120,6 +120,8 @@ input {
     font-size: 40px;
 }
 
+.text-footer a:hover,
+#social-footer li:hover,
 #social-container li:hover {
     transform: scale(1.5);
 }
@@ -234,10 +236,11 @@ input {
 }
 
 #skills-section-title {
+    text-align: center;
     border-top: 1px solid var(--border-color);
     color: var(--main-color);
-    margin-top: 15px;
-    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     font-size: 32px;
 }
 
@@ -296,7 +299,6 @@ input {
     display: flex;
     flex-direction: row;
     color: var(--main-text-color);
-    /* width: 100%; */
     min-height: 100vh;
     background-size: cover;
     background-position: center;
@@ -379,7 +381,7 @@ input {
     text-align: center;
     list-style: none;
     margin-bottom: 25px;
-    padding-top: 30px ;
+    padding-top: 100px ;
     padding-bottom: 5px;
 }
 

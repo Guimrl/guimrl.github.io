@@ -60,7 +60,6 @@ input {
     flex: 1 1 80%;
     min-height: 100vh;
     background-color: var(--about-bg-color);
-    padding: 50px;
 }
 
 #bio-container p {
@@ -141,17 +140,13 @@ input {
     background-color: var(--about-bg-color);
     border-radius: 50px;
     cursor: pointer;
-
-
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
-
     padding: 5px;
     position: relative;
     height: 26px;
     width: 50px;
-
     transform: scale(1.5);
 }
 
@@ -251,10 +246,6 @@ input {
     display: flex;
     flex-direction: row;
     color: var(--main-text-color);
-    min-height: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
 }
 
 .portfolio {

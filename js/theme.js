@@ -48,6 +48,6 @@ function changeProperty(property, value) {
 
 let GetTheme = JSON.parse(localStorage.getItem("PageTheme"));
 
-if(GetTheme === 'DARK') {
+if (GetTheme === 'DARK') {
     changeTheme(darkTheme);
 }

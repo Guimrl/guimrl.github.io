@@ -156,17 +156,17 @@ input {
     border-radius: 50%;
     position: absolute;
     top: 0.125em;
-    left: 0.125;
+    left: 0.125em;
 
     height: 1.375em;
-    width: 1.375;
+    width: 1.375em;
 
     transform: translateX(0px);
     transition: transform 0.2s linear;
 }
 
 .checkbox:checked+.dark-mode .ball {
-    transform: translateX(1.5em);
+    transform: translateX(24px);
 }
 
 .fa-moon {

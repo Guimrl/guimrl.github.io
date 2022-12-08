@@ -49,7 +49,7 @@
 
     .portfolio p {
         top: 35%;
-        width: 70%;
+        width: 65%;
     }
 
     .portfolio-inner img {
@@ -61,7 +61,7 @@
         max-width: 100%;
         margin-bottom: 40px;
         text-align: left;
-        font-size: 60px;
+        font-size: 3.75em;
     }
 
     #btn-projects {
@@ -76,6 +76,14 @@
     }
 
     .skills-box i {
-        font-size: 60px;
+        font-size: 3.75em;
+    }
+}
+
+
+@media (max-width: 575px) {
+    .portfolio p {
+        top: 30%;
+        width: 50%;
     }
 }

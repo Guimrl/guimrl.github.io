@@ -53,8 +53,8 @@ input {
     background-color: var(--bio-bg-color);
     color: var(--main-text-color);
     text-align: center;
-    padding: 40px 12px;
-    border-right: 5px solid var(--bio-border-color);
+    padding: 2.5em 0.75em;
+    border-right: 0.313 solid var(--bio-border-color);
 }
 
 #about-container {
@@ -64,38 +64,38 @@ input {
 }
 
 #bio-container p {
-    margin-bottom: 20px;
+    margin-bottom: 1.25em;
 }
 
 #bio-container #welcome-text {
     font-weight: bold;
-    margin-bottom: 25px;
+    margin-bottom: 1.563em;
 }
 
 #bio-img {
-    width: 175px;
-    height: 175px;
+    width: 10.938em;
+    height: 10.938em;
     border-radius: 50%;
-    margin-bottom: 25px;
+    margin-bottom: 1.563em;
 }
 
 #social-container {
     display: flex;
     justify-content: center;
     list-style: none;
-    margin-bottom: 25px;
-    padding-bottom: 25px;
+    margin-bottom: 1.563em;
+    padding-bottom: 1.563em;
 }
 
 #social-container li {
     flex: 1 1 0;
-    max-width: 60px;
+    max-width: 3.75em;
 }
 
 #social-container li a {
     justify-content: center;
     color: var(--main-color);
-    font-size: 40px;
+    font-size: 2.5em;
 }
 
 #social-footer li:hover,
@@ -117,14 +117,14 @@ input {
 #email-container a {
     color: var(--main-text-color);
     text-decoration: none;
-    max-width: 225px;
+    max-width: 14.063em;
 }
 
 #email-container ion-icon {
     color: var(--main-color);
-    font-size: 20px;
-    margin-right: 5px;
-    max-width: 20px;
+    font-size: 1.25em;
+    margin-right: 0.313em;
+    max-width: 1.25em;
 }
 
 #email-container ion-icon:hover {
@@ -139,15 +139,15 @@ input {
 /* dark mode */
 .dark-mode {
     background-color: var(--about-bg-color);
-    border-radius: 50px;
+    border-radius: 3.125em;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
-    padding: 5px;
+    padding: 0.313em;
     position: relative;
-    height: 26px;
-    width: 50px;
+    height: 1.625em;
+    width: 3.125em;
     transform: scale(1.5);
 }
 
@@ -155,18 +155,18 @@ input {
     background-color: var(--main-color);
     border-radius: 50%;
     position: absolute;
-    top: 2px;
-    left: 2px;
+    top: 0.125em;
+    left: 0.125;
 
-    height: 22px;
-    width: 22px;
+    height: 1.375em;
+    width: 1.375;
 
     transform: translateX(0px);
     transition: transform 0.2s linear;
 }
 
 .checkbox:checked+.dark-mode .ball {
-    transform: translateX(24px);
+    transform: translateX(1.5em);
 }
 
 .fa-moon {
@@ -180,26 +180,26 @@ input {
 /* about container */
 
 #name {
-    font-size: 42px;
-    margin-bottom: 10px;
+    font-size: 2.625em;
+    margin-bottom: 0.625em;
 }
 
 #title {
-    font-size: 24px;
+    font-size: 1.5em;
     font-weight: bold;
-    margin-bottom: 25px;
+    margin-bottom: 1.563em;
 }
 
 .description {
     max-width: 70%;
-    margin-bottom: 20px;
+    margin-bottom: 1.25em;
     text-align: center;
     /* visibility: hidden; */
 }
 
 #btn-projects ion-icon {
-    font-size: 20px;
-    max-width: 20px;
+    font-size: 1.25em;
+    max-width: 1.25em;
     color: var(--main-color);
 }
 
@@ -213,34 +213,34 @@ input {
     text-align: center;
     border-top: 1px solid var(--border-color);
     color: var(--main-color);
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: 32px;
+    margin-top: 1.25em;
+    margin-bottom: 1.25em;
+    font-size: 2em;
 }
 
 #skills-container {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 25px;
+    margin-top: 1.563em;
 }
 
 .skills-box {
     flex: 1 1 33%;
     max-width: 33%;
-    margin-bottom: 35px;
+    margin-bottom: 2.188em;
 }
 
 .skills-title {
-    font-size: 24px;
-    margin-bottom: 25px;
+    font-size: 1.5em;
+    margin-bottom: 1.563em;
     font-weight: bold;
-    padding-left: 10px;
+    padding-left: 0.625em;
     border-left: 5px solid var(--main-color);
 }
 
 .skills-box i {
-    font-size: 45px;
-    margin-right: 10px;
+    font-size: 2.813em;
+    margin-right: 0.625em;
 }
 
 #container-projetos {
@@ -251,10 +251,10 @@ input {
 
 .portfolio {
     position: relative;
-    width: 480px;
+    width: 30em;
     display: block;
     float: left;
-    padding: 35px;
+    padding: 2.188em;
     padding-bottom: 5px;
     overflow: hidden;
 }
@@ -274,7 +274,7 @@ input {
     transform: translate(-50%, -50%);
     color: transparent;
     transition: all 0.2s;
-    line-height: 23px;
+    line-height: 1.438em;
     font-weight: bold;
 }
 
@@ -291,9 +291,9 @@ input {
     border: 1px solid var(--main-color);
     color: var(--main-color);
     display: block;
-    font-size: 13px;
-    width: 80px;
-    padding: 5px;
+    font-size: 0.813em;
+    width: 5em;
+    padding: 0.313em;
     margin: 0 auto;
     font-weight: bold;
 }
@@ -313,10 +313,10 @@ input {
 
 /* botao */
 .portfolio-inner a {
-    border-radius: 10px;
-    font-size: 15px;
+    border-radius: 0.625em;
+    font-size: 0.938em;
     border: 1px solid transparent;
-    padding: 5px;
+    padding: 0.313em;
 }
 
 #social-footer {
@@ -324,9 +324,9 @@ input {
     justify-content: center;
     text-align: center;
     list-style: none;
-    margin-bottom: 25px;
+    margin-bottom: 1.563em;
     padding-top: 100px;
-    padding-bottom: 5px;
+    padding-bottom: 0.313em;
 }
 
 #footer p a {
@@ -339,7 +339,7 @@ input {
     color: var(--main-color);
     flex: 1 1 0;
     max-width: 20%;
-    font-size: 40px;
+    font-size: 2.5em;
 }
 
 #social-footer ion-icon {
@@ -350,5 +350,5 @@ input {
     display: flex;
     justify-content: center;
     text-align: center;
-    padding-bottom: 25px;
+    padding-bottom: 1.563em;
 }

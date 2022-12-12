@@ -197,12 +197,30 @@ input {
     /* visibility: hidden; */
 }
 
+#btn-cv {
+    font-weight: bold;
+    font-size: 16px;
+    color: var(--main-text-color);
+    background-color: var(--main-color);
+    border: 2px solid var(--main-color);
+    border-radius: 5px;
+    text-decoration: none;
+    transition: .5s;
+    margin: 25px 0;
+    padding: 12px 10px;
+    width: 150px;
+    text-align: center;
+    display: flex;
+}
+
+#btn-cv ion-icon,
 #btn-projects ion-icon {
     font-size: 1.25em;
     max-width: 1.25em;
     color: var(--main-color);
 }
 
+#btn-cv:hover,
 #btn-projects:hover {
     background-color: transparent;
     transform: scale(1.3);

@@ -2,240 +2,230 @@
 <html lang="pt-Br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="img/favicon.png" type="image/png">
-    <title>Guilherme Amaral | Portfólio</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;0,900;1,300;1,700;1,900&display=swap" rel="stylesheet">
-    <!-- Dev Icon Fonts -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
-    <!-- CSS do Projeto -->
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/animation.css">
-    <link rel="stylesheet" href="css/media.css">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <title>Guilherme Amaral | Portfólio</title>
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;0,900;1,300;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <!-- Dev Icon Fonts -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
+  <!-- CSS do Projeto -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animation.css">
+  <link rel="stylesheet" href="css/media.css">
+  <link rel="stylesheet" href="css/styles2.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body id="home">
-    <main id="container">
-        <aside id="bio-container">
-            <img id="bio-img" src="img/foto.jpg" alt="Principal Guilherme Amaral">
-            <p>Olá, meu nome é <br> Guilherme Amaral e sou <br>
-                <span class="neon" id="digit" alt="Desenvolvedor FullStack"></span>
-            </p>
+  <main id="container">
+    <aside id="bio-container">
+      <img id="bio-img" src="img/foto.jpg" alt="Principal Guilherme Amaral">
+      <p>Olá, meu nome é <br> Guilherme Amaral e sou <br>
+        <span class="neon" id="digit"></span>
+      </p>
+      <p id="welcome-text">Seja bem-vindo!</p>
+      <ul id="social-container">
+        <li class="linkedin">
+          <a href="https://www.linkedin.com/in/guimrl/" target="_blank">
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a>
+        </li>
 
-            <p id="welcome-text">Seja bem-vindo!</p>
+        <li class="github">
+          <a href="https://github.com/Guimrl" target="_blank">
+            <ion-icon name="logo-github"></ion-icon>
+          </a>
+        </li>
 
-            <div id="div-social">
-                <ul id="social-container">
-                    <li class="linkedin">
-                        <a href="https://www.linkedin.com/in/guimrl/" target="_blank">
-                            <ion-icon name="logo-linkedin"></ion-icon>
-                        </a>
-                    </li>
+        <li class="insta">
+          <a href="https://www.instagram.com/guimrll/" target="_blank">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a>
+        </li>
+      </ul>
+      <div id="email-container" class="mail">
+        <ion-icon name="mail-outline"></ion-icon>
+        <a href="mailto:gui.amaral123@outlook.com">gui.amaral123@outlook.com</a>
+      </div>
 
-                    <li class="github">
-                        <a href="https://github.com/Guimrl" target="_blank">
-                            <ion-icon name="logo-github"></ion-icon>
-                        </a>
-                    </li>
+      <div id="email-container" class="whats">
+        <ion-icon name="logo-whatsapp"></ion-icon>
+        <a href="https://api.whatsapp.com/send?phone=5551989515251
+            &text=Fala,%20Gui!%20Dei%20uma%20olhada%20no%20teu%20portfólio,%20vamos%20bater%20um%20papo?!"
+          target="_blank">+55 51 98951-5251</a>
+      </div>
+      <br>
+      <div>
+        <input type="checkbox" name="theme" id="theme" class="checkbox">
 
-                    <li class="insta">
-                        <a href="https://www.instagram.com/guimrll/" target="_blank">
-                            <ion-icon name="logo-instagram"></ion-icon>
-                        </a>
-                    </li>
-                </ul>
+        <label for="theme" class="dark-mode">
+          <i class="fas fa-sun"></i>
+          <i class="fas fa-moon"></i>
+          <div class="ball"></div>
+        </label>
+      </div>
+    </aside>
+    <section id="about-container">
+      <article id="caixa">
+        <h1 id="name">Guilherme Amaral</h1>
+        <p id="title"><span class="neon">Desenvolvedor FullStack</span></p>
+        <p class="description">Entusiasta e Amante da programação,
+          cursando Análise e Desenvolvimento de Sistemas na universidade de ensino Estácio de Sá,
+          atualmente no 4° semestre.<br></p>
+        <p class="description">Atuo tanto no <span class="highlight">front-end</span> como no <span
+            class="highlight">back-end</span>, estudo todos os dias buscando aprimorar meus
+          conhecimentos e
+          habilidades para me tornar cada vez melhor no que faço.</p>
+        <a href="GUILHERME-AMARAL-DEV.pdf" download="GUILHERME-AMARAL-DEV.pdf" type="application/pdf"
+          id="btn-cv"><ion-icon name="cloud-download-outline"></ion-icon> <span> Download CV</span></a>
+      </article>
+
+      <div id="about-container">
+        <article id="caixa">
+          <h2 id="skills-section-title">Skills</h2>
+          <p class="description">Conheça as tecnologias que domino:</p>
+          <div id="skills-container">
+            <div class="skills-box">
+              <p class="skills-title">Front-end</p>
+              <i class="devicon-html5-plain colored"></i>
+              <i class="devicon-css3-plain colored"></i>
+              <i class="devicon-javascript-plain colored"></i>
             </div>
-
-            <div id="email-container" class="mail">
-                <ion-icon name="mail-outline"></ion-icon>
-                <a href="mailto:gui.amaral123@outlook.com">gui.amaral123@outlook.com</a>
+            <div class="skills-box">
+              <p class="skills-title">Back-end</p>
+              <i class="devicon-php-plain colored"></i>
+              <i class="devicon-go-plain colored"></i>
             </div>
-
-            <div id="email-container" class="whats">
-                <ion-icon name="logo-whatsapp"></ion-icon>
-                <a href="https://api.whatsapp.com/send?phone=5551989515251
-                &text=Fala,%20Gui!%20Dei%20uma%20olhada%20no%20teu%20portfólio,%20vamos%20bater%20um%20papo?!"
-                    target="_blank">+55 51 98951-5251</a>
+            <div class="skills-box">
+              <p class="skills-title">Databases</p>
+              <i class="devicon-mysql-plain colored"></i>
+              <i class="devicon-postgresql-plain colored"></i>
+              <i class="devicon-mongodb-plain colored"></i>
             </div>
-            <br>
-            <div>
-                <input type="checkbox" name="theme" id="theme" class="checkbox">
-
-                <label for="theme" class="dark-mode">
-                    <i class="fas fa-sun"></i>
-                    <i class="fas fa-moon"></i>
-                    <div class="ball"></div>
-                </label>
+            <div class="skills-box">
+              <p class="skills-title">Frameworks</p>
+              <i class="devicon-vuejs-plain colored"></i>
+              <i class="devicon-laravel-plain colored"></i>
+              <i class="devicon-jquery-plain colored"></i>
             </div>
-        </aside>
+          </div>
+        </article>
+      </div>
+      <!--INCIO projetos-->
+      <div id="about-container">
+        <article id="caixa">
 
-        <section id="about-container">
+          <h2 id="skills-section-title">Projetos</h2>
 
-            <article id="caixa">
-                <h1 id="name">Guilherme Amaral</h1>
-                <p id="title"><span class="neon">Desenvolvedor FullStack</span></p>
-                <p class="description">Entusiasta e Amante da programação,
-                    cursando Análise e Desenvolvimento de Sistemas na universidade de ensino Estácio de Sá,
-                    atualmente no 4° semestre.<br></p>
-                <p class="description">Atuo tanto no <span class="highlight">front</span> como no <span
-                        class="highlight">back-end</span>, estudo todos os dias buscando aprimorar meus
-                    conhecimentos e
-                    habilidades para me tornar cada vez melhor no que faço.</p>
-            </article>
-            <!-- </section> -->
+          <!--INICIO DA COL-->
+          <div class="portfolio">
+            <div class="portfolio-inner">
+              <img src="img/grantoro.png" alt="Site Oficial Banda Gran Toro">
+              <p> Site desenvolvido para a banda Gran Toro. O design e
+                cores utilizadas correspondem à identidade visual da mesma. Aguardando
+                posicionamento da banda para publicação oficial em domínio próprio.
+                <a href="http://grantoro.epizy.com/" class="" id="btn-projects" target="_blank">Ver
+                  site
+                </a>
+              </p>
 
-            <div id="about-container">
-                <article id="caixa">
-                    <h2 id="skills-section-title">Skills</h2>
-                    <p class="description">Conheça as tecnologias que domino:</p>
-                    <div id="skills-container">
-                        <div class="skills-box">
-                            <p class="skills-title">Front-end</p>
-                            <i class="devicon-html5-plain colored"></i>
-                            <i class="devicon-css3-plain colored"></i>
-                            <i class="devicon-javascript-plain colored"></i>
-                        </div>
-                        <div class="skills-box">
-                            <p class="skills-title">Back-end</p>
-                            <i class="devicon-php-plain colored"></i>
-                            <i class="devicon-go-plain colored"></i>
-                        </div>
-                        <div class="skills-box">
-                            <p class="skills-title">Databases</p>
-                            <i class="devicon-mysql-plain colored"></i>
-                            <i class="devicon-postgresql-plain colored"></i>
-                            <i class="devicon-mongodb-plain colored"></i>
-                        </div>
-                        <div class="skills-box">
-                            <p class="skills-title">Frameworks</p>
-                            <i class="devicon-vuejs-plain colored"></i>
-                            <i class="devicon-laravel-plain colored"></i>
-                            <i class="devicon-jquery-plain colored"></i>
-                        </div>
-                    </div>
-                </article>
             </div>
+          </div>
 
-            <!--INCIO projetos-->
-            <div id="about-container">
-                <article id="caixa">
-
-                    <h2 id="skills-section-title">Projetos</h2>
-
-                    <!--INICIO DA COL-->
-                    <div class="portfolio">
-                        <div class="portfolio-inner">
-                            <img src="img/grantoro.png" alt="Site Oficial Banda Gran Toro">
-                            <p> Site desenvolvido para a banda Gran Toro. O design e
-                                cores utilizadas correspondem à identidade visual da mesma. Aguardando
-                                posicionamento da banda para publicação oficial em domínio próprio.
-                                <a href="http://grantoro.epizy.com/" class="" id="btn-projects" target="_blank">Ver
-                                    site
-                                </a>
-                            </p>
-
-                        </div>
-                    </div>
-
-                    <div class="portfolio">
-                        <div class="portfolio-inner">
-                            <img src="img/rickandmorty.png" alt="Jogo Rick and Morty" class="">
-                            <p> Jogo para navegador inspirado na série de TV Rick
-                                and Morty, o objetivo é clicar nos Mortys enquanto o cronômetro não estiver
-                                zerado.
-                                <a href="https://guimrl.github.io/mortynight-run/" class="" id="btn-projects"
-                                    target="_blank">Ver site
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="portfolio">
-                        <div class="portfolio-inner">
-                            <img src="img/midistudio.png" alt="Midi Studio" class="">
-                            <p> controlador midi portatil para levar no bolso, o projeto conta
-                                com 9 pads para fazer o beat que você quiser, em qualquer lugar,
-                                a qualquer hora.
-                                <a href="https://guimrl.github.io/midi-studio/" class="" id="btn-projects"
-                                    target="_blank">Ver site
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="portfolio">
-                        <div class="portfolio-inner">
-                            <img src="img/digiteumnumero.png" alt="Jogo Digite um número" class="">
-                            <p>Jogo com reconhecimento de voz objetivo é encontrar o
-                                número secreto entre 1 e 1000.
-                                <a href="https://guimrl.github.io/numero-secreto/" class="" id="btn-projects"
-                                    target="_blank">Ver site
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="portfolio">
-                        <div class="portfolio-inner">
-                            <img src="img/orcamento.png" alt="App Orcamento Pessoal" class="">
-                            <p> Web app de controle de gastos
-                                com design minimalista, o objetivo do site é armazenar os gastos em
-                                localStorage, o site conta também com uma sessão de busca com os
-                                respectivos filtros e listagem dos gastos.
-                                <a href="https://guimrl.github.io/orcamento-pessoal/" class="" id="btn-projects"
-                                    target="_blank">Ver site
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="portfolio">
-                        <div class="portfolio-inner">
-                            <img src="img/todo.png" alt="App To Do List" class="">
-                            <p> Aplicativo de gerenciamento de tarefas. Ele permite que os
-                                usuários gerenciem suas tarefas a partir de um smartphone,
-                                tablet e computador.
-                                <a href="https://guimrl.github.io/to-do-list-poo/" class="" id="btn-projects"
-                                    target="_blank">Ver site
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-                </article>
+          <div class="portfolio">
+            <div class="portfolio-inner">
+              <img src="img/rickandmorty.png" alt="Jogo Rick and Morty" class="">
+              <p> Jogo para navegador inspirado na série de TV Rick
+                and Morty, o objetivo é clicar nos Mortys enquanto o cronômetro não estiver
+                zerado.
+                <a href="https://guimrl.github.io/mortynight-run/" class="" id="btn-projects" target="_blank">Ver site
+                </a>
+              </p>
             </div>
+          </div>
 
-            <!--footer-->
-            <footer id="footer">
-                <ul id="social-footer">
-                    <li class="linkedin bounce"><a href="https://www.linkedin.com/in/guimrl/" rel=”nofollow”
-                            target="_blank">
-                            <ion-icon name="logo-linkedin"></ion-icon>
-                        </a></li>
-                    <li class="github bounce"><a href="https://github.com/Guimrl" rel=”nofollow” target="_blank">
-                            <ion-icon name="logo-github"></ion-icon>
-                        </a></li>
-                    <li class="insta bounce"><a href="https://www.instagram.com/guimrll/" rel=”nofollow”
-                            target="_blank">
-                            <ion-icon name="logo-instagram"></ion-icon>
-                        </a></li>
-                </ul>
-                <p class="text-footer"><a href="#home" rel=”nofollow”>Início</a></p>
-                <p class="text-footer">&copy; 2022 - Guilherme Amaral</p>
-            </footer>
-        </section>
+          <div class="portfolio">
+            <div class="portfolio-inner">
+              <img src="img/midistudio.png" alt="Midi Studio" class="">
+              <p> controlador midi portatil para levar no bolso, o projeto conta
+                com 9 pads para fazer o beat que você quiser, em qualquer lugar,
+                a qualquer hora.
+                <a href="https://guimrl.github.io/midi-studio/" class="" id="btn-projects" target="_blank">Ver site
+                </a>
+              </p>
+            </div>
+          </div>
 
-    </main>
-    <!-- Ion Icons -->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script src="js/theme.js"></script>
-    <script src="js/script.js"></script>
+          <div class="portfolio">
+            <div class="portfolio-inner">
+              <img src="img/digiteumnumero.png" alt="Jogo Digite um número" class="">
+              <p>Jogo com reconhecimento de voz objetivo é encontrar o
+                número secreto entre 1 e 1000.
+                <a href="https://guimrl.github.io/numero-secreto/" class="" id="btn-projects" target="_blank">Ver site
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <div class="portfolio">
+            <div class="portfolio-inner">
+              <img src="img/orcamento.png" alt="App Orcamento Pessoal" class="">
+              <p> Web app de controle de gastos
+                com design minimalista, o objetivo do site é armazenar os gastos em
+                localStorage, o site conta também com uma sessão de busca com os
+                respectivos filtros e listagem dos gastos.
+                <a href="https://guimrl.github.io/orcamento-pessoal/" class="" id="btn-projects" target="_blank">Ver
+                  site
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <div class="portfolio">
+            <div class="portfolio-inner">
+              <img src="img/todo.png" alt="App To Do List" class="">
+              <p> Aplicativo de gerenciamento de tarefas. Ele permite que os
+                usuários gerenciem suas tarefas a partir de um smartphone,
+                tablet e computador.
+                <a href="https://guimrl.github.io/to-do-list-poo/" class="" id="btn-projects" target="_blank">Ver site
+                </a>
+              </p>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!--footer-->
+      <footer id="footer">
+        <ul id="social-footer">
+          <li class="linkedin bounce"><a href="https://www.linkedin.com/in/guimrl/" rel=”nofollow” target="_blank">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a></li>
+          <li class="github bounce"><a href="https://github.com/Guimrl" rel=”nofollow” target="_blank">
+              <ion-icon name="logo-github"></ion-icon>
+            </a></li>
+          <li class="insta bounce"><a href="https://www.instagram.com/guimrll/" rel=”nofollow” target="_blank">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a></li>
+        </ul>
+        <p class="text-footer"><a href="#home" rel=”nofollow”>Início</a></p>
+        <p class="text-footer">&copy; 2022 - Guilherme Amaral</p>
+      </footer>
+    </section>
+  </main>
+  <!-- Ion Icons -->
+  <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

@@ -219,6 +219,7 @@ input {
     font-size: 1.25em;
     max-width: 1.25em;
     color: var(--main-color);
+    padding-right: 8px;
 }
 
 #btn-cv:hover,

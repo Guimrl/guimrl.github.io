@@ -21,3 +21,11 @@ function showText(el, text, interval) {
 
 showText(el, text, interval);
 
+//muda o tittle do html quando o usuario da tab
+let docTitle = document.title;
+window.addEventListener("blur", () => {
+    document.title = 'Volta aqui :(';
+})
+window.addEventListener("focus", () => {
+    document.title = docTitle;
+})

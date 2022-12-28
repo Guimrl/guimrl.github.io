@@ -86,6 +86,7 @@ a:nth-of-type(1) {
 input{
     display: none;
 }
+
 .dark-mode {
     background-color: var(--bg-color);
     border-radius: 3.125em;
@@ -172,6 +173,7 @@ input{
 
 #email-container li {
     list-style: none;
+    text-align: left;
 }
 
 #email-container li i {
@@ -181,4 +183,26 @@ input{
 #email-container li a{
     text-decoration: none;
     color: var(--main-text-color);
+    padding: 5px;
+}
+
+/* Sobre */
+#nome {
+    color: var(--main-color);
+    font-size: 2em;
+}
+
+.descricao {
+    padding: 15px;
+}
+
+#artigo a{
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+@media(max-width: 600px) {
+    .nav.visivel {
+        width: 50%;
+    }
 }

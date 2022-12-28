@@ -39,10 +39,12 @@ a:nth-of-type(1) {
     border: none;
     background-color: transparent;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 2em;
 }
 
-.open-btn {
+.open-btn,
+.close-btn {
+    color: var(--main-color);
     position: fixed;
     top: 10px;
     left: 10px;
@@ -71,12 +73,17 @@ a:nth-of-type(1) {
 .navegacao li a{
     list-style-type: none;
     text-decoration: none;
-    padding: 0;
-    margin: 5px;
+    padding: 10px;
+    margin: 10px;
+    color: var(--main-text-color);
+}
+
+.navegacao li a:hover {
+    color: var(--main-color);
 }
 
 /* Dark Mode */
-input {
+input{
     display: none;
 }
 .dark-mode {
@@ -88,6 +95,7 @@ input {
     justify-content: space-between;
     padding: 0.313em;
     position: relative;
+    margin-left: 65px;
     height: 1.625em;
     width: 3.125em;
     transform: scale(1.5);
@@ -126,6 +134,7 @@ input {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     color: var(--main-text-color);
     background-color: var(--bg-color);
 }
@@ -134,4 +143,42 @@ input {
     width: 180px;
     height: 180px;
     border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+#welcome-text {
+    font-weight: bold;
+    margin: 10px;
+}
+
+#social-container {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#social-container li {
+    flex: 1 1 0;
+    max-width: 3.75em;
+}
+
+#social-container li a {
+    justify-content: center;
+    color: var(--main-color);
+    font-size: 2.5em;
+}
+
+#email-container li {
+    list-style: none;
+}
+
+#email-container li i {
+    color: var(--main-color);
+}
+
+#email-container li a{
+    text-decoration: none;
+    color: var(--main-text-color);
 }

@@ -1,4 +1,4 @@
-const input = document.querySelector('input');
+const input = document.querySelector('#theme');
 const root = document.documentElement;
 
 const lightTheme = {

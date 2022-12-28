@@ -61,12 +61,11 @@ a:nth-of-type(1) {
 }
 
 .nav.visivel {
-    transform: translateX(0);
     background-color: var(--main-bg-color);
     width: 25%;
+    transform: translateX(0);
     transition-delay: .2s;
-    box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
-    0 15px 40px rgba(0, 0, 0, 0.1);
+    box-shadow: 5px -5px 10px var(--main-bg-color), -5px 5px 10px var(--main-text-color);
     z-index: 1;
 }
 
@@ -231,30 +230,39 @@ input {
 
 /* Projetos */
 .projetos-container {
-    display: grid; 
-    grid-auto-flow: column; 
-    grid-auto-columns: 1fr; 
-    grid-auto-rows: 1fr; 
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: 1fr 1fr 1fr; 
-    grid-template-areas: 
-      ". . ."
-      ". . ."
-      ". . ."; 
-    justify-items: center; 
-    align-items: center; 
-    display: none;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 10px 10px;
+    grid-template-areas:
+        "t t t"
+        ". . ."
+        ". . ."
+        ". . .";
+    justify-items: center;
+    align-items: center;
+}
+
+.titulo-projetos {
+    grid-area: t;
+    margin-bottom: 50px;
+    font-size: 2em;
+    color: var(--main-color);
 }
 
 .projetos {
-    border: 1px solid red;
     width: 400px;
     height: 200px;
-    background-color: #0b5ed7;
+    color: #FFF;
+    font-weight: bold;
+}
+
+.projetos:hover {
+    backdrop-filter: blur(4px);
 }
 
 .projeto-imagem {
-    background-color: transparent;
     width: 400px;
     height: 200px;
     perspective: 1000px;
@@ -267,6 +275,7 @@ input {
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
+    box-shadow: 5px -5px 10px var(--main-bg-color), -5px 5px 10px var(--main-text-color);
 }
 
 .projetos:hover .projeto-conteudo {

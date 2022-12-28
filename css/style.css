@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+a:nth-of-type(1) {
+    font-family: "Roboto", sans-serif;
+}
+
+:root {
+    --main-color: #0b5ed7;
+    --main-text-color: #333333;
+    --main-bg-color: #eeeeee;
+    --bg-color: #ffffff;
+}
+
+.highlight {
+    color: var(--main-color);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-color)
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 20px;
+}
+
+/* Navbar */
+.navbar-btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.open-btn {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav.visivel {
+    transform: translateX(0);
+    background-color: var(--main-bg-color);
+    width: 25%;
+    transition-delay: 0.1s;
+    box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+    0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.navegacao,
+.navegacao li,
+.navegacao li a{
+    list-style-type: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 5px;
+}
+
+/* Dark Mode */
+input {
+    display: none;
+}
+.dark-mode {
+    background-color: var(--bg-color);
+    border-radius: 3.125em;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.313em;
+    position: relative;
+    height: 1.625em;
+    width: 3.125em;
+    transform: scale(1.5);
+}
+
+.dark-mode .ball {
+    background-color: var(--main-color);
+    border-radius: 50%;
+    position: absolute;
+    top: 0.125em;
+    left: 0.125em;
+
+    height: 1.375em;
+    width: 1.375em;
+
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked+.dark-mode .ball {
+    transform: translateX(24px);
+}
+
+.fa-moon {
+    color: var(--main-color);
+}
+
+.fa-sun {
+    color: var(--main-color);
+}
+
+/* Principal */
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-text-color);
+    background-color: var(--bg-color);
+}
+
+.imagem {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+}

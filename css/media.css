@@ -1,9 +1,29 @@
-@media(max-width: 700px) {
+@media(max-width: 600px) {
     .nav.visivel {
         width: 50%;
     }
 
     #artigo {
         padding: 20px;
+    }
+
+    .projetos-container {
+        grid-template-areas:
+        "t t"
+        "i i"
+        "i i"
+        "i i"
+        "i i";
+    }
+}
+
+@media(max-width: 500px) {
+    .projetos-container {
+        grid-template-areas:
+        "t"
+        "i"
+        "i"
+        "i"
+        "i";
     }
 }

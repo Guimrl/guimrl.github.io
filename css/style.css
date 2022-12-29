@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+body {
+    height: 100%;
+}
+
 a:nth-of-type(1) {
     font-family: "Roboto", sans-serif;
 }
@@ -210,7 +214,8 @@ input {
     margin-bottom: 1.25em;
 }
 
-#btn-cv {
+#btn-cv,
+#btn-projeto {
     font-weight: bold;
     font-size: 1em;
     color: var(--bg-color);
@@ -223,49 +228,83 @@ input {
     padding: 12px;
 }
 
-#btn-cv:hover {
+#btn-cv:hover,
+#btn-projeto:hover {
     background-color: transparent;
     color: var(--main-color);
 }
 
 /* Projetos */
 .projetos-container {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 0 20px 0 20px;
     display: grid;
-    grid-auto-flow: row;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    gap: 10px 10px;
-    grid-template-areas:
-        "t t t"
-        ". . ."
-        ". . ."
-        ". . .";
-    justify-items: center;
+    grid-template-areas: 
+    "t t t"
+    "i i i"
+    "i i i"
+    "i i i";
+    grid-gap: 10px 10px;
+    justify-content: center;
     align-items: center;
+    overflow: hidden;
+    background-color: var(--bg-color);
 }
 
-.titulo-projetos {
+.projeto-container-titulo {
     grid-area: t;
+    grid-column: t;
     margin-bottom: 50px;
     font-size: 2em;
     color: var(--main-color);
+    text-align: center;
 }
 
 .projetos {
-    width: 400px;
+    max-width: 500px;
+    min-width: 400px;
     height: 200px;
-    color: #FFF;
+    /* color: #FFF; */
     font-weight: bold;
 }
 
-.projetos:hover {
-    backdrop-filter: blur(4px);
+.projeto-imagem {
+    grid-area: i;
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.projeto-imagem {
-    width: 400px;
-    height: 200px;
-    perspective: 1000px;
+/* Hover da imagem */
+img:hover {
+    filter: drop-shadow();
+}
+
+/* Texto da imagem projeto */
+.projetos p {
+    visibility: hidden;
+    position: absolute;
+    text-align: center;
+    top: 45%;
+    left: 50%;
+    text-align: center;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    color: transparent;
+    transition: all 0.2s;
+    line-height: 1.438em;
+    font-weight: bold;
+}
+
+.projetos:hover p,
+.projetos:hover a {
+    color: var(--main-text-color);
+    bottom: 30%;
+    visibility: visible;
 }
 
 .projeto-conteudo {
@@ -274,28 +313,11 @@ input {
     height: 100%;
     text-align: center;
     transition: transform 0.8s;
-    transform-style: preserve-3d;
-    box-shadow: 5px -5px 10px var(--main-bg-color), -5px 5px 10px var(--main-text-color);
+    box-shadow: 5px -5px 10px var(--main-bg-color), -5px 5px 10px var(--bg-color);
 }
 
-.projetos:hover .projeto-conteudo {
-    transform: rotateY(180deg);
+#btn-projeto {
+    margin: 15px;
+    padding: 7px;
 }
 
-.projeto-frente,
-.projeto-atras {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.projeto-atras {
-    transform: rotateY(180deg);
-}

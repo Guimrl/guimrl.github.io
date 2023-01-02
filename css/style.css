@@ -211,7 +211,9 @@ input {
 
 .descricao {
     max-width: 120vh;
-    margin: 2em 0 2em 2em;
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-bottom: 2em;
 }
 
 #btn-cv {

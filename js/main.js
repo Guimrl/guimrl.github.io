@@ -49,3 +49,24 @@ window.addEventListener("blur", () => {
 window.addEventListener("focus", () => {
     document.title = title;
 })
+
+//Texto que digita sozinho
+const elemento = document.querySelector('#digit');
+const texto = "Desenvolvedor Full Stack.";
+const intervalo = 100;
+
+function digitaTexto(elemento, texto, intervalo) {
+    const caractere = texto.split("").reverse();
+    const digitador = setInterval(() => {
+        
+        if(!caractere.length) {
+            return clearInterval(digitador);
+        }
+
+        const proximaLetra = caractere.pop();
+
+        elemento.innerHTML += proximaLetra;
+    }, intervalo);
+}
+
+digitaTexto(elemento, texto, intervalo);

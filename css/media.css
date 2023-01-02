@@ -4,7 +4,7 @@
     }
 
     #artigo {
-        padding: 20px;
+        margin: 20px;
     }
 
     .projetos-container {
@@ -18,6 +18,18 @@
 }
 
 @media screen and (max-width: 767px) {
+    .container {
+        height: 80vh;
+    }
+
+    .nav.visivel {
+        width: 50%;
+    }
+
+    .projeto-container-titulo {
+        margin-top: 30px;
+    }
+
     .projetos-container {
         grid-template-areas:
         "t"

@@ -214,8 +214,7 @@ input {
     margin: 2em 0 2em 2em;
 }
 
-#btn-cv,
-#btn-projeto {
+#btn-cv {
     font-weight: bold;
     font-size: 1em;
     color: var(--bg-color);
@@ -228,15 +227,13 @@ input {
     padding: 12px;
 }
 
-#btn-cv:hover,
-#btn-projeto:hover {
+#btn-cv:hover {
     background-color: transparent;
     color: var(--main-color);
 }
 
 /* Projetos */
 .projetos-container {
-    /* border: 1px solid red; */
     width: 100%;
     min-height: 100vh;
     margin: 0 auto;
@@ -267,13 +264,11 @@ input {
     max-width: 500px;
     min-width: 400px;
     height: 200px;
-    /* color: #FFF; */
     font-weight: bold;
 }
 
 .projeto-imagem {
     grid-area: i;
-    /* border: 1px solid red; */
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -281,7 +276,10 @@ input {
 
 /* Hover da imagem */
 img:hover {
-    filter: drop-shadow();
+    transform: scale(1.1);
+    transition: all 0.5s;
+    filter: grayscale(100%);
+    opacity: 0.3;
 }
 
 /* Texto da imagem projeto */
@@ -289,13 +287,12 @@ img:hover {
     visibility: hidden;
     position: absolute;
     text-align: center;
-    top: 45%;
+    top: 35%;
     left: 50%;
-    text-align: center;
-    width: 100%;
+    width: 80%;
     transform: translate(-50%, -50%);
     color: transparent;
-    transition: all 0.2s;
+    transition: all .5s;
     line-height: 1.438em;
     font-weight: bold;
 }
@@ -312,18 +309,39 @@ img:hover {
     width: 100%;
     height: 100%;
     text-align: center;
-    transition: transform 0.8s;
+    transition: transform .4s;
     box-shadow: 5px -5px 10px var(--main-bg-color), -5px 5px 10px var(--bg-color);
 }
 
 #btn-projeto {
-    margin: 15px;
-    padding: 7px;
+    background-color: var(--bg-color);
+    color: var(--main-text-color);
+    border-radius: 10em;
+    font-size: 1em;
+    font-weight: 600;
+    padding: 10px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    border: 1px solid var(--main-text-color);
+    box-shadow: 0 0 0 0 var(--main-text-color);
+    text-decoration: none;
+}
+
+#btn-projeto:hover {
+    transform: translateY(-4px) translateX(-2px);
+    box-shadow: 2px 5px 0 0 var(--main-text-color);
+}
+
+#btn-projeto:active {
+    transform: translateY(2px) translateX(1px);
+    box-shadow: 0 0 0 0 var(--main-text-color);
 }
 
 footer {
-    height: 20vh;
+    height: 17vh;
     background-color: var(--main-bg-color);
     color: var(--main-text-color);
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

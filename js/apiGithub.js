@@ -4,20 +4,11 @@ const img = document.getElementById('imagem');
 
 async function getApi() {
     axios.get(url).then(res => {
-    var imagemDePerfil = res.data.avatar_url;
-    var nome = res.data.name;
-
-    console.log(res.data)
-    console.log(imagemDePerfil)
-
-    const criaImg = `
-    <img src="${imagemDePerfil}" class="imagem" alt="${nome}">
-    <h1 class="highlight">${nome}</h1>
-    `
-    img.innerHTML = criaImg;
+    
+    criaImagemDePerfil(res);
     }).catch(e => {
         if(e.request.status === 404) {
-            console.log('Erro')
+            console.log('Erro 404')
         } else {
             console.log(e)
         }
@@ -26,6 +17,16 @@ async function getApi() {
     })
 }
 
+function criaImagemDePerfil(res) {
+    var imagemDePerfil = res.data.avatar_url;
+    var nome = res.data.name;
 
+    const criaImg = `
+    <img src="${imagemDePerfil}" class="imagem" alt="foto de ${nome}">
+    <h1 class="highlight">${nome}</h1>
+    `
+
+    img.innerHTML = criaImg;
+}
 
 getApi();

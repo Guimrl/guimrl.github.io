@@ -15,7 +15,7 @@ function scrollNativo(distanciaEntreASectionETopo) {
 
 function scrollSessao(event) {
     event.preventDefault();
-    const distanciaEntreASectionETopo = descobreAdistanciaEntreASectionETopo(event.target) - 90;
+    const distanciaEntreASectionETopo = descobreAdistanciaEntreASectionETopo(event.target) - 0;
     scrollNativo(distanciaEntreASectionETopo);
 }
 

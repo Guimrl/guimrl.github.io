@@ -211,7 +211,7 @@ input {
 
 .descricao {
     max-width: 120vh;
-    margin-bottom: 1.25em;
+    margin: 2em 0 2em 2em;
 }
 
 #btn-cv,
@@ -321,3 +321,9 @@ img:hover {
     padding: 7px;
 }
 
+footer {
+    height: 20vh;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    text-align: center;
+}

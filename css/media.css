@@ -1,4 +1,4 @@
-@media(max-width: 600px) {
+@media screen and (min-width: 767px) and (max-width: 1023px) {
     .nav.visivel {
         width: 50%;
     }
@@ -17,7 +17,7 @@
     }
 }
 
-@media(max-width: 500px) {
+@media screen and (max-width: 767px) {
     .projetos-container {
         grid-template-areas:
         "t"

@@ -23,8 +23,9 @@ function criaImagemDePerfil(res) {
     var nome = res.data.name;
 
     const criaImg = `
-    <img src="${imagemDePerfil}" class="imagem" alt="foto de ${nome}">
-    <h1 class="highlight">${nome}</h1>
+    <img src="${imagemDePerfil}" class="imagem" alt="foto de ${nome} 
+    em frente ao espelho usando oculos, camiseta preta,
+    com o cabelo raspado, barba e segurando um celular">
     `
 
     img.innerHTML = criaImg;
@@ -33,7 +34,7 @@ function criaImagemDePerfil(res) {
 //pega as informaçoes da api e cria a página sobre
 function criaInfo(res) {
 const criaNome = `
-<h1>${res.data.name}</h1>
+<h2>${res.data.name}</h2>
 `
 nome.innerHTML = criaNome;
 }

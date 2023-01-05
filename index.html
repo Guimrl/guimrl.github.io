@@ -18,12 +18,12 @@
 </head>
 
 <body>
-    <header>
+    <header role="dialog" aria-labelledby="nav">
         <nav>
             <button class="navbar-btn open-btn" title="abrir barra lateral">
                 <i class="fas fa-bars"></i>
             </button>
-            <div class="nav">
+            <div class="nav" id="nav">
                 <button class="navbar-btn close-btn" title="fechar barra lateral">
                     <i class="fas fa-times"></i>
                 </button>
@@ -194,7 +194,7 @@
         </section>
         <footer>
             <div class="footer">
-                <p>&copy; Guilherme Amaral - 2023</p>
+                <p>&copy; Guilherme<span class="highlight"> Amaral</span> - 2023</p>
             </div>
         </footer>
     </main>

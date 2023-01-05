@@ -86,6 +86,7 @@ a:nth-of-type(1) {
 .navegacao li a:hover {
     color: var(--main-color);
     font-weight: bold;
+    transform: scale(1.3);
 }
 
 /* Dark Mode */
@@ -191,6 +192,15 @@ input {
     text-decoration: none;
     color: var(--main-text-color);
     padding: 5px;
+}
+
+#email-container li a:hover {
+    color: var(--main-color);
+}
+.open-btn:hover,
+.close-btn:hover,
+#social-container li:hover {
+    transform: scale(1.3);
 }
 
 /* Sobre */

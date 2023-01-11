@@ -33,9 +33,9 @@ function criaImagemDePerfil(res) {
 
 //pega as informaçoes da api e cria a página sobre
 function criaInfo(res) {
-const criaNome = `
-<h2>${res.data.name}</h2>
-`
-nome.innerHTML = criaNome;
+    const criaNome = `
+    <h2>${res.data.name}</h2>
+    `
+    nome.innerHTML = criaNome;
 }
 getApi();

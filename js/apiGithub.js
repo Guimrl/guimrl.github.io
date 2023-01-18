@@ -23,9 +23,8 @@ function criaImagemDePerfil(res) {
     var nome = res.data.name;
 
     const criaImg = `
-    <img src="${imagemDePerfil}" class="imagem" alt="foto de ${nome} 
-    em frente ao espelho usando oculos, camiseta preta,
-    com o cabelo raspado, barba e segurando um celular">
+    <img src="${imagemDePerfil}" class="imagem" alt="foto de ${nome}
+    vestindo camiseta preta, de barba, cabelo baixo e com o fundo laranja e branco.">
     `
 
     img.innerHTML = criaImg;

@@ -1,2 +1,5 @@
 .git/
 img/
+ideias/
+node_modules/
+dist/

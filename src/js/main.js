@@ -1,4 +1,5 @@
 // Efeito Smooth da navegação
+console.log('funcionou o babel e o webpack')
 const menu = document.querySelectorAll('.navegacao a[href^="#"]');
 
 function descobreAdistanciaEntreASectionETopo(element) {

@@ -1,28 +1,32 @@
 
-#        .        Desculpa :(        .<br>
-#         .                         .<br>
-#          . Página em manutenção  .<br>
-#           .  volte mais tarde   .    .'.<br>
-#           .                     .  .   .<br>
-#           .___               ___. ,'   .<br>
-#           .  ..             ..  . .:   .<br>
-#           .  . .           . .  . .:   .<br>
-#           .  .  .         .  .  . .:   .<br>
-#           .  .  .__     __.  .  . .:   .<br>
-#           .  .  . .. _ .. .  .  . .:   .<br>
-#           .  .  . . (#) . .  .  . :===='<br>
-#           .  .  ._..nHn.._.  .  .<br>
-#           .  .  .  HHHHH. .  .  .<br>
-#           .  . .   `HH("N  . .  .<br>
-#           . _..     HHH  "  .._ .<br>
-#           .         NNN         .<br>
-#           .         N/"         .<br>
-#           .         N H         .<br>
-#          .          N            .<br>
-#         .           q,            .<br>
-#        .                           .<br>
-<br>
+```cmd
 
+        \         Desculpa :(       /
+         \                         /
+          \ Página em manutenção  /
+           ]  volte mais tarde   [    ,'|
+           ]                     [   /  |
+           ]___               ___[ ,'   |
+           ]  ]\             /[  [ |:   |
+           ]  ] \           / [  [ |:   |
+           ]  ]  ]         [  [  [ |:   |
+           ]  ]  ]__     __[  [  [ |:   |
+           ]  ]  ] ]\ _ /[ [  [  [ |:   |
+           ]  ]  ] ] (#) [ [  [  [ :===='
+           ]  ]  ]_].nHn.[_[  [  [
+           ]  ]  ]  HHHHH. [  [  [
+           ]  ] /   `HH("N  \ [  [
+           ]__]/     HHH  "  \[__[
+           ]         NNN         [
+           ]         N/"         [
+           ]         N H         [
+          /          N            \
+         /           q,            \
+        /                           \
+
+
+```
+<br><br>
 
 <div align="center">
     <p> &copy; Guilherme Amaral - 2023 </p>

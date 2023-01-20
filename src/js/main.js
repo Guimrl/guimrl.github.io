@@ -1,5 +1,7 @@
+import '../css/style.css';
+import '../css/media.css';
 // Efeito Smooth da navegação
-console.log('funcionou o babel e o webpack')
+console.log('página carregada')
 const menu = document.querySelectorAll('.navegacao a[href^="#"]');
 
 function descobreAdistanciaEntreASectionETopo(element) {
@@ -71,3 +73,95 @@ function digitaTexto(elemento, texto, intervalo) {
 }
 
 digitaTexto(elemento, texto, intervalo);
+
+//API GITHUB
+const url = 'https://api.github.com/users/guimrl';
+const img = document.getElementById('imagem');
+const nome = document.getElementById('nome');
+
+async function getApi() {
+    axios.get(url).then(res => {
+    
+    criaImagemDePerfil(res);
+    criaInfo(res);
+    }).catch(e => {
+        if(e.request.status === 404) {
+            console.log('Erro 404')
+        } else {
+            console.log(e)
+        }
+    }).finally(f => {
+        console.log('Página carregada!')
+    })
+}
+
+function criaImagemDePerfil(res) {
+    var imagemDePerfil = res.data.avatar_url;
+    var nome = res.data.name;
+
+    const criaImg = `
+    <img src="${imagemDePerfil}" class="imagem" alt="foto de ${nome}
+    vestindo camiseta preta, de barba, cabelo baixo e com o fundo laranja e branco.">
+    `
+
+    img.innerHTML = criaImg;
+}
+
+//pega as informaçoes da api e cria a página sobre
+function criaInfo(res) {
+    const criaNome = `
+    <h2>${res.data.name}</h2>
+    `
+    nome.innerHTML = criaNome;
+}
+getApi();
+
+//TEMA
+
+const input = document.querySelector('#theme');
+const root = document.documentElement;
+
+const lightTheme = {
+    '--main-color': '#0b5ed7',
+    '--main-text-color': '#333333',
+    '--main-bg-color': '#eeeeee',
+    '--bg-color': '#FFFFFF'
+}
+
+const darkTheme = {
+    '--main-color': '#F39C12',
+    '--main-text-color': '#EEEEEE',
+    '--main-bg-color': '#333333',
+    '--bg-color': '#262626'
+}
+
+input.addEventListener('change', () => {
+    const check = input.checked;
+    let GetTheme;
+    if (check) {
+        GetTheme = 'DARK';
+        changeTheme(darkTheme);
+    } else {
+        GetTheme = 'LIGHT';
+        changeTheme(lightTheme);
+    }
+
+    //salva em localStorage
+    localStorage.setItem("PageTheme", JSON.stringify(GetTheme));
+})
+
+function changeTheme(theme) {
+    for (let prop in theme) {
+        changeProperty(prop, theme[prop]);
+    }
+}
+
+function changeProperty(property, value) {
+    root.style.setProperty(property, value);
+}
+
+let GetTheme = JSON.parse(localStorage.getItem("PageTheme"));
+
+if (GetTheme === 'DARK') {
+    changeTheme(darkTheme);
+}

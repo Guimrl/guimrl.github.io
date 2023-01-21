@@ -3,6 +3,7 @@
     "version": "2.0.0",
     "description": "<div align=\"center\">\r     <p> &copy; Guilherme Amaral - 2023 </p>\r </div>",
     "main": "index.js",
+    "homepage": "guimrl.github.io/",
     "scripts": {
         "start": "webpack serve --hot --mode development --config webpack.config.js",
         "build": "webpack --mode production --config webpack.config.js"

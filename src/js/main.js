@@ -1,7 +1,6 @@
 import '../css/style.css';
 import '../css/media.css';
 // Efeito Smooth da navegação
-console.log('página carregada')
 const menu = document.querySelectorAll('.navegacao a[href^="#"]');
 
 function descobreAdistanciaEntreASectionETopo(element) {
@@ -43,7 +42,7 @@ menu.forEach((link) => {
     link.addEventListener("click", () => nav.classList.remove('visivel'))
 })
 
-// Muda o title do HTML quando o usuario pressiona tab
+// Muda o title do HTML quando o usuario da tab
 let title = document.title;
 window.addEventListener("blur", () => {
     document.title = 'Volta aqui! :(';

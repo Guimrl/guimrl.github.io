@@ -2,19 +2,19 @@ const url = 'https://api.github.com/users/guimrl';
 const img = document.getElementById('imagem');
 const nome = document.getElementById('nome');
 
-async function getApi() {
+export async function getApi() {
     axios.get(url).then(res => {
     
     criaImagemDePerfil(res);
     criaInfo(res);
     }).catch(e => {
         if(e.request.status === 404) {
-            console.log('Erro 404')
+            console.log('Erro 404');
         } else {
             console.log(e)
         }
     }).finally(f => {
-        console.log('Página carregada!')
+        console.log('Página carregada!');
     })
 }
 
@@ -25,7 +25,7 @@ function criaImagemDePerfil(res) {
     const criaImg = `
     <img src="${imagemDePerfil}" class="imagem" alt="foto de ${nome}
     vestindo camiseta preta, de barba, cabelo baixo e com o fundo laranja e branco.">
-    `
+    `;
 
     img.innerHTML = criaImg;
 }
@@ -34,7 +34,6 @@ function criaImagemDePerfil(res) {
 function criaInfo(res) {
     const criaNome = `
     <h2>${res.data.name}</h2>
-    `
+    `;
     nome.innerHTML = criaNome;
 }
-getApi();

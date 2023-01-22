@@ -1,3 +1,4 @@
+const axios = require('axios');
 const url = 'https://api.github.com/users/guimrl';
 const img = document.getElementById('imagem');
 const nome = document.getElementById('nome');

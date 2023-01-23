@@ -1,0 +1,22 @@
+#sobre {
+    min-height: 100vh;
+}
+
+#nome {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+#titulo {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 1em;
+    color: var(--main-color);
+}
+
+.descricao {
+    max-width: 120vh;
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-bottom: 2em;
+}

@@ -4,7 +4,7 @@
     transform: scale(1.3);
 }
 
-#btn-cv {
+.btn-cv {
     font-weight: bold;
     font-size: 1em;
     color: var(--bg-color);
@@ -15,9 +15,10 @@
     transition: .5s;
     margin: 25px;
     padding: 12px;
+    cursor: pointer;
 }
 
-#btn-cv:hover {
+.btn-cv:hover {
     background-color: transparent;
     color: var(--main-color);
 }
@@ -44,4 +45,13 @@
 #btn-projeto:active {
     transform: translateY(2px) translateX(1px);
     box-shadow: 0 0 0 0 var(--main-text-color);
+}
+
+#fechar-modal {
+    color: var(--fix-color);
+    cursor: pointer;
+    padding: .20em;
+    font-size: 1.5em;
+    border: none;
+    background-color: #FFF;
 }

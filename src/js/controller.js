@@ -8,6 +8,7 @@ import '../css/sobre.css';
 import '../css/botoes.css';
 import '../css/projetos.css';
 import '../css/footer.css';
+import '../css/modal.css';
 import '../css/media/media.css';
 
 import { title } from './title.js';
@@ -16,6 +17,7 @@ import { navBar } from './navBar.js';
 import { navegacao } from './navegacao.js';
 import { digitaTexto } from './digitaTexto.js';
 import { tema } from './tema.js';
+import { modal } from './modal.js';
 
 const elemento = document.querySelector('#digit');
 const texto = "Desenvolvedor Full Stack.";
@@ -27,3 +29,4 @@ navBar();
 navegacao();
 digitaTexto(elemento, texto, intervalo);
 tema();
+modal();

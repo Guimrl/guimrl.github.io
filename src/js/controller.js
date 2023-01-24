@@ -18,6 +18,7 @@ import { navegacao } from './navegacao.js';
 import { digitaTexto } from './digitaTexto.js';
 import { tema } from './tema.js';
 import { modal } from './modal.js';
+import { criaProjetos } from './projetos.js';
 
 const elemento = document.querySelector('#digit');
 const texto = "Desenvolvedor Full Stack.";
@@ -30,3 +31,4 @@ navegacao();
 digitaTexto(elemento, texto, intervalo);
 tema();
 modal();
+criaProjetos();

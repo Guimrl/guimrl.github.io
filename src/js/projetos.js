@@ -1,41 +1,41 @@
 const projetos = [
     {
-        imagem: "https://user-images.githubusercontent.com/88007295/213883176-d2471b02-b34f-44ee-a762-215ff4864847.png",
+        imagem: "https://user-images.githubusercontent.com/88007295/214310217-86278fce-d009-4fd9-8f39-c98bd8def31a.png",
         alt: "Repositório de Mini Projetos",
         descricao: "Mini Projetos para treinar HTML, CSS e JavaScript Vanilla.",
         link: "https://guimrl.github.io/mini-projetos/",
         FigId: "fig1"
     },
     {
-        imagem: "https://user-images.githubusercontent.com/88007295/210238502-cb35a5e0-03dc-4345-ae1b-c3a8dfdaeb7d.png",
+        imagem: "https://user-images.githubusercontent.com/88007295/214310215-1d8538c0-ea03-4f82-bdb7-21d4aafcbad0.png",
         alt: "Site oficial banda Gran Toro",
         descricao: "Site desenvolvido para a banda Gran Toro. O design e cores utilizadas correspondem à identidade visual da mesma.",
         link: "https://grantoro.github.io/",
         FigId: "fig2"
     },
     {
-        imagem: "https://user-images.githubusercontent.com/88007295/209858541-f79b5773-6f21-4e43-a772-a758bd43375b.png",
+        imagem: "https://user-images.githubusercontent.com/88007295/214310221-c5b6ee06-2c83-4c94-b39e-7916afac27d3.png",
         alt: "jogo mortynight run",
         descricao: "Jogo para navegador inspirado na série de TV Rick and Morty, o objetivo é clicar nos Mortys enquanto o cronômetro não estiver zerado.",
         link: "https://guimrl.github.io/mortynight-run/",
         figId: "fig3"
     },
     {
-        imagem: "https://user-images.githubusercontent.com/88007295/209858540-e102543c-10e5-4e80-a296-668677612a6c.png",
+        imagem: "https://user-images.githubusercontent.com/88007295/214310226-e96db8ab-425e-4e00-8031-e1555d6c4aef.png",
         alt: "Jogo Número Secreto",
         descricao: "Jogo com reconhecimento de voz, o objetivo é encontrar o número secreto entre 1 e 1000.",
         link: "https://guimrl.github.io/numero-secreto/",
         figId: "fig4"
     },
     {
-        imagem: "https://user-images.githubusercontent.com/88007295/209858537-ecd6eb34-1a86-4316-9e5a-8e19b0e717f0.png",
+        imagem: "https://user-images.githubusercontent.com/88007295/214310211-1d29bb4c-da31-4ba9-90a3-2e452964de5d.png",
         alt: "Aplicativo Lista de Tarefas",
         descricao: "Aplicativo de gerenciamento de tarefas. Ele permite que os usuários gerenciem suas tarefas.",
         link: "http://listatarefas.epizy.com/nova_tarefa.php",
         figId: "fig5"
     },
     {
-        imagem: "https://user-images.githubusercontent.com/88007295/214141392-288efe09-8c45-411e-8487-9b5db7317dd5.png",
+        imagem: "https://user-images.githubusercontent.com/88007295/214310219-92ed809b-00f5-4464-b7c0-c461dd74951c.png",
         alt: "Página inicial projeto fictício money bank",
         descricao: "Site de um banco fictício desenvolvido para treinar validação de formulário e eventos em JavaScript",
         link: "https://guimrl.github.io/money-bank/pages/abrir-conta-form.html",

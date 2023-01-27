@@ -10,5 +10,12 @@ export function modal() {
 
     [abrirModal, fecharModal, fade].forEach((el) => {
         el.addEventListener('click', () => toggleModal());
-    })
+        document.querySelector('#dialogConteudoIndisponivel').focus();
+    });
+
+    document.addEventListener('keyup', function(tecla) {
+        if(tecla.keyCode == 27 && !modal.classList.contains('hide')) {
+            toggleModal();
+        }
+    });
 }

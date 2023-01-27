@@ -4,14 +4,14 @@ const projetos = [
         alt: "Repositório de Mini Projetos",
         descricao: "Mini Projetos para treinar HTML, CSS e JavaScript Vanilla.",
         link: "https://guimrl.github.io/mini-projetos/",
-        FigId: "fig1"
+        figId: "fig1"
     },
     {
         imagem: "https://user-images.githubusercontent.com/88007295/214310215-1d8538c0-ea03-4f82-bdb7-21d4aafcbad0.png",
         alt: "Site oficial banda Gran Toro",
         descricao: "Site desenvolvido para a banda Gran Toro. O design e cores utilizadas correspondem à identidade visual da mesma.",
         link: "https://grantoro.github.io/",
-        FigId: "fig2"
+        figId: "fig2"
     },
     {
         imagem: "https://user-images.githubusercontent.com/88007295/214310221-c5b6ee06-2c83-4c94-b39e-7916afac27d3.png",
@@ -52,10 +52,10 @@ export function criaProjetos() {
         projeto.innerHTML += `
         <figure id="projeto-conteudo" class="projeto-conteudo">
             <img src="${projetos[i].imagem}" alt="${projetos[i].alt}" class="projeto-imagem" loading="lazy">
-                <figcaption class="descricao-projeto" id="${projetos[i].FigId}">
+                <figcaption class="descricao-projeto" id="${projetos[i].figId}">
                     ${projetos[i].descricao}
                     <br><br>
-                    <a href="${projetos[i].link}" aria-labelledby="${projetos[i].FigId}" id="btn-projeto"
+                    <a href="${projetos[i].link}" aria-labelledby="${projetos[i].figId}" id="btn-projeto"
                         target="_blank">Ver Site</a>
                 </figcaption>
         </figure>

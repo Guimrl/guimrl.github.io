@@ -1,18 +1,17 @@
 export function navBar() {
-    const menu = document.querySelectorAll('.navegacao a[href^="#"]');
-    const openBtn = document.querySelector('.open-btn');
-    const closeBtn = document.querySelector('.close-btn');
+    const links = document.querySelectorAll('.navegacao a[href^="#"]');
+    const btns = document.querySelectorAll('.open-btn, .close-btn');
     const nav = document.querySelector('.nav');
 
-    openBtn.addEventListener('click', () => {
-        nav.classList.add('visivel');
+    btns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+            nav.classList.toggle('visivel');
+        });
     });
 
-    closeBtn.addEventListener('click', () => {
-        nav.classList.remove('visivel');
-    });
-
-    menu.forEach((link) => {
-        link.addEventListener("click", () => nav.classList.remove('visivel'))
+    links.forEach((link) => {
+        link.addEventListener('click', () => {
+            nav.classList.remove('visivel');
+        });
     });
 }

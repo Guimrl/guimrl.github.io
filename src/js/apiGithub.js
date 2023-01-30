@@ -4,37 +4,39 @@ const img = document.getElementById('imagem');
 const nome = document.getElementById('nome');
 
 export async function getApi() {
-    axios.get(url).then(res => {
-    
-    criaImagemDePerfil(res);
-    criaInfo(res);
-    }).catch(e => {
-        if(e.request.status === 404) {
-            console.log('Erro 404');
-        } else {
-            console.log(e)
-        }
-    }).finally(f => {
-        console.log('Página carregada!');
-    })
+    axios.get(url)
+        .then(res => {
+            criaImagemPerfil(res);
+            criaInfoPerfil(res);
+        })
+        .catch(erro => {
+            if (erro.request.status === 404) {
+                console.log('Erro 404');
+            } else {
+                console.log(erro);
+            }
+        })
+        .finally(() => {
+            console.log('Página carregada com sucesso!');
+        });
 }
 
-function criaImagemDePerfil(res) {
-    var imagemDePerfil = res.data.avatar_url;
-    var nome = res.data.name;
+function criaImagemPerfil(res) {
+    const imagemPerfil = res.data.avatar_url;
+    const nomeCompleto = res.data.name;
 
-    const criaImg = `
-    <img src="${imagemDePerfil}" class="imagem" alt="foto de ${nome}
-    vestindo camiseta preta, de barba, cabelo baixo e com o fundo laranja e branco.">
+    const htmlImagem = `
+        <img src="${imagemPerfil}" class="imagem" alt="${nomeCompleto} vestindo
+        uma camiseta preta, com barba bem aparada e cabelo curto, em um fundo
+        colorido com tonalidades de laranja e branco.">
     `;
 
-    img.innerHTML = criaImg;
+    img.innerHTML = htmlImagem;
 }
 
-//pega as informaçoes da api e cria a página sobre
-function criaInfo(res) {
+function criaInfoPerfil(res) {
     const criaNome = `
-    <h2>${res.data.name}</h2>
+        <h2>${res.data.name}</h2>
     `;
     nome.innerHTML = criaNome;
 }

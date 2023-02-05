@@ -7,7 +7,7 @@ const projetos = [
         figId: "fig1"
     },
     {
-        imagem: "https://user-images.githubusercontent.com/88007295/214310215-1d8538c0-ea03-4f82-bdb7-21d4aafcbad0.png",
+        imagem: "https://user-images.githubusercontent.com/88007295/216800450-79624122-5611-4597-b1de-b1bd088c69f4.png",
         alt: "Site oficial banda Gran Toro",
         descricao: "Site desenvolvido para a banda Gran Toro. O design e cores utilizadas correspondem à identidade visual da mesma.",
         link: "https://grantoro.github.io/",

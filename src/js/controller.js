@@ -19,6 +19,7 @@ import { digitaTexto } from './digitaTexto.js';
 import { tema } from './tema.js';
 import { modal } from './modal.js';
 import { criaProjetos } from './projetos.js';
+import { log } from './index.js';
 
 const elemento = document.querySelector('#digit');
 const texto = "Desenvolvedor Full Stack.";
@@ -32,3 +33,4 @@ digitaTexto(elemento, texto, intervalo);
 tema();
 modal();
 criaProjetos();
+log();

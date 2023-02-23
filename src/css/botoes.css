@@ -24,27 +24,17 @@
 }
 
 #btn-projeto {
-    background-color: var(--bg-color);
-    color: var(--main-text-color);
-    border-radius: 10em;
-    font-size: 1em;
-    font-weight: 600;
-    padding: 10px;
-    cursor: pointer;
-    transition: all .3s ease-in-out;
-    border: 1px solid var(--main-text-color);
-    box-shadow: 0 0 0 0 var(--main-text-color);
     text-decoration: none;
+    background-color: var(--main-color);
+    padding: .7rem;
+    border-radius: 1.5rem;
+    color: var(--bg-color);
 }
 
 #btn-projeto:hover {
-    transform: translateY(-4px) translateX(-2px);
-    box-shadow: 2px 5px 0 0 var(--main-text-color);
-}
-
-#btn-projeto:active {
-    transform: translateY(2px) translateX(1px);
-    box-shadow: 0 0 0 0 var(--main-text-color);
+    background-color: var(--bg-color);
+    color: var(--main-color);
+    border: 3px solid var(--main-color);
 }
 
 #fechar-modal {

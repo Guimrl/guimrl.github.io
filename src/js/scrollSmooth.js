@@ -1,4 +1,4 @@
-export function navegacao() {
+export function scrollSmooth() {
     const menu = document.querySelectorAll('.navegacao a[href^="#"]');
 
     function descobreAdistanciaEntreASectionETopo(element) {

@@ -1,4 +1,4 @@
-export function digitaTexto(elemento, texto, intervalo) {
+export function textDigit(elemento, texto, intervalo) {
     const caractere = texto.split("").reverse();
     const digitador = setInterval(() => {
 

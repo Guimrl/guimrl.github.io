@@ -1,0 +1,41 @@
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+    .nav.visivel {
+        width: 50%;
+    }
+
+    #artigo {
+        margin: 20px;
+    }
+
+    .projetos-container {
+        grid-template-areas:
+        "t t"
+        "i i"
+        "i i"
+        "i i"
+        "i i";
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #nome {
+        font-size: 1.5em;
+    }
+
+    .nav.visivel {
+        width: 50%;
+    }
+
+    .projeto-container-titulo {
+        margin-top: 30px;
+    }
+
+    .projetos-container {
+        grid-template-areas:
+        "t"
+        "i"
+        "i"
+        "i"
+        "i";
+    }
+}

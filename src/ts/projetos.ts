@@ -1,4 +1,6 @@
-export const projetos = [
+import { Projetos } from "./interfaces/ProjetosInterface";
+
+export const projetos: Projetos[] = [
     {
         imagem: "https://user-images.githubusercontent.com/88007295/214310217-86278fce-d009-4fd9-8f39-c98bd8def31a.png",
         alt: "Repositório de Mini Projetos",

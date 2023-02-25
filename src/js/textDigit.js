@@ -1,13 +1,10 @@
-export function textDigit(elemento, texto, intervalo) {
-    const caractere = texto.split("").reverse();
-    const digitador = setInterval(() => {
-
-        if (!caractere.length) {
-            return clearInterval(digitador);
+export function textDigit(element, text, interval) {
+    const char = text.split('').reverse();
+    const type = setInterval(() => {
+        if (!char.length) {
+            return clearInterval(type);
         }
-
-        const proximaLetra = caractere.pop();
-
-        elemento.innerHTML += proximaLetra;
-    }, intervalo);
+        let nextLetter = char.pop();
+        element.innerHTML += nextLetter;
+    }, interval);
 }

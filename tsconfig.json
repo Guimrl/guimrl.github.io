@@ -7,6 +7,11 @@
       "removeComments": true,
       "strictNullChecks": true,
       "experimentalDecorators": true,
+      "moduleResolution": "node",
+      "baseUrl": ".",
+      "paths": {
+        "@axios/*": ["node_modules/axios/*"]
+      }
       // "sourceMap": true
   },
   "include": ["src/**/*"]

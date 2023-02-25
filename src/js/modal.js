@@ -1,16 +1,18 @@
 export function modal() {
-    const abrirModal = document.querySelector('#abrir-modal');
-    const fecharModal = document.querySelector('#fechar-modal');
+    const openModal = document.querySelector('#abrir-modal');
+    const closeModal = document.querySelector('#fechar-modal');
     const modal = document.querySelector('#modal');
     const fade = document.querySelector('#fade');
     const toggleModal = () => {
         [modal, fade].forEach((el) => el === null || el === void 0 ? void 0 : el.classList.toggle('hide'));
     };
-    [abrirModal, fecharModal, fade].forEach((el) => {
+    [openModal, closeModal, fade].forEach((el) => {
+        const dialogUnavailable = document.querySelector('#dialogConteudoIndisponivel');
         el === null || el === void 0 ? void 0 : el.addEventListener('click', () => toggleModal());
+        dialogUnavailable === null || dialogUnavailable === void 0 ? void 0 : dialogUnavailable.focus();
     });
-    document.addEventListener('keyup', function (tecla) {
-        if (tecla.keyCode == 27 && !(modal === null || modal === void 0 ? void 0 : modal.classList.contains('hide'))) {
+    document.addEventListener('keyup', (tecla) => {
+        if (tecla.key == 'Escape' && !(modal === null || modal === void 0 ? void 0 : modal.classList.contains('hide'))) {
             toggleModal();
         }
     });

@@ -1,10 +1,11 @@
 export function theme() {
+    var _a;
     const input = document.querySelector('#theme');
     const root = document.documentElement;
     const lightTheme = {
-        '--main-color': '#0b5ed7',
+        '--main-color': '#0B5ED7',
         '--main-text-color': '#333333',
-        '--main-bg-color': '#eeeeee',
+        '--main-bg-color': '#EEEEEE',
         '--bg-color': '#FFFFFF'
     };
     const darkTheme = {
@@ -35,13 +36,6 @@ export function theme() {
     }
     let GetTheme = localStorage.getItem("PageTheme");
     let theme;
-    if (GetTheme != null) {
-        theme = JSON.parse(GetTheme);
-    }
-    else {
-        theme = "light";
-    }
-    if (theme === 'DARK') {
-        changeTheme(darkTheme);
-    }
+    GetTheme != null ? theme = JSON.parse(GetTheme) : theme = "light";
+    (_a = theme === 'DARK') !== null && _a !== void 0 ? _a : changeTheme(darkTheme);
 }

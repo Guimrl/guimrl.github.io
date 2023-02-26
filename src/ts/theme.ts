@@ -1,16 +1,17 @@
-export function theme(): void 
-{
-    const input = document.querySelector('#theme');
+import { Theme } from "./types/Theme";
+
+export function theme(): void {
+    const input: HTMLInputElement | null = document.querySelector('#theme');
     const root: HTMLElement = document.documentElement;
 
-    const lightTheme = {
+    const lightTheme: Theme = {
         '--main-color': '#0B5ED7',
         '--main-text-color': '#333333',
         '--main-bg-color': '#EEEEEE',
         '--bg-color': '#FFFFFF'
     };
 
-    const darkTheme = {
+    const darkTheme: Theme = {
         '--main-color': '#F39C12',
         '--main-text-color': '#EEEEEE',
         '--main-bg-color': '#333333',
@@ -31,13 +32,13 @@ export function theme(): void
         localStorage.setItem("PageTheme", JSON.stringify(GetTheme));
     })
 
-    function changeTheme(theme: any) {
+    function changeTheme(theme: Theme) {
         for (let prop in theme) {
             changeProperty(prop, theme[prop]);
         }
     }
 
-    function changeProperty(property: any, value: any) {
+    function changeProperty(property: string, value: string) {
         root.style.setProperty(property, value);
     }
 
@@ -45,6 +46,6 @@ export function theme(): void
     let theme: string;
 
     GetTheme != null ? theme = JSON.parse(GetTheme) : theme = "light";
-    
+
     theme === 'DARK' ?? changeTheme(darkTheme);
 }

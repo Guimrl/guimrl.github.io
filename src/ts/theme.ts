@@ -47,5 +47,7 @@ export function theme(): void {
 
     GetTheme != null ? theme = JSON.parse(GetTheme) : theme = "light";
 
-    theme === 'DARK' ?? changeTheme(darkTheme);
+    if (theme === 'DARK') {
+        changeTheme(darkTheme);
+    }
 }

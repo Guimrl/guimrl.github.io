@@ -1,25 +1,25 @@
-export function scrollSmooth() {
-    const menu = document.querySelectorAll('.navegacao a[href^="#"]');
+export function scrollSmooth(): void {
+    const menu: NodeListOf<HTMLAnchorElement> = document.querySelectorAll('.navegacao a[href^="#"]');
 
-    function descobreAdistanciaEntreASectionETopo(element: any) {
+    function getTheDistanceBetweenTheSectionAndTop(element: any): any {
         const id = element.getAttribute("href");
         return document.querySelector(id).offsetTop;
     }
 
-    function scrollNativo(distanciaEntreASectionETopo: any) {
-        window.scroll({
-            top: distanciaEntreASectionETopo,
+    function nativeScroll(distanceBetweenTheSectionAndTop: number): void {
+        window.scrollTo({
+            top: distanceBetweenTheSectionAndTop,
             behavior: "smooth"
         });
     }
 
-    function scrollSessao(event: any) {
+    function scrollToSection(event: any): void {
         event.preventDefault();
-        const distanciaEntreASectionETopo = descobreAdistanciaEntreASectionETopo(event.target) - 0;
-        scrollNativo(distanciaEntreASectionETopo);
+        const distanceBetweenTheSectionAndTop = getTheDistanceBetweenTheSectionAndTop(event.target) - 0;
+        nativeScroll(distanceBetweenTheSectionAndTop);
     }
 
     menu.forEach((link) => {
-        link.addEventListener("click", scrollSessao);
+        link.addEventListener("click", scrollToSection);
     });
 }

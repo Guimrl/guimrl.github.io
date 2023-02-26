@@ -8,7 +8,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import axios from '../../node_modules/axios';
-function getApi() {
+export function getApi() {
     return __awaiter(this, void 0, void 0, function* () {
         const res = yield axios.get('https://api.github.com/users/guimrl');
         return res.data;

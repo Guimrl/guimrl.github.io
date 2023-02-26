@@ -1,5 +1,4 @@
 export function theme() {
-    var _a;
     const input = document.querySelector('#theme');
     const root = document.documentElement;
     const lightTheme = {
@@ -37,5 +36,7 @@ export function theme() {
     let GetTheme = localStorage.getItem("PageTheme");
     let theme;
     GetTheme != null ? theme = JSON.parse(GetTheme) : theme = "light";
-    (_a = theme === 'DARK') !== null && _a !== void 0 ? _a : changeTheme(darkTheme);
+    if (theme === 'DARK') {
+        changeTheme(darkTheme);
+    }
 }

@@ -11,6 +11,7 @@ import '../assets/css/footer.css';
 import '../assets/css/modal.css';
 import '../assets/css/media/media.css';
 import { title } from './title.js';
+import { getApi } from './apiGithub.js';
 import { navBar } from './navBar.js';
 import { scrollSmooth } from './scrollSmooth.js';
 import { textDigit } from './textDigit.js';
@@ -21,6 +22,7 @@ const element = document.querySelector('#digit');
 const text = "Desenvolvedor web Full Stack.";
 const interval = 100;
 title();
+getApi();
 navBar();
 scrollSmooth();
 if (element) {

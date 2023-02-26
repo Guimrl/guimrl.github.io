@@ -1,10 +1,12 @@
 export function textDigit(element, text, interval) {
-    const char = text.split('').reverse();
+    const chars = text.split('');
+    let currentIndex = 0;
     const type = setInterval(() => {
-        if (!char.length) {
-            return clearInterval(type);
+        if (currentIndex >= chars.length) {
+            clearInterval(type);
+            return;
         }
-        let nextLetter = char.pop();
-        element.innerHTML += nextLetter;
+        element.innerHTML += chars[currentIndex];
+        currentIndex++;
     }, interval);
 }

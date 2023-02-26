@@ -1,4 +1,4 @@
-import { projetos } from "./projetos.js";
+import { projetos } from "./projetos";
 export function criaProjetos() {
     const section = document.querySelector('#projetos');
     projetos.forEach((projeto) => {

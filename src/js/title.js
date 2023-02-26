@@ -1,6 +1,7 @@
 export function title() {
-    let title = document.title;
+    let originalTitle = document.title;
     let counter = 0;
+    let isWindowFocused = true;
     let interval = setInterval(tradeTitle, 2000);
     let arrayTitle = [
         "Desenvolvedor Back end",
@@ -13,11 +14,17 @@ export function title() {
         counter++;
     }
     window.addEventListener('focus', () => {
-        document.title = title;
-        interval = setInterval(tradeTitle, 2000);
+        if (!isWindowFocused) {
+            isWindowFocused = true;
+            document.title = originalTitle;
+            interval = setInterval(tradeTitle, 2000);
+        }
     });
     window.addEventListener('blur', () => {
-        document.title = 'Volta aqui! ;(';
-        clearInterval(interval);
+        if (isWindowFocused) {
+            isWindowFocused = false;
+            document.title = 'Volta aqui! ;(';
+            clearInterval(interval);
+        }
     });
 }

@@ -1,13 +1,14 @@
-export function textDigit(element: Element, text: string, interval: number) {
-    const char: string[] = text.split('').reverse();
-    const type: any = setInterval(() => {
+export function textDigit(element: Element, text: string, interval: number): void {
+    const chars: string[] = text.split('');
+    let currentIndex: number = 0;
 
-        if (!char.length) {
-            return clearInterval(type);
+    const type: NodeJS.Timer = setInterval(() => {
+        if (currentIndex >= chars.length) {
+            clearInterval(type);
+            return;
         }
 
-        let nextLetter: string | undefined = char.pop();
-
-        element.innerHTML += nextLetter;
+        element.innerHTML += chars[currentIndex];
+        currentIndex++;
     }, interval);
 }

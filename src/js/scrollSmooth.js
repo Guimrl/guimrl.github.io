@@ -1,21 +1,21 @@
 export function scrollSmooth() {
     const menu = document.querySelectorAll('.navegacao a[href^="#"]');
-    function descobreAdistanciaEntreASectionETopo(element) {
+    function getTheDistanceBetweenTheSectionAndTop(element) {
         const id = element.getAttribute("href");
         return document.querySelector(id).offsetTop;
     }
-    function scrollNativo(distanciaEntreASectionETopo) {
-        window.scroll({
-            top: distanciaEntreASectionETopo,
+    function nativeScroll(distanceBetweenTheSectionAndTop) {
+        window.scrollTo({
+            top: distanceBetweenTheSectionAndTop,
             behavior: "smooth"
         });
     }
-    function scrollSessao(event) {
+    function scrollToSection(event) {
         event.preventDefault();
-        const distanciaEntreASectionETopo = descobreAdistanciaEntreASectionETopo(event.target) - 0;
-        scrollNativo(distanciaEntreASectionETopo);
+        const distanceBetweenTheSectionAndTop = getTheDistanceBetweenTheSectionAndTop(event.target) - 0;
+        nativeScroll(distanceBetweenTheSectionAndTop);
     }
     menu.forEach((link) => {
-        link.addEventListener("click", scrollSessao);
+        link.addEventListener("click", scrollToSection);
     });
 }

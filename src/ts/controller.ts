@@ -12,7 +12,7 @@ import '../assets/css/modal.css';
 import '../assets/css/media/media.css';
 
 import { title } from './title.js';
-// import { getApi } from './apiGithub.js';
+import { getApi } from './apiGithub.js';
 import { navBar } from './navBar.js';
 import { scrollSmooth } from './scrollSmooth.js';
 import { textDigit } from './textDigit.js';
@@ -25,7 +25,7 @@ const text: string = "Desenvolvedor web Full Stack.";
 const interval: number = 100;
 
 title();
-// getApi();
+getApi();
 navBar();
 scrollSmooth();
 if (element) {

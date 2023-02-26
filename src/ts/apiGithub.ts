@@ -1,7 +1,7 @@
 import axios from '../../node_modules/axios';
 import { User } from './interfaces/UserInterface';
 
-async function getApi(): Promise<User> {
+export async function getApi(): Promise<User> {
     const res = await axios.get<User>('https://api.github.com/users/guimrl');
     return res.data;
 }
@@ -14,12 +14,13 @@ getApi().then(user => {
         <img src="${user.avatar_url}" class="imagem" alt="${user.name} vestindo
         uma camiseta preta, com barba bem aparada e cabelo curto, em um fundo
         colorido com tonalidades de laranja e branco."> `;
+
     const criaNome = `<h2>${user.name}`;
 
-    if(img) {
+    if (img) {
         img.innerHTML = htmlImagem;
     }
-    if(name) {
+    if (name) {
         name.innerHTML = criaNome;
     }
 });

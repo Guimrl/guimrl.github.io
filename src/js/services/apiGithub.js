@@ -7,7 +7,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import axios from '../../node_modules/axios';
+import axios from 'axios';
 export function getApi() {
     return __awaiter(this, void 0, void 0, function* () {
         const res = yield axios.get('https://api.github.com/users/guimrl');
@@ -28,4 +28,13 @@ getApi().then(user => {
     if (name) {
         name.innerHTML = criaNome;
     }
+}).catch(erro => {
+    if (erro.request.status === 404) {
+        console.log('Erro 404');
+    }
+    else {
+        console.log(erro);
+    }
+}).finally(() => {
+    console.log('Página carregada com sucesso!');
 });

@@ -1,4 +1,4 @@
-import { projetos } from "./projetos";
+import { projetos } from "../services/projetos";
 export function criaProjetos() {
     const section = document.querySelector('#projetos');
     projetos.forEach((projeto) => {
@@ -10,7 +10,7 @@ export function criaProjetos() {
                 <figcaption class="descricao-projeto" id="${projeto.figId}">
                     ${projeto.descricao}
                     <br><br>
-                    <<a href="${projeto.link}" aria-labelledby="${projeto.figId}" id="btn-projeto"
+                    <a href="${projeto.link}" aria-labelledby="${projeto.figId}" id="btn-projeto"
                         target="_blank">Ver Site</a>
                 </figcaption>
         </figure>

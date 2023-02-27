@@ -1,4 +1,4 @@
-import { Theme } from "./interfaces/ThemeInterface";
+import { Theme } from "../interfaces/ThemeInterface";
 
 export function theme(): void {
     const input: HTMLInputElement | null = document.querySelector('#theme');

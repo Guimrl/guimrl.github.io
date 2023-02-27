@@ -1,5 +1,5 @@
-import axios from '../../node_modules/axios';
-import { User } from './interfaces/UserInterface';
+import axios from 'axios';
+import { User } from '../interfaces/UserInterface';
 
 export async function getApi(): Promise<User> {
     const res = await axios.get<User>('https://api.github.com/users/guimrl');
@@ -23,4 +23,12 @@ getApi().then(user => {
     if (name) {
         name.innerHTML = criaNome;
     }
-});
+}).catch(erro => {
+    if (erro.request.status === 404) {
+        console.log('Erro 404');
+    } else {
+        console.log(erro);
+    }
+}).finally(() => {
+        console.log('Página carregada com sucesso!');
+    });

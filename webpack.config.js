@@ -4,7 +4,7 @@ const CssMinimizerWebpackPlugin = require('css-minimizer-webpack-plugin');
 const path = require('path');
 
 module.exports = {
-    entry: './src/js/controllers/Controller.js',
+    entry: './src/js/main.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',

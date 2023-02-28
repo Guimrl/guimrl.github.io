@@ -11,15 +11,15 @@ import '../../assets/css/footer.css';
 import '../../assets/css/modal.css';
 import '../../assets/css/media/media.css';
 
-import { title } from '../utils/title.js';
-import { getApi } from '../services/apiGithub.js';
-import { navBar } from '../views/navBar.js';
-import { scrollSmooth } from '../utils/scrollSmooth.js';
-import { textDigit } from '../utils/textDigit.js';
-import { theme } from '../utils/theme.js';
-import { modal } from '../views/modal.js';
-import { criaProjetos } from '../views/criaProjetos.js';
-import { footer } from '../views/footer.js';
+import { title } from '../utils/title';
+import { getApi } from '../services/apiGithub';
+import { navBar } from '../views/navBar';
+import { scrollSmooth } from '../utils/scrollSmooth';
+import { textDigit } from '../utils/textDigit';
+import { theme } from '../utils/theme';
+import { modal } from '../views/modal';
+import { criaProjetos } from '../views/criaProjetos';
+import { footer } from '../views/footer';
 
 const element: HTMLElement | null = document.querySelector('#digit');
 const text: string = "Desenvolvedor web Full Stack.";

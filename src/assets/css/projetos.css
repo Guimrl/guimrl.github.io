@@ -4,11 +4,11 @@
     margin: 0 auto;
     padding: 0 20px 20px 20px;
     display: grid;
-    grid-template-areas: 
-    "t t t"
-    "i i i"
-    "i i i"
-    "i i i";
+    grid-template-areas:
+        "t t t"
+        "i i i"
+        "i i i"
+        "i i i";
     gap: 10px 10px;
     justify-content: center;
     align-items: center;
@@ -19,7 +19,7 @@
 .projeto-container-titulo {
     grid-area: t;
     grid-column: t;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     font-size: 2em;
     color: var(--main-color);
     text-align: center;
@@ -40,7 +40,7 @@
 }
 
 /* Hover da imagem */
-img:hover {
+.projeto-imagem:hover {
     transform: scale(1.1);
     transition: all 0.5s;
     filter: grayscale(100%);
@@ -57,7 +57,6 @@ img:hover {
     width: 80%;
     transform: translate(-50%, -50%);
     color: transparent;
-    transition: all .5s;
     line-height: 1.438em;
     font-weight: bold;
 }

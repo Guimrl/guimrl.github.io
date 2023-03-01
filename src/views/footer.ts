@@ -1,6 +1,6 @@
 export function footer() {
     let footer = document.querySelector("#footerTag");
-    
+
     if (footer) {
         footer.innerHTML += `
         <div class="footer">

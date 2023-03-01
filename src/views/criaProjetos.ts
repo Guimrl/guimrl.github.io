@@ -6,7 +6,7 @@ export function criaProjetos(): void {
     projetos.forEach((projeto: Projetos) => {
         const div: HTMLElement = document.createElement("div");
         div.classList.add("projetos");
-        
+
         div.innerHTML = `
         <figure id="projeto-conteudo" class="projeto-conteudo">
             <img src="${projeto.imagem}" alt="${projeto.alt}" class="projeto-imagem" loading="lazy">

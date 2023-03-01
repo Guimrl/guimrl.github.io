@@ -1,5 +1,4 @@
-export function modal(): void
-{
+export function modal(): void {
     const openModal: HTMLElement | null = document.querySelector('#abrir-modal');
     const closeModal: HTMLElement | null = document.querySelector('#fechar-modal');
     const modal: HTMLElement | null = document.querySelector('#modal');

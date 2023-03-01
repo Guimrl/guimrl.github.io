@@ -30,5 +30,5 @@ getApi().then(user => {
         console.log(erro);
     }
 }).finally(() => {
-        console.log('Página carregada com sucesso!');
-    });
+    console.log('Página carregada com sucesso!');
+});

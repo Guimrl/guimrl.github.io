@@ -3,5 +3,5 @@
 </div>
 
 <div align="center">
-    <p> &copy; Guilherme Amaral Owner into Touro Manco Produções - 2023 </p>
+    <p> &copy; Guilherme Amaral - 2023 </p>
 </div>

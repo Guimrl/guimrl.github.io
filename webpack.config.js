@@ -27,15 +27,13 @@ module.exports = {
                 exclude: /node_modules/
             }
         ]
-    }, resolve: {
+    },
+    resolve: {
         extensions: ['.ts', '.js']
     },
     optimization: {
         minimize: true,
-        minimizer: [
-            new CssMinimizerWebpackPlugin(),
-            '...'
-        ]
+        minimizer: [new CssMinimizerWebpackPlugin(), '...']
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -47,4 +45,4 @@ module.exports = {
             filename: 'style.css'
         })
     ]
-}
+};

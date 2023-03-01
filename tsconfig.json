@@ -10,9 +10,7 @@
         "moduleResolution": "node",
         "baseUrl": ".",
         "paths": {
-            "@axios/*": [
-                "node_modules/axios/*"
-            ]
+            "@axios/*": ["node_modules/axios/*"]
         }
         // "sourceMap": true
     },

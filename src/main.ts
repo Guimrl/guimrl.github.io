@@ -1,15 +1,15 @@
-import '../assets/css/document.css';
-import '../assets/css/principal.css';
-import '../assets/css/navbar.css';
-import '../assets/css/root.css';
-import '../assets/css/dark-mode.css';
-import '../assets/css/scrollbar.css';
-import '../assets/css/sobre.css';
-import '../assets/css/botoes.css';
-import '../assets/css/projetos.css';
-import '../assets/css/footer.css';
-import '../assets/css/modal.css';
-import '../assets/css/media/media.css';
+import './assets/css/document.css';
+import './assets/css/principal.css';
+import './assets/css/navbar.css';
+import './assets/css/root.css';
+import './assets/css/dark-mode.css';
+import './assets/css/scrollbar.css';
+import './assets/css/sobre.css';
+import './assets/css/botoes.css';
+import './assets/css/projetos.css';
+import './assets/css/footer.css';
+import './assets/css/modal.css';
+import './assets/css/media/media.css';
 
 import { title } from './utils/title';
 import { getApi } from './services/apiGithub';

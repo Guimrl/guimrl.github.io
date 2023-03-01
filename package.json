@@ -4,8 +4,8 @@
     "description": "<div align=\"center\">\r     <p> &copy; Guilherme Amaral - 2023 </p>\r </div>",
     "main": "index.js",
     "scripts": {
-        "start": "webpack serve --hot --mode development --config webpack.config.js",
-        "build": "webpack --mode production --config webpack.config.js"
+        "start": "tsc && webpack serve --hot --mode development --config webpack.config.js",
+        "build": "tsc && webpack --mode production --config webpack.config.js"
     },
     "repository": {
         "type": "git",

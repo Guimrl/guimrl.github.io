@@ -22,6 +22,7 @@ import { modal } from './views/modal';
 import { criaProjetos } from './views/criaProjetos';
 import { footer } from './views/footer';
 import { hideMaintenance, maintenance } from './views/maintenance';
+import { createModal } from './views/createModal';
 
 const element: HTMLElement | null = document.querySelector('#digit');
 const text: string = "Desenvolvedor web Full Stack.";
@@ -30,6 +31,7 @@ const interval: number = 100;
 title();
 getApi();
 navBar();
+createModal();
 scrollSmooth();
 if (element) {
     textDigit(element, text, interval);

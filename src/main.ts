@@ -19,7 +19,7 @@ import { scrollSmooth } from './utils/scrollSmooth';
 import { textDigit } from './utils/textDigit';
 import { theme } from './utils/theme';
 import { modal } from './views/modal';
-import { criaProjetos } from './views/criaProjetos';
+import { createProjects } from './views/createProjects';
 import { footer } from './views/footer';
 import { hideMaintenance, maintenance } from './views/maintenance';
 import { createModal } from './views/createModal';
@@ -38,7 +38,7 @@ if (element) {
 }
 theme();
 modal();
-criaProjetos();
+createProjects();
 footer();
 
 

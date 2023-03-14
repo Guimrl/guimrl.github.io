@@ -24,16 +24,20 @@
         <h3 class="h2Maintenance">Página em manutenção</h3>
         <h4>Voltaremos em breve com novidades</h4>
     </div>
+
     <header role="dialog" aria-labelledby="nav">
         <nav>
-            <button class="navbar-btn open-btn" title="abrir barra lateral">
+            <!--navbar-btn-->
+            <button id="open-btnson" title="abrir barra de navegação lateral">
                 <i class="fas fa-bars"></i>
             </button>
-            <div class="nav" id="nav">
-                <button class="navbar-btn close-btn" title="fechar barra lateral">
+            <div id="fadeNavson"></div>
+            <div id="navson" class="navson">
+                <!--navbar-btn-->
+                <button id="close-btnson" title="fechar barra de navegação lateral">
                     <i class="fas fa-times"></i>
                 </button>
-                <ul class="navegacao">
+                <ul class="navegacaoson">
                     <li>
                         <a href="#inicio" title="pular para início">início</a>
                     </li>
@@ -54,6 +58,7 @@
                         <div class="ball"></div>
                     </label>
                 </div>
+            </div>
             </div>
         </nav>
     </header>
@@ -101,37 +106,7 @@
             </div>
         </section>
 
-        <section id="sobre" class="container">
-            <article id="artigo">
-                <div id="nome"></div>
-                <p id="titulo"><i>Desenvolvedor Web Full-Stack</i></p>
-                <p class="descricao">
-                    Entusiasta e Amante da programação, cursando Análise e
-                    Desenvolvimento de Sistemas na universidade de ensino
-                    Estácio de Sá, atualmente no 4° semestre.
-                </p>
-                <p>
-                    Trabalho na
-                    <span class="highlight">Target.IT</span> como Estagiário
-                    de Desenvolvimento.
-                </p>
-                <br />
-                <p class="descricao">
-                    Atuo tanto no
-                    <span class="highlight">front-end</span> como no
-                    <span class="highlight">back-end</span>, estudo todos os
-                    dias buscando aprimorar meus conhecimentos e habilidades
-                    para me tornar cada vez melhor no que faço.
-                </p>
-
-                <button type="application/pdf" class="btn-cv" id="abrir-modal">
-                    <i class="fa-solid fa-cloud-arrow-down"></i><span class="cv-letra"
-                        title="Botão para baixar o currículo em pdf">
-                        Download CV</span>
-                </button>
-                <div id="divModal"></div>
-            </article>
-        </section>
+        <section id="sobre" class="container"></section>
 
         <section id="projetos" class="projetos-container">
             <h2 class="projeto-container-titulo">Projetos</h2>
@@ -139,5 +114,4 @@
     </main>
     <footer id="footerTag"></footer>
 </body>
-
 </html>

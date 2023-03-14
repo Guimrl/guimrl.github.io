@@ -23,11 +23,13 @@ import { createProjects } from './views/createProjects';
 import { footer } from './views/footer';
 import { hideMaintenance, maintenance } from './views/maintenance';
 import { createModal } from './views/createModal';
+import { aboutSection } from './views/aboutSection';
 
 const element: HTMLElement | null = document.querySelector('#digit');
 const text: string = "Desenvolvedor web Full Stack.";
 const interval: number = 100;
 
+aboutSection();
 title();
 getApi();
 navBar();

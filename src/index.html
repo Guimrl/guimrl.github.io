@@ -24,20 +24,17 @@
         <h3 class="h2Maintenance">Página em manutenção</h3>
         <h4>Voltaremos em breve com novidades</h4>
     </div>
-
     <header role="dialog" aria-labelledby="nav">
         <nav>
-            <!--navbar-btn-->
-            <button id="open-btnson" title="abrir barra de navegação lateral">
+            <button id="open-btnson" class="navbar-btn" title="abrir barra de navegação lateral">
                 <i class="fas fa-bars"></i>
             </button>
-            <div id="fadeNavson"></div>
-            <div id="navson" class="navson">
-                <!--navbar-btn-->
-                <button id="close-btnson" title="fechar barra de navegação lateral">
+            <div id="fadeNavson" class="navHide"></div>
+            <div id="navson" class="navson navHide">
+                <button id="close-btnson" class="navbar-btn" title="fechar barra de navegação lateral">
                     <i class="fas fa-times"></i>
                 </button>
-                <ul class="navegacaoson">
+                <ul class="navegacao">
                     <li>
                         <a href="#inicio" title="pular para início">início</a>
                     </li>
@@ -51,7 +48,7 @@
 
                 <div id="dark-mode-theme">
                     <input type="checkbox" name="theme" id="theme" class="checkbox"
-                        title="alterar tema da página entre claro/escuro" />
+                        title="alterar tema da página entre claro ou escuro" />
                     <label for="theme" class="dark-mode">
                         <i class="fas fa-sun"></i>
                         <i class="fas fa-moon"></i>
@@ -62,6 +59,7 @@
             </div>
         </nav>
     </header>
+
 
     <main role="main">
         <section id="inicio" class="container">
@@ -114,4 +112,5 @@
     </main>
     <footer id="footerTag"></footer>
 </body>
+
 </html>

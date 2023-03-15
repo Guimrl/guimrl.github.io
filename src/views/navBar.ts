@@ -1,41 +1,21 @@
 export function navBar(): void {
     const links: NodeListOf<Element> = document.querySelectorAll('.navegacao a[href^="#"]');
-    //const btns: NodeListOf<Element> = document.querySelectorAll('.open-btn, .close-btn');
-    const openNav = document.querySelector("#open-btnson");
-    const closeNav = document.querySelector("#close-btnson");
-    //const nav: Element | null = document.querySelector('.nav');
-    const navson = document.querySelector("#navson");
-    const fadeNavson = document.querySelector("#fadeNavson");
+    const openNav: Element | null = document.querySelector("#open-btn");
+    const closeNav: Element | null = document.querySelector("#close-btn");
+    const nav: Element | null = document.querySelector("#nav");
+    const fadeNav: Element | null = document.querySelector("#fadeNav");
 
     const toggleNav = () => {
-        navson?.classList.toggle("navHide");
-        fadeNavson?.classList.toggle("navHide");
+        nav?.classList.toggle("navHide");
+        fadeNav?.classList.toggle("navHide");
     }
 
-    [openNav, closeNav, fadeNavson].forEach((el) => {
+    [openNav, closeNav, fadeNav].forEach((el) => {
         el?.addEventListener("click", () => toggleNav());
     });
 
+    links.forEach((link) => {
+        link.addEventListener("click", () => toggleNav());
+    });
 
-
-
-
-
-
-
-
-
-
-
-    //btns.forEach((btn) => {
-    //  btn.addEventListener('click', () => {
-    //    nav?.classList.toggle('visivel');
-    //});
-    //});
-
-    //links.forEach((link) => {
-    //link.addEventListener('click', () => {
-    //nav?.classList.remove('visivel');
-    //});
-    //});
 }

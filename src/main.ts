@@ -29,7 +29,7 @@ const element: HTMLElement | null = document.querySelector('#digit');
 const text: string = "Desenvolvedor web Full Stack.";
 const interval: number = 100;
 
-maintenance();
+//maintenance();
 
 aboutSection();
 title();
@@ -47,4 +47,4 @@ footer();
 
 
 
-//hideMaintenance();
+hideMaintenance();

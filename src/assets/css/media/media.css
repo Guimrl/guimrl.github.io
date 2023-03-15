@@ -9,11 +9,11 @@
 
     .projetos-container {
         grid-template-areas:
-        "t t"
-        "i i"
-        "i i"
-        "i i"
-        "i i";
+            "t t"
+            "i i"
+            "i i"
+            "i i"
+            "i i";
     }
 }
 
@@ -22,8 +22,20 @@
         font-size: 1.5em;
     }
 
-    .nav.visivel {
-        width: 50%;
+    #nav {
+        width: 100%;
+    }
+
+    .navegacao,
+    .navegacao li,
+    .navegacao li a {
+        list-style-type: none;
+        text-decoration: none;
+        /* display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 1rem; */
+        color: var(--main-text-color);
     }
 
     .projeto-container-titulo {
@@ -32,10 +44,10 @@
 
     .projetos-container {
         grid-template-areas:
-        "t"
-        "i"
-        "i"
-        "i"
-        "i";
+            "t"
+            "i"
+            "i"
+            "i"
+            "i";
     }
 }

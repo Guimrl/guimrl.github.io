@@ -21,17 +21,24 @@ import { theme } from './utils/theme';
 import { modal } from './views/modal';
 import { createProjects } from './views/createProjects';
 import { footer } from './views/footer';
-import { hideMaintenance, maintenance } from './views/maintenance';
+import { hideMaintenance, onMaintenance } from './views/maintenance';
 import { createModal } from './views/createModal';
 import { aboutSection } from './views/aboutSection';
+import { createNav } from './views/createNav';
+import { createHome } from './views/createHome';
+import { createMaintenance } from './views/createMaintenance';
 
 const element: HTMLElement | null = document.querySelector('#digit');
 const text: string = "Desenvolvedor web Full Stack.";
 const interval: number = 100;
 
-//maintenance();
+//onMaintenance();
 
+
+createMaintenance();
+createHome();
 aboutSection();
+createNav();
 title();
 getApi();
 navBar();

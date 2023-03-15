@@ -17,5 +17,4 @@ export function navBar(): void {
     links.forEach((link) => {
         link.addEventListener("click", () => toggleNav());
     });
-
 }

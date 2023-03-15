@@ -3,7 +3,7 @@ export function aboutSection(): void {
 
     if (aboutSection) {
         aboutSection.innerHTML = `
-        <article id="artigo">
+            <article id="artigo">
                 <div id="nome"></div>
                 <p id="titulo"><i>Desenvolvedor Web Full-Stack</i></p>
                 <p class="descricao">

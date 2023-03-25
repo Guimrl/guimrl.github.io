@@ -23,7 +23,7 @@
     }
 
     #nav {
-        width: 100%;
+        width: 65%;
     }
 
     .navegacao,
@@ -31,10 +31,6 @@
     .navegacao li a {
         list-style-type: none;
         text-decoration: none;
-        /* display: flex;
-        justify-content: center;
-        flex-direction: column;
-        gap: 1rem; */
         color: var(--main-text-color);
     }
 

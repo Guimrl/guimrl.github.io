@@ -4,13 +4,14 @@ export function navBar(): void {
     const closeNav: Element | null = document.querySelector("#close-btn");
     const nav: Element | null = document.querySelector("#nav");
     const fadeNav: Element | null = document.querySelector("#fadeNav");
+    const input = document.querySelector("input");
 
     const toggleNav = () => {
         nav?.classList.toggle("navHide");
         fadeNav?.classList.toggle("navHide");
     }
 
-    [openNav, closeNav, fadeNav].forEach((el) => {
+    [openNav, closeNav, fadeNav, input].forEach((el) => {
         el?.addEventListener("click", () => toggleNav());
     });
 

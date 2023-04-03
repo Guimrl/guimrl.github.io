@@ -12,7 +12,7 @@ export function theme(): void {
     };
 
     const darkTheme: Theme = {
-        '--main-color': '#F39C12',
+        '--main-color': '#ED6237',
         '--main-text-color': '#EEEEEE',
         '--main-bg-color': '#333333',
         '--bg-color': '#262626'

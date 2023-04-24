@@ -17,16 +17,19 @@ export function theme(): void {
         '--main-bg-color': '#333333',
         '--bg-color': '#262626'
     };
-
+    const ball: HTMLElement | null = document.querySelector('.dark-mode .ball');
     input?.addEventListener('change', () => {
         let GetTheme: string;
 
-        if ((input as HTMLInputElement).checked) {
+
+        if (input.checked) {
             GetTheme = 'DARK';
             changeTheme(darkTheme);
+            ball?.classList.add("active");
         } else {
             GetTheme = 'LIGHT';
             changeTheme(lightTheme);
+            ball?.classList.add("disable");
         }
 
         localStorage.setItem("PageTheme", JSON.stringify(GetTheme));
@@ -45,9 +48,16 @@ export function theme(): void {
     let GetTheme: string | null = localStorage.getItem("PageTheme");
     let theme: string;
 
-    GetTheme != null ? theme = JSON.parse(GetTheme) : theme = "light";
+    GetTheme != null ? theme = JSON.parse(GetTheme) : theme = "LIGHT";
 
     if (theme === 'DARK') {
+        input?.checked;
+        // ball?.classList.add("active");
+        ball?.classList.add("active");
         changeTheme(darkTheme);
+    } else {
+
+        ball?.classList.add("disable");
+        changeTheme(lightTheme);
     }
 }

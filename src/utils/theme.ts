@@ -17,17 +17,17 @@ export function theme(): void {
         '--main-bg-color': '#333333',
         '--bg-color': '#262626'
     };
+
     const ball: HTMLElement | null = document.querySelector('.dark-mode .ball');
     input?.addEventListener('change', () => {
         let GetTheme: string;
 
-
         if (input.checked) {
-            GetTheme = 'DARK';
+            GetTheme = "DARK";
             changeTheme(darkTheme);
             ball?.classList.add("active");
         } else {
-            GetTheme = 'LIGHT';
+            GetTheme = "LIGHT";
             changeTheme(lightTheme);
             ball?.classList.add("disable");
         }
@@ -50,13 +50,16 @@ export function theme(): void {
 
     GetTheme != null ? theme = JSON.parse(GetTheme) : theme = "LIGHT";
 
-    if (theme === 'DARK') {
-        input?.checked;
-        // ball?.classList.add("active");
+    if (theme === "DARK") {
+        if (input) {
+            input.checked = true;
+        }
         ball?.classList.add("active");
         changeTheme(darkTheme);
     } else {
-
+        if (input) {
+            input.checked = false;
+        }
         ball?.classList.add("disable");
         changeTheme(lightTheme);
     }

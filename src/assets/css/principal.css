@@ -1,3 +1,11 @@
+.progress {
+    height: .5rem;
+    width: 0%;
+    position: fixed;
+    background-color: var(--main-color);
+    z-index: 1000;
+}
+
 .highlight {
     color: var(--main-color);
 }

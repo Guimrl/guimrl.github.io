@@ -27,15 +27,18 @@ import { aboutSection } from './views/aboutSection';
 import { createNav } from './views/createNav';
 import { createHome } from './views/createHome';
 import { createMaintenance } from './views/createMaintenance';
+import { progress } from './utils/progress';
 
 const element: HTMLElement | null = document.querySelector('#digit');
 const text: string = "Desenvolvedor web Full Stack.";
 const interval: number = 100;
 
-//onMaintenance();
-
-
 createMaintenance();
+
+//onMaintenance();
+hideMaintenance();
+
+progress();
 createHome();
 aboutSection();
 createNav();
@@ -51,7 +54,3 @@ theme();
 modal();
 createProjects();
 footer();
-
-
-
-hideMaintenance();

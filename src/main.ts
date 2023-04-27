@@ -19,7 +19,6 @@ import { scrollSmooth } from './utils/scrollSmooth';
 import { textDigit } from './utils/textDigit';
 import { theme } from './utils/theme';
 import { modal } from './views/modal';
-import { createProjects } from './views/createProjects';
 import { footer } from './views/footer';
 import { hideMaintenance, onMaintenance } from './views/maintenance';
 import { createModal } from './views/createModal';
@@ -28,6 +27,8 @@ import { createNav } from './views/createNav';
 import { createHome } from './views/createHome';
 import { createMaintenance } from './views/createMaintenance';
 import { progress } from './utils/progress';
+import { apiProjects } from './services/apiProjects';
+import { createProjects } from './views/createProjects';
 
 const element: HTMLElement | null = document.querySelector('#digit');
 const text: string = "Desenvolvedor web Full Stack.";
@@ -52,5 +53,5 @@ if (element) {
 }
 theme();
 modal();
-createProjects();
+apiProjects().then(projects => createProjects(projects));
 footer();

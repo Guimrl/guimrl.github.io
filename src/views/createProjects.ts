@@ -1,24 +1,22 @@
-import { Projects } from "../interfaces/ProjectsInterface";
-import { projects } from "../services/projects";
+import { Projects } from "src/interfaces/ProjectsInterface";
 
-export function createProjects(): void {
-    const section: HTMLElement | null = document.querySelector('#projetos');
-    projects.forEach((project: Projects) => {
+const section: HTMLElement | null = document.querySelector("#projetos");
+export function createProjects(projects: Projects[]): void {
+    projects.forEach((project) => {
+        const { alt, description, image, url, _id } = project;
         const div: HTMLElement = document.createElement("div");
         div.classList.add("projetos");
-
         div.innerHTML = `
         <figure id="projeto-conteudo" class="projeto-conteudo">
-            <img src="${project.imagem}" alt="${project.alt}" class="projeto-imagem" loading="lazy">
-                <figcaption class="descricao-projeto" id="${project.figId}">
-                    ${project.descricao}
+            <img src="${image}" alt="${alt}" class="projeto-imagem" loading="lazy">
+                <figcaption class="descricao-projeto" id="${_id}">
+                    ${description}
                     <br><br>
-                    <a href="${project.link}" aria-labelledby="${project.figId}" id="btn-projeto"
+                    <a href="${url}" aria-labelledby="${_id}" id="btn-projeto"
                         target="_blank">Ver Site</a>
                 </figcaption>
         </figure>
-        `;
-
+        `
         if (section) {
             section.appendChild(div);
         }

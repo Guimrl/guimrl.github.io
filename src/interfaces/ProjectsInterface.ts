@@ -1,7 +1,7 @@
 export interface Projects {
-    imagem: string;
     alt: string;
-    descricao: string;
-    link: string;
-    figId: string;
+    description: string;
+    image: string;
+    url: string;
+    _id: string;
 }

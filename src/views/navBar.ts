@@ -1,21 +1,24 @@
-export function navBar(): void {
-    const links: NodeListOf<Element> = document.querySelectorAll('.navegacao a[href^="#"]');
-    const openNav: Element | null = document.querySelector("#open-btn");
-    const closeNav: Element | null = document.querySelector("#close-btn");
-    const nav: Element | null = document.querySelector("#nav");
-    const fadeNav: Element | null = document.querySelector("#fadeNav");
-    const input = document.querySelector("input");
 
-    const toggleNav = () => {
-        nav?.classList.toggle("navHide");
-        fadeNav?.classList.toggle("navHide");
+export class NavBar {
+    private links: NodeListOf<Element> = document.querySelectorAll('.navegacao a[href^="#"]');
+    private openNav: Element | null = document.querySelector("#open-btn");
+    private closeNav: Element | null = document.querySelector("#close-btn");
+    private nav: Element | null = document.querySelector("#nav");
+    private fadeNav: Element | null = document.querySelector("#fadeNav");
+    private input: HTMLInputElement | null = document.querySelector("input");
+
+    public togleNav(): void {
+        [this.openNav, this.closeNav, this.fadeNav, this.input].forEach((el) => {
+            el?.addEventListener("click", () => this.btnTogleNav());
+        });
+
+        this.links.forEach((link) => {
+            link.addEventListener("click", () => this.btnTogleNav());
+        });
     }
 
-    [openNav, closeNav, fadeNav, input].forEach((el) => {
-        el?.addEventListener("click", () => toggleNav());
-    });
-
-    links.forEach((link) => {
-        link.addEventListener("click", () => toggleNav());
-    });
+    private btnTogleNav(): void {
+        this.nav?.classList.toggle("navHide");
+        this.fadeNav?.classList.toggle("navHide");
+    }
 }

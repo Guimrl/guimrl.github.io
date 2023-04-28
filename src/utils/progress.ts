@@ -1,12 +1,17 @@
-export function progress() {
-    const progress: HTMLElement | null = document.querySelector("#progress");
-    window.addEventListener('scroll', () => {
-        let height = document.body.scrollHeight - window.innerHeight;
-        let scrollPosition = document.documentElement.scrollTop;
-        let width = (scrollPosition / height) * 100;
 
-        if (progress) {
-            progress.style.width = `${width}%`;
-        }
-    });
+export class Progress {
+    private progress: HTMLElement | null = document.querySelector("#progress");
+
+    public scroll(): void {
+
+        window.addEventListener('scroll', () => {
+            let height: number = document.body.scrollHeight - window.innerHeight;
+            let scrollPosition: number = document.documentElement.scrollTop;
+            let width: number = (scrollPosition / height) * 100;
+
+            if (this.progress) {
+                this.progress.style.width = `${width}%`;
+            }
+        });
+    }
 }

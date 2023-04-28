@@ -24,7 +24,7 @@ import { aboutSection } from './views/aboutSection';
 import { createNav } from './views/createNav';
 import { createHome } from './views/createHome';
 import { createMaintenance } from './views/createMaintenance';
-import { apiProjects } from './services/apiProjects';
+import { ApiProjects } from './services/ApiProjects';
 import { createProjects } from './views/createProjects';
 import { Progress } from './utils/progress';
 import { NavBar } from './views/navBar';
@@ -63,5 +63,7 @@ theme();
 const modal: Modal = new Modal();
 modal.togleModal();
 
-apiProjects().then(projects => createProjects(projects));
+const apiProjects: ApiProjects = new ApiProjects();
+apiProjects.getData().then(projects => createProjects(projects));
+
 footer();

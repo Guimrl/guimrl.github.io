@@ -5,6 +5,10 @@ export class Modal {
     private modal: HTMLElement | null = document.querySelector('#modal');
     private fade: HTMLElement | null = document.querySelector('#fade');
 
+    private btnToggleModal(): void {
+        [this.modal, this.fade].forEach((el) => el?.classList.toggle("hide"));
+    }
+
     public togleModal(): void {
         [this.openModal, this.closeModal, this.fade].forEach((el) => {
             const dialogUnavailable: HTMLElement | null = document.querySelector('#dialogConteudoIndisponivel');
@@ -20,7 +24,4 @@ export class Modal {
         });
     }
 
-    private btnToggleModal(): void {
-        [this.modal, this.fade].forEach((el) => el?.classList.toggle("hide"));
-    }
 }

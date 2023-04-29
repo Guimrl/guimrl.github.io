@@ -7,6 +7,11 @@ export class NavBar {
     private fadeNav: Element | null = document.querySelector("#fadeNav");
     private input: HTMLInputElement | null = document.querySelector("input");
 
+    private btnTogleNav(): void {
+        this.nav?.classList.toggle("navHide");
+        this.fadeNav?.classList.toggle("navHide");
+    }
+
     public togleNav(): void {
         [this.openNav, this.closeNav, this.fadeNav, this.input].forEach((el) => {
             el?.addEventListener("click", () => this.btnTogleNav());
@@ -15,10 +20,5 @@ export class NavBar {
         this.links.forEach((link) => {
             link.addEventListener("click", () => this.btnTogleNav());
         });
-    }
-
-    private btnTogleNav(): void {
-        this.nav?.classList.toggle("navHide");
-        this.fadeNav?.classList.toggle("navHide");
     }
 }

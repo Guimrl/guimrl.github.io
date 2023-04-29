@@ -12,23 +12,23 @@ import './assets/css/modal.css';
 import './assets/css/media/media.css';
 import './assets/css/maintenance.css'
 
-import { title } from './utils/title';
 import { getApi } from './services/apiGithub';
 import { scrollSmooth } from './utils/scrollSmooth';
 import { theme } from './utils/theme';
-import { Modal } from './views/modal';
-import { footer } from './views/footer';
+import { Modal } from './views/Modal';
 import { hideMaintenance, onMaintenance } from './views/maintenance';
 import { createModal } from './views/createModal';
 import { aboutSection } from './views/aboutSection';
 import { createNav } from './views/createNav';
-import { createHome } from './views/createHome';
 import { createMaintenance } from './views/createMaintenance';
 import { ApiProjects } from './services/ApiProjects';
 import { createProjects } from './views/createProjects';
 import { Progress } from './utils/progress';
-import { NavBar } from './views/navBar';
+import { NavBar } from './views/NavBar';
 import { textDigit } from './utils/textDigit';
+import { Home } from './views/Home';
+import { Footer } from './views/Footer';
+import { title } from './utils/title';
 
 const element: HTMLElement | null = document.querySelector('#digit');
 const text: string = "Desenvolvedor web Full Stack.";
@@ -42,7 +42,9 @@ hideMaintenance();
 const progress: Progress = new Progress();
 progress.scroll();
 
-createHome();
+const home: Home = new Home();
+home.createHome();
+
 aboutSection();
 createNav();
 title();
@@ -66,4 +68,5 @@ modal.togleModal();
 const apiProjects: ApiProjects = new ApiProjects();
 apiProjects.getData().then(projects => createProjects(projects));
 
-footer();
+const footer: Footer = new Footer();
+footer.createFooter();

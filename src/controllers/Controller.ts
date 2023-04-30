@@ -14,7 +14,6 @@ import '../assets/css/maintenance.css';
 
 import { createMaintenance } from '../views/createMaintenance';
 import { hideMaintenance } from '../views/maintenance';
-import { Progress } from '../utils/progress';
 import { Home } from '../views/Home';
 import { aboutSection } from '../views/aboutSection';
 import { createNav } from '../views/createNav';
@@ -23,12 +22,13 @@ import { getApi } from '../services/apiGithub';
 import { NavBar } from '../views/NavBar';
 import { createModal } from '../views/createModal';
 import { scrollSmooth } from '../utils/scrollSmooth';
-import { textDigit } from '../utils/textDigit';
 import { theme } from '../utils/theme';
 import { Modal } from '../views/Modal';
 import { ApiProjects } from '../services/ApiProjects';
 import { createProjects } from '../views/createProjects';
 import { Footer } from '../views/Footer';
+import { Progress } from '../utils/Progress';
+import { TextTyper } from '../utils/TextTyper';
 
 export class Controller {
 
@@ -59,9 +59,8 @@ export class Controller {
         createModal();
         scrollSmooth();
 
-        if (element) {
-            textDigit(element, text, interval);
-        }
+        const typer: TextTyper = new TextTyper();
+        typer.start(element, text, interval);
 
         theme();
 

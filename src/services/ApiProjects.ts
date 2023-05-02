@@ -1,9 +1,12 @@
 import { Projects } from "src/interfaces/ProjectsInterface";
+import { Api } from "./Api";
 
-export class ApiProjects {
-    private url: RequestInfo | URL = "https://api-mini-projetos.up.railway.app/nprojects";
+export class ApiProjects extends Api {
+    constructor(url: RequestInfo | URL) {
+        super(url);
+    }
 
-    public async getData(): Promise<Projects[]> {
+    async getData(): Promise<Projects[]> {
         const res: Response = await fetch(this.url);
         const data: Projects[] = await res.json();
 

@@ -18,17 +18,18 @@ import { Home } from '../views/Home';
 import { aboutSection } from '../views/aboutSection';
 import { createNav } from '../views/createNav';
 import { title } from '../utils/title';
-import { getApi } from '../services/apiGithub';
 import { NavBar } from '../views/NavBar';
 import { createModal } from '../views/createModal';
 import { scrollSmooth } from '../utils/scrollSmooth';
 import { theme } from '../utils/theme';
 import { Modal } from '../views/Modal';
-import { ApiProjects } from '../services/ApiProjects';
 import { createProjects } from '../views/createProjects';
 import { Footer } from '../views/Footer';
 import { Progress } from '../utils/Progress';
 import { TextTyper } from '../utils/TextTyper';
+import { ApiFactory } from '../services/ApiFactory';
+import { ApiGithub } from 'src/services/apiGithub';
+import { ApiProjects } from '../services/ApiProjects';
 
 export class Controller {
 
@@ -51,7 +52,7 @@ export class Controller {
         aboutSection();
         createNav();
         title();
-        getApi();
+        // getApi();
 
         const nav: NavBar = new NavBar();
         nav.togleNav();
@@ -67,8 +68,11 @@ export class Controller {
         const modal: Modal = new Modal();
         modal.togleModal();
 
-        const apiProjects: ApiProjects = new ApiProjects();
-        apiProjects.getData().then(projects => createProjects(projects));
+        const projectsApi: ApiProjects = ApiFactory.createProjectsApi();
+        projectsApi.getData().then(projects => createProjects(projects));
+
+        const githubApi: ApiGithub = ApiFactory.createUserApi();
+        githubApi.getData().then(data => console.log(data))
 
         const footer: Footer = new Footer();
         footer.createFooter();

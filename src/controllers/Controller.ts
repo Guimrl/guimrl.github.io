@@ -28,8 +28,9 @@ import { Footer } from '../views/Footer';
 import { Progress } from '../utils/Progress';
 import { TextTyper } from '../utils/TextTyper';
 import { ApiFactory } from '../services/ApiFactory';
-import { ApiGithub } from 'src/services/apiGithub';
+import { ApiGithub } from '../services/ApiGithub';
 import { ApiProjects } from '../services/ApiProjects';
+import { ApiGithubView } from '../views/ApiGithubView';
 
 export class Controller {
 
@@ -52,7 +53,6 @@ export class Controller {
         aboutSection();
         createNav();
         title();
-        // getApi();
 
         const nav: NavBar = new NavBar();
         nav.togleNav();
@@ -72,7 +72,12 @@ export class Controller {
         projectsApi.getData().then(projects => createProjects(projects));
 
         const githubApi: ApiGithub = ApiFactory.createUserApi();
-        githubApi.getData().then(data => console.log(data))
+        githubApi.getData().then(data => ApiGithubView.getApi(data))
+            .catch(erro => {
+                erro.request.status === 404 ? console.error(`Error 404: ${erro.message}`) : console.error(`Error: ${erro}`);
+            }).finally(() => {
+                console.log('Página carregada com sucesso!');
+            });
 
         const footer: Footer = new Footer();
         footer.createFooter();

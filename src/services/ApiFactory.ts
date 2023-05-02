@@ -1,5 +1,5 @@
 import { ApiProjects } from "./ApiProjects";
-import { ApiGithub } from "./apiGithub";
+import { ApiGithub } from "./ApiGithub";
 
 export class ApiFactory {
     public static createProjectsApi(): ApiProjects {

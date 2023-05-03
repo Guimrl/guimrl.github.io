@@ -1,66 +1,74 @@
 import { Theme } from "../interfaces/ThemeInterface";
 
-export function theme(): void {
-    const input: HTMLInputElement | null = document.querySelector('#theme');
-    const root: HTMLElement = document.documentElement;
-
-    const lightTheme: Theme = {
+export class ThemeSwitcher {
+    private input: HTMLInputElement | null;
+    private root: HTMLElement;
+    private ball: HTMLElement | null;
+    private lightTheme: Theme = {
         '--main-color': '#0B5ED7',
         '--main-text-color': '#333333',
         '--main-bg-color': '#EEEEEE',
         '--bg-color': '#FFFFFF'
     };
-
-    const darkTheme: Theme = {
+    private darkTheme: Theme = {
         '--main-color': '#F39C12',
         '--main-text-color': '#EEEEEE',
         '--main-bg-color': '#333333',
         '--bg-color': '#262626'
     };
 
-    const ball: HTMLElement | null = document.querySelector('.dark-mode .ball');
-    input?.addEventListener('change', () => {
-        let GetTheme: string;
+    constructor() {
+        this.input = document.querySelector('#theme');
+        this.root = document.documentElement;
+        this.ball = document.querySelector('.dark-mode .ball');
 
-        if (input.checked) {
-            GetTheme = "DARK";
-            changeTheme(darkTheme);
-            ball?.classList.add("active");
+        this.init();
+    }
+
+    private init(): void {
+        this.input?.addEventListener("change", () => {
+            let GetTheme: string;
+
+            if (this.input?.checked) {
+                GetTheme = "DARK";
+                this.changeTheme(this.darkTheme);
+                this.ball?.classList.add("active");
+            } else {
+                GetTheme = "LIGHT";
+                this.changeTheme(this.lightTheme);
+                this.ball?.classList.add("disable");
+            }
+
+            localStorage.setItem("PageTheme", JSON.stringify(GetTheme));
+        });
+
+        let GetTheme: string | null = localStorage.getItem("PageTheme");
+        let theme: string;
+
+        GetTheme != null ? theme = JSON.parse(GetTheme) : theme = "LIGHT";
+
+        if (theme === "DARK") {
+            if (this.input) {
+                this.input.checked = true;
+            }
+            this.ball?.classList.add("active");
+            this.changeTheme(this.darkTheme);
         } else {
-            GetTheme = "LIGHT";
-            changeTheme(lightTheme);
-            ball?.classList.add("disable");
+            if (this.input) {
+                this.input.checked = false;
+            }
+            this.ball?.classList.add("disable");
+            this.changeTheme(this.lightTheme);
         }
+    }
 
-        localStorage.setItem("PageTheme", JSON.stringify(GetTheme));
-    })
-
-    function changeTheme(theme: Theme) {
+    private changeTheme(theme: Theme): void {
         for (let prop in theme) {
-            changeProperty(prop, theme[prop]);
+            this.changeProperty(prop, theme[prop]);
         }
     }
 
-    function changeProperty(property: string, value: string) {
-        root.style.setProperty(property, value);
-    }
-
-    let GetTheme: string | null = localStorage.getItem("PageTheme");
-    let theme: string;
-
-    GetTheme != null ? theme = JSON.parse(GetTheme) : theme = "LIGHT";
-
-    if (theme === "DARK") {
-        if (input) {
-            input.checked = true;
-        }
-        ball?.classList.add("active");
-        changeTheme(darkTheme);
-    } else {
-        if (input) {
-            input.checked = false;
-        }
-        ball?.classList.add("disable");
-        changeTheme(lightTheme);
+    private changeProperty(property: string, value: string): void {
+        this.root.style.setProperty(property, value);
     }
 }

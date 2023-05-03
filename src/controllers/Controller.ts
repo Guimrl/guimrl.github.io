@@ -12,8 +12,8 @@ import '../assets/css/modal.css';
 import '../assets/css/media/media.css';
 import '../assets/css/maintenance.css';
 
-// import { createMaintenance } from '../views/createMaintenance';
-import { hideMaintenance } from '../views/maintenance';
+import { Loader } from '../views/Loader';
+import { LoaderView } from '../views/LoaderView';
 import { Home } from '../views/Home';
 import { aboutSection } from '../views/aboutSection';
 import { createNav } from '../views/createNav';
@@ -32,6 +32,7 @@ import { ApiProjects } from '../services/ApiProjects';
 import { ApiGithubView } from '../views/ApiGithubView';
 import { ThemeSwitcher } from '../utils/theme';
 
+
 export class Controller {
 
     public render(): void {
@@ -39,10 +40,9 @@ export class Controller {
         const text: string = "Desenvolvedor web Full Stack.";
         const interval: number = 100;
 
-        // createMaintenance();
-
-        //onMaintenance();
-        hideMaintenance()
+        const loaderView = new LoaderView();
+        loaderView.render();
+        Loader.onLoad();
 
         title();
         const progress: Progress = new Progress();
@@ -55,6 +55,7 @@ export class Controller {
         const nav: NavBar = new NavBar();
         nav.togleNav();
         new ThemeSwitcher();
+
         scrollSmooth();
 
         const githubApi: ApiGithub = ApiFactory.createUserApi();

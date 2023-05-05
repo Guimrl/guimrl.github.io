@@ -1,73 +1,31 @@
-import '../assets/css/document.css';
-import '../assets/css/principal.css';
-import '../assets/css/navbar.css';
-import '../assets/css/root.css';
-import '../assets/css/dark-mode.css';
-import '../assets/css/scrollbar.css';
-import '../assets/css/sobre.css';
-import '../assets/css/botoes.css';
-import '../assets/css/projetos.css';
-import '../assets/css/footer.css';
-import '../assets/css/modal.css';
-import '../assets/css/media/media.css';
-import '../assets/css/maintenance.css';
-
-import { Loader } from '../views/Loader';
-import { title } from '../utils/title';
-import { NavBar } from '../views/NavBar';
-import { createModal } from '../views/createModal';
-import { scrollSmooth } from '../utils/scrollSmooth';
-import { Modal } from '../views/Modal';
-import { createProjects } from '../views/createProjects';
-import { Progress } from '../utils/Progress';
-import { TextTyper } from '../utils/TextTyper';
-import { ApiFactory } from '../services/ApiFactory';
-import { ApiGithub } from '../services/ApiGithub';
-import { ApiProjects } from '../services/ApiProjects';
-import { ApiGithubView } from '../views/ApiGithubView';
-import { ThemeSwitcher } from '../utils/ThemeSwitcher';
-import { ModalView } from '../views/ModalView';
-
+import { Model } from "../models/Model";
+import { ApiFactory } from "../services/ApiFactory";
+import { ApiGithub } from "../services/ApiGithub";
+import { ApiGithubView } from "../views/ApiGithubView";
+import { ApiProjects } from "../services/ApiProjects";
+import { createProjects } from "../views/createProjects";
 
 export class Controller {
+    public init(): void {
 
-    public render(): void {
-        const element: HTMLElement | null = document.querySelector("#digit");
-        const text: string = "Desenvolvedor web Full Stack.";
-        const interval: number = 100;
+        try {
+            const model: Model = new Model();
+            model.render();
 
-        Loader.onLoad();
+            const githubApi: ApiGithub = ApiFactory.createGithubApi();
+            githubApi.getData().then(data => ApiGithubView.getApi(data))
+                .catch(erro => {
+                    erro.request.status === 404
+                        ? console.error(`Error: ${erro.request.statusText} - ${erro.request.status}`)
+                        : console.error(`Error: ${erro}`);
+                }).finally(() => {
+                    console.log("Página carregada com sucesso!");
+                });
 
-        title();
-        const progress: Progress = new Progress();
-        progress.scroll();
-
-        const nav: NavBar = new NavBar();
-        nav.togleNav();
-        new ThemeSwitcher();
-
-        scrollSmooth();
-
-        const githubApi: ApiGithub = ApiFactory.createGithubApi();
-        githubApi.getData().then(data => ApiGithubView.getApi(data))
-            .catch(erro => {
-                erro.request.status === 404
-                    ? console.error(`Error: ${erro.request.statusText} - ${erro.request.status}`)
-                    : console.error(`Error: ${erro}`);
-            }).finally(() => {
-                console.log("Página carregada com sucesso!");
-            });
-
-        const typer: TextTyper = new TextTyper();
-        typer.start(element, text, interval);
-
-        // const modal: Modal = new Modal();
-        // createModal();
-        // modal.togleModal();
-
-        const projectsApi: ApiProjects = ApiFactory.createProjectsApi();
-        projectsApi.getData().then(projects => createProjects(projects));
-
+            const projectsApi: ApiProjects = ApiFactory.createProjectsApi();
+            projectsApi.getData().then(projects => createProjects(projects));
+        } catch (e) {
+            console.log(e.message);
+        }
     }
-
 }

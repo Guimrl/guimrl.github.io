@@ -6,7 +6,7 @@ export class ApiFactory {
         return new ApiProjects("https://api-mini-projetos.up.railway.app/nprojects");
     }
 
-    public static createUserApi(): ApiGithub {
+    public static createGithubApi(): ApiGithub {
         return new ApiGithub("https://api.github.com/users/guimrl");
     }
 }

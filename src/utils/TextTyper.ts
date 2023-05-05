@@ -2,18 +2,16 @@
 export class TextTyper {
 
     public start(element: HTMLElement | null, text: string, interval: number): void {
-        const letters: string[] = text.split('');
-        let index: number = 0;
+        const letters: string[] = text.split("").reverse();
         const typer = setInterval(() => {
-            if (index >= letters.length) {
+            if (!letters.length) {
                 clearInterval(typer);
                 return;
             }
-
-            if (element)
-                element.innerHTML = letters[index];
-
-            index++;
-        }, interval)
+            const next = letters.pop();
+            if (element) {
+                element.innerHTML += next;
+            }
+        }, interval);
     }
 }

@@ -1,7 +1,7 @@
 {
     "name": "portfolio",
-    "version": "2.5.1",
-    "description": "<div align=\"center\">\r     <p> &copy; Guilherme Amaral - 2023 </p>\r </div>",
+    "version": "2.5.2",
+    "description": "Portfolio Dev | Guilherme Amaral - 2023",
     "main": "index.js",
     "scripts": {
         "start": "tsc && webpack serve --hot --mode development --config webpack.config.js",
@@ -13,11 +13,11 @@
     },
     "keywords": [],
     "author": "Guilherme Amaral",
-    "license": "ISC",
+    "license": "CC",
     "bugs": {
         "url": "https://github.com/Guimrl/guimrl.github.io/issues"
     },
-    "homepage": "https://github.com/Guimrl/guimrl.github.io#readme",
+    "homepage": "https://guimrl.github.io/",
     "devDependencies": {
         "@babel/core": "^7.21.0",
         "@babel/preset-env": "^7.20.2",

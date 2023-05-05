@@ -13,73 +13,60 @@ import '../assets/css/media/media.css';
 import '../assets/css/maintenance.css';
 
 import { Loader } from '../views/Loader';
-import { LoaderView } from '../views/LoaderView';
-import { Home } from '../views/Home';
-import { aboutSection } from '../views/aboutSection';
-import { createNav } from '../views/createNav';
 import { title } from '../utils/title';
 import { NavBar } from '../views/NavBar';
 import { createModal } from '../views/createModal';
 import { scrollSmooth } from '../utils/scrollSmooth';
 import { Modal } from '../views/Modal';
 import { createProjects } from '../views/createProjects';
-import { Footer } from '../views/Footer';
 import { Progress } from '../utils/Progress';
 import { TextTyper } from '../utils/TextTyper';
 import { ApiFactory } from '../services/ApiFactory';
 import { ApiGithub } from '../services/ApiGithub';
 import { ApiProjects } from '../services/ApiProjects';
 import { ApiGithubView } from '../views/ApiGithubView';
-import { ThemeSwitcher } from '../utils/theme';
+import { ThemeSwitcher } from '../utils/ThemeSwitcher';
+import { ModalView } from '../views/ModalView';
 
 
 export class Controller {
 
     public render(): void {
-        const element: HTMLElement | null = document.querySelector('#digit');
+        const element: HTMLElement | null = document.querySelector("#digit");
         const text: string = "Desenvolvedor web Full Stack.";
         const interval: number = 100;
 
-        const loaderView = new LoaderView();
-        loaderView.render();
         Loader.onLoad();
 
         title();
         const progress: Progress = new Progress();
         progress.scroll();
 
-        const home: Home = new Home();
-        home.createHome();
-
-        createNav();
         const nav: NavBar = new NavBar();
         nav.togleNav();
         new ThemeSwitcher();
 
         scrollSmooth();
 
-        const githubApi: ApiGithub = ApiFactory.createUserApi();
+        const githubApi: ApiGithub = ApiFactory.createGithubApi();
         githubApi.getData().then(data => ApiGithubView.getApi(data))
             .catch(erro => {
-                erro.request.status === 404 ? console.error(`Error 404: ${erro.message}`) : console.error(`Error: ${erro}`);
+                erro.request.status === 404
+                    ? console.error(`Error: ${erro.request.statusText} - ${erro.request.status}`)
+                    : console.error(`Error: ${erro}`);
             }).finally(() => {
-                console.log('Página carregada com sucesso!');
+                console.log("Página carregada com sucesso!");
             });
-
-        aboutSection();
 
         const typer: TextTyper = new TextTyper();
         typer.start(element, text, interval);
 
-        const modal: Modal = new Modal();
-        modal.togleModal();
-        createModal();
+        // const modal: Modal = new Modal();
+        // createModal();
+        // modal.togleModal();
 
         const projectsApi: ApiProjects = ApiFactory.createProjectsApi();
         projectsApi.getData().then(projects => createProjects(projects));
-
-        const footer: Footer = new Footer();
-        footer.createFooter();
 
     }
 

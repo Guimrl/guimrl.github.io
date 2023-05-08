@@ -1,5 +1,5 @@
 
-export class NavBar {
+export class NavBarModel {
     private links: NodeListOf<Element> = document.querySelectorAll('.navegacao a[href^="#"]');
     private openNav: Element | null = document.querySelector("#open-btn");
     private closeNav: Element | null = document.querySelector("#close-btn");

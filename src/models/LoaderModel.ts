@@ -1,5 +1,5 @@
 
-export abstract class Loader {
+export abstract class LoaderModel {
 
     public static onLoad(): void {
         const load: HTMLElement | null = document.querySelector("#load");

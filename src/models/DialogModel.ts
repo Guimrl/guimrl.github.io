@@ -1,5 +1,5 @@
 
-export class Modal {
+export class DialogModel {
     private openModal: HTMLElement | null = document.querySelector('#abrir-modal');
     private closeModal: HTMLElement | null = document.querySelector('#fechar-modal');
     private modal: HTMLElement | null = document.querySelector('#modal');

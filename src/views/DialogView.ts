@@ -1,5 +1,5 @@
 
-export class ModalView {
+export class DialogView {
     private divModal: HTMLElement | null = document.querySelector("#divModal");
 
     public render(): void {

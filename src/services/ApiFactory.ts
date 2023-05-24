@@ -3,7 +3,7 @@ import { ApiGithub } from "./ApiGithub";
 
 export class ApiFactory {
     public static createProjectsApi(): ApiProjects {
-        return new ApiProjects("https://api-mini-projetos.up.railway.app/nprojects");
+        return new ApiProjects("https://api-mini-projetos-guimrl.vercel.app/nprojects");
     }
 
     public static createGithubApi(): ApiGithub {

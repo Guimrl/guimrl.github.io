@@ -11,6 +11,7 @@ import "../assets/css/footer.css";
 import "../assets/css/modal.css";
 import "../assets/css/media/media.css";
 import "../assets/css/maintenance.css";
+import "../assets/css/techContainer.css";
 
 
 import { Progress } from "../utils/Progress";

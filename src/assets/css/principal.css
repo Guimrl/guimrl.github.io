@@ -70,3 +70,8 @@
 #email-container li a:hover {
     color: var(--main-color);
 }
+
+#decision {
+    text-decoration: none;
+    color: var(--main-color);
+}

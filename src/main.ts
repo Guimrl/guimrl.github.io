@@ -1,4 +1,4 @@
-import { Controller } from "./controllers/Controller";
+import { Controller } from './controllers/Controller';
 
 const controller: Controller = new Controller();
 controller.init();

@@ -1,12 +1,12 @@
 {
-    "editor.formatOnSave": true,
-    "semi": true,
-    "singleQuote": true,
-    "trailingComma": "all",
-    "arrowParens": "avoid",
-    "printWidth": 80,
-    "proseWrap": "always",
-    "tabWidth": 4,
-    "useTabs": false,
-    "bracketSpacing": true
+  "editor.formatOnSave": true,
+  "semi": true,
+  "singleQuote": true,
+  "trailingComma": "all",
+  "arrowParens": "avoid",
+  "printWidth": 80,
+  "proseWrap": "always",
+  "tabWidth": 2,
+  "useTabs": false,
+  "bracketSpacing": true
 }

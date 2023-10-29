@@ -1,8 +1,8 @@
 export function createModal(): void {
-    let divModal: HTMLElement | null = document.querySelector("#divModal");
+  let divModal: HTMLElement | null = document.querySelector('#divModal');
 
-    if (divModal) {
-        divModal.innerHTML = `
+  if (divModal) {
+    divModal.innerHTML = `
         <div id="fade" class="hide"></div>
             <div id="modal" class="hide" role="dialog">
                 <div class="modal-header">
@@ -18,5 +18,5 @@ export function createModal(): void {
                 </div>
             </div>
         `;
-    }
+  }
 }

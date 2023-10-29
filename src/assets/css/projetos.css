@@ -1,4 +1,4 @@
-.projetos-container {
+/* .projetos-container {
     width: 100%;
     min-height: 100vh;
     margin: 0 auto;
@@ -14,65 +14,65 @@
     align-items: center;
     overflow: hidden;
     background-color: var(--bg-color);
-}
+} */
 
-.projeto-container-titulo {
+/* .projeto-container-titulo {
     grid-area: t;
     grid-column: t;
     margin-bottom: 40px;
     font-size: 2em;
     color: var(--main-color);
     text-align: center;
-}
+} */
 
-.projetos {
-    max-width: 500px;
-    min-width: 400px;
-    height: 200px;
-    font-weight: bold;
-}
+/* .projetos {
+  max-width: 500px;
+  min-width: 400px;
+  height: 200px;
+  font-weight: bold;
+} */
 
-.projeto-imagem {
-    grid-area: i;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+/* .projeto-imagem { */
+/* grid-area: i;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; */
+/* } */
 
 /* Hover da imagem */
-.projeto-imagem:hover {
-    transform: scale(1.1);
-    transition: all 0.5s;
-    filter: grayscale(100%);
-    opacity: 0.3;
-}
+/* .projeto-imagem:hover { */
+/* transform: scale(1.1);
+  transition: all 0.5s;
+  filter: grayscale(100%);
+  opacity: 0.3; */
+/* } */
 
 /* Texto da imagem projeto */
 .projetos figcaption {
-    visibility: hidden;
-    position: absolute;
-    text-align: center;
-    top: 35%;
-    left: 50%;
-    width: 80%;
-    transform: translate(-50%, -50%);
-    color: transparent;
-    line-height: 1.438em;
-    font-weight: bold;
+  visibility: hidden;
+  position: absolute;
+  text-align: center;
+  top: 35%;
+  left: 50%;
+  width: 80%;
+  transform: translate(-50%, -50%);
+  color: transparent;
+  line-height: 1.438em;
+  font-weight: bold;
 }
 
 .projetos:hover figcaption,
 .projetos:hover a {
-    color: var(--main-text-color);
-    bottom: 30%;
-    visibility: visible;
+  color: var(--main-text-color);
+  bottom: 30%;
+  visibility: visible;
 }
 
-.projeto-conteudo {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform .4s;
-    box-shadow: 5px -5px 10px var(--main-bg-color), -5px 5px 10px var(--bg-color);
-}
+/* .projeto-conteudo { */
+/* position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.4s;
+  box-shadow: 5px -5px 10px var(--main-bg-color), -5px 5px 10px var(--bg-color); */
+/* } */

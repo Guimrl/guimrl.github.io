@@ -1,19 +1,22 @@
 {
-    "compilerOptions": {
-        "outDir": "src/js",
-        "module": "es2022",
-        "target": "es2017",
-        "noEmitOnError": true,
-        "noImplicitAny": true,
-        "removeComments": true,
-        "strictNullChecks": true,
-        "experimentalDecorators": true,
-        "moduleResolution": "node",
-        "baseUrl": ".",
-        "paths": {
-            "@axios/*": ["node_modules/axios/*"]
-        }
-        // "sourceMap": true
-    },
-    "include": ["src/**/*"]
+  "compilerOptions": {
+    "jsx": "react",
+    "outDir": "src/js",
+    "module": "es2022",
+    "target": "es2017",
+    "noEmitOnError": true,
+    // "noImplicitAny": true,
+    "removeComments": true,
+    "strictNullChecks": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "@axios/*": ["node_modules/axios/*"]
+    }
+    // "sourceMap": true
+  },
+  "include": ["src/**/*"],
+  "typeRoots": ["node_modules/@types"],
+  "types": ["node", "react-emotion"]
 }

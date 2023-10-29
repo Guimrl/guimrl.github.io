@@ -1,10 +1,9 @@
-
 export class DialogView {
-    private divModal: HTMLElement | null = document.querySelector("#divModal");
+  private divModal: HTMLElement | null = document.querySelector('#divModal');
 
-    public render(): void {
-        if (this.divModal) {
-            this.divModal.innerHTML = `
+  public render(): void {
+    if (this.divModal) {
+      this.divModal.innerHTML = `
             <div id="fade" class="hide"></div>
             <div id="modal" class="hide" role="dialog">
                 <div class="modal-header">
@@ -19,6 +18,6 @@ export class DialogView {
                     </p>
                 </div>
             </div>`;
-        }
     }
+  }
 }

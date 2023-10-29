@@ -1,8 +1,28 @@
 import React from 'react';
-import { IconType } from 'react-icons';
 import { FaBars, FaSun, FaTimes } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+
+export const Progress = styled('div')`
+  animation: scroll 1ms ease-in;
+  animation-timeline: scroll();
+  background-color: var(--main-color);
+  transform-origin: left;
+  height: var(--scroll-height);
+  inset: 0;
+  position: fixed;
+  z-index: 1000;
+
+  @keyframes scroll {
+    from {
+      scale: 0 1;
+    }
+
+    to {
+      scale: 1 1;
+    }
+  }
+`;
 
 export const FaBar = ({ onClick }) => {
   return (
@@ -32,6 +52,12 @@ export const SocialItem = ({ title, href, icon }) => {
 
 export const Highlight = styled('span')`
   color: var(--main-color);
+
+  a:link,
+  a:visited {
+    text-decoration: none;
+    color: var(--main-color);
+  }
 `;
 
 export const Container = styled('section')`
@@ -51,6 +77,7 @@ export const WelcomeText = styled('p')`
 `;
 
 const NavButton = styled('button')`
+  padding-block: var(--scroll-height);
   border: none;
   background-color: transparent;
   cursor: pointer;

@@ -1,74 +1,82 @@
-import { Theme } from '../interfaces/ThemeInterface';
+// import React, { useEffect, useState } from 'react';
 
-export class ThemeSwitcher {
-  private input: HTMLInputElement | null;
-  private root: HTMLElement;
-  private ball: HTMLElement | null;
-  private lightTheme: Theme = {
-    '--main-color': '#0B5ED7',
-    '--main-text-color': '#333333',
-    '--main-bg-color': '#EEEEEE',
-    '--bg-color': '#FFFFFF',
-  };
-  private darkTheme: Theme = {
-    '--main-color': '#F39C12',
-    '--main-text-color': '#EEEEEE',
-    '--main-bg-color': '#333333',
-    '--bg-color': '#262626',
-  };
+// const ThemeSwitcher = () => {
+//   const [isDarkTheme, setIsDarkTheme] = useState(false);
+//   const lightTheme = {
+//     '--main-color': '#0B5ED7',
+//     '--main-text-color': '#333333',
+//     '--main-bg-color': '#EEEEEE',
+//     '--bg-color': '#FFFFFF',
+//   };
+//   const darkTheme = {
+//     '--main-color': '#F39C12',
+//     '--main-text-color': '#EEEEEE',
+//     '--main-bg-color': '#333333',
+//     '--bg-color': '#262626',
+//   };
 
-  constructor() {
-    this.input = document.querySelector('#theme');
-    this.root = document.documentElement;
-    this.ball = document.querySelector('.dark-mode .ball');
+//   useEffect(() => {
+//     const input = document.querySelector('#theme') as HTMLInputElement;
+//     const root = document.documentElement;
+//     const ball = document.querySelector('.dark-mode .ball');
 
-    this.init();
-  }
+//     const handleThemeChange = () => {
+//       const GetTheme = input.checked ? 'DARK' : 'LIGHT';
 
-  private init(): void {
-    this.input?.addEventListener('change', () => {
-      let GetTheme: string;
+//       setIsDarkTheme(input.checked);
 
-      if (this.input?.checked) {
-        GetTheme = 'DARK';
-        this.changeTheme(this.darkTheme);
-        this.ball?.classList.add('active');
-      } else {
-        GetTheme = 'LIGHT';
-        this.changeTheme(this.lightTheme);
-        this.ball?.classList.add('disable');
-      }
+//       if (input.checked) {
+//         changeTheme(darkTheme);
+//         ball?.classList.add('active');
+//       } else {
+//         changeTheme(lightTheme);
+//         ball?.classList.add('disable');
+//       }
 
-      localStorage.setItem('PageTheme', JSON.stringify(GetTheme));
-    });
+//       localStorage.setItem('PageTheme', JSON.stringify(GetTheme));
+//     };
 
-    let GetTheme: string | null = localStorage.getItem('PageTheme');
-    let theme: string;
+//     const storedTheme = localStorage.getItem('PageTheme');
+//     const theme = storedTheme !== null ? JSON.parse(storedTheme) : 'LIGHT';
 
-    GetTheme != null ? (theme = JSON.parse(GetTheme)) : (theme = 'LIGHT');
+//     if (theme === 'DARK') {
+//       if (input) {
+//         input.checked = true;
+//       }
+//       ball?.classList.add('active');
+//       changeTheme(darkTheme);
+//       setIsDarkTheme(true);
+//     } else {
+//       if (input) {
+//         input.checked = false;
+//       }
+//       ball?.classList.add('disable');
+//       changeTheme(lightTheme);
+//       setIsDarkTheme(false);
+//     }
 
-    if (theme === 'DARK') {
-      if (this.input) {
-        this.input.checked = true;
-      }
-      this.ball?.classList.add('active');
-      this.changeTheme(this.darkTheme);
-    } else {
-      if (this.input) {
-        this.input.checked = false;
-      }
-      this.ball?.classList.add('disable');
-      this.changeTheme(this.lightTheme);
-    }
-  }
+//     input?.addEventListener('change', handleThemeChange);
 
-  private changeTheme(theme: Theme): void {
-    for (let prop in theme) {
-      this.changeProperty(prop, theme[prop]);
-    }
-  }
+//     return () => {
+//       input?.removeEventListener('change', handleThemeChange);
+//     };
+//   }, []);
 
-  private changeProperty(property: string, value: string): void {
-    this.root.style.setProperty(property, value);
-  }
-}
+//   const changeTheme = (theme) => {
+//     for (let prop in theme) {
+//       changeProperty(prop, theme[prop]);
+//     }
+//   };
+
+//   const changeProperty = (property, value) => {
+//     document.documentElement.style.setProperty(property, value);
+//   };
+
+//   return (
+//     <div>
+//       <input id="theme" type="checkbox" checked={isDarkTheme} onChange={() => {}} />
+//     </div>
+//   );
+// };
+
+// export default ThemeSwitcher;

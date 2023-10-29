@@ -6,6 +6,7 @@
   --main-bg-color: #eeeeee;
   --bg-color: #ffffff;
   --fix-color: #333333;
+  --scroll-height: 0.5rem;
 }
 
 * {
@@ -19,17 +20,13 @@ body {
   min-height: 100vh;
 }
 
+section {
+  padding-block: var(--scroll-height);
+}
+
 input {
   left: -9999px;
   position: absolute;
-}
-
-.progress {
-  height: 0.5rem;
-  width: 0%;
-  position: fixed;
-  background-color: var(--main-color);
-  z-index: 1000;
 }
 
 .highlight {

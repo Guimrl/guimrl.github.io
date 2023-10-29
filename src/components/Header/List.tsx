@@ -1,34 +1,44 @@
 import * as React from 'react';
-import { HashLink as Link } from 'react-router-hash-link';
 import styled from 'styled-components';
+import { Link } from 'react-scroll';
 
 const NavList = () => {
   return (
     <UlStyled>
-      {/* <li>
-        <Link to="#inicio" smooth>
+      <li>
+        <Link
+          to="home"
+          spy={true}
+          smooth={true}
+          duration={300}
+          title="Pular para início"
+        >
           Início
         </Link>
-      </li> */}
-      <li>
-        <a href={'#inicio'} title={'pular para inicio'}>
-          Início
-        </a>
       </li>
+
       <li>
-        <a href={'#sobre'} title={'pular para sobre'}>
+        <Link
+          to="about"
+          spy={true}
+          smooth={true}
+          duration={500}
+          title="Pular para sobre"
+        >
           Sobre
-        </a>
+        </Link>
       </li>
+
       <li>
-        <a href={'#tecnologias'} title={'pular para tecnologias'}>
-          Tecnologias
-        </a>
-      </li>
-      <li>
-        <a href={'#projetos'} title={'pular para projetos'}>
+        <Link
+          to="projects"
+          spy={true}
+          smooth={true}
+          duration={500}
+          title="Pular para projetos"
+        >
           Projetos
-        </a>
+        </Link>
       </li>
     </UlStyled>
   );
@@ -36,7 +46,7 @@ const NavList = () => {
 
 const UlStyled = styled('ul')`
   li,
-  li a {
+  li {
     list-style-type: none;
     text-decoration: none;
     padding: 10px;
@@ -44,10 +54,10 @@ const UlStyled = styled('ul')`
     color: var(--main-text-color);
   }
 
-  li a:hover {
+  :hover {
     color: var(--main-color);
     font-weight: bold;
-    transform: scale(1.3);
+    cursor: pointer;
   }
 `;
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-
+import { Element } from 'react-scroll';
 const Projects = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -28,26 +28,32 @@ const Projects = () => {
       {loading ? (
         <p>Carregando...</p>
       ) : (
-        <ProjectsContainer>
-          <ProjectsTitle>Projetos</ProjectsTitle>
-          {data.map(item => (
-            <ProjectsContent>
-              <ProjectsFigure>
-                <ProjectsImage src={item.image} alt={item.alt} loading="lazy" />
-                <ProjectsDescription id={item._id}>
-                  ${item.description}
-                  <Btn
-                    href={item.url}
-                    aria-labelledby={item._id}
-                    target="_blank"
-                  >
-                    Ver Site
-                  </Btn>
-                </ProjectsDescription>
-              </ProjectsFigure>
-            </ProjectsContent>
-          ))}
-        </ProjectsContainer>
+        <Element name="projects">
+          <ProjectsContainer>
+            <ProjectsTitle>Projetos</ProjectsTitle>
+            {data.map(item => (
+              <ProjectsContent>
+                <ProjectsFigure>
+                  <ProjectsImage
+                    src={item.image}
+                    alt={item.alt}
+                    loading="lazy"
+                  />
+                  <ProjectsDescription id={item._id}>
+                    ${item.description}
+                    <Btn
+                      href={item.url}
+                      aria-labelledby={item._id}
+                      target="_blank"
+                    >
+                      Ver Site
+                    </Btn>
+                  </ProjectsDescription>
+                </ProjectsFigure>
+              </ProjectsContent>
+            ))}
+          </ProjectsContainer>
+        </Element>
       )}
     </div>
   );

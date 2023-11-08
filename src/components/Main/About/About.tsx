@@ -5,7 +5,7 @@ import { Element } from 'react-scroll';
 
 const About = () => {
   return (
-    <Element name="about">
+    <Element name="Sobre">
       <Container>
         <article id="artigo">
           <Name id="nome"></Name>

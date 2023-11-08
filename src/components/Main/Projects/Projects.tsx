@@ -28,7 +28,7 @@ const Projects = () => {
       {loading ? (
         <p>Carregando...</p>
       ) : (
-        <Element name="projects">
+        <Element name="Projetos">
           <ProjectsContainer>
             <ProjectsTitle>Projetos</ProjectsTitle>
             {data.map(item => (

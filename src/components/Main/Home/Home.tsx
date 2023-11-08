@@ -9,7 +9,7 @@ import { Element } from 'react-scroll';
 
 const Home = () => {
   return (
-    <Element name="home">
+    <Element name="Inicio">
       <Container>
         <Perfil />
         <h1 className="highlight">Guilherme Amaral</h1>

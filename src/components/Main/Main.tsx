@@ -14,43 +14,13 @@ import { useEffect } from 'react';
 
 const Main = () => {
   const [maintenanceMode, setMaintenanceMode] = useState(true);
-  const [notificationPermission, setNotificationPermission] = useState(false);
-
-  useEffect(() => {
-    if ('Notification' in window && Notification.permission === 'granted') {
-      setNotificationPermission(true);
-    }
-  }, []);
-
-  const handleNotifyMe = () => {
-    if ('Notification' in window) {
-      Notification.requestPermission().then(permission => {
-        if (permission === 'granted') {
-          setNotificationPermission(true);
-        }
-      });
-    }
-  };
-
-  const handleMaintenanceEnd = () => {
-    if (notificationPermission) {
-      new Notification('A página está de volta!', {
-        body: 'A manutenção terminou e a página está disponível novamente.',
-      });
-    }
-  };
 
   return (
     <div>
       {maintenanceMode ? (
-        <Maintenance
-          maintenanceMode={maintenanceMode}
-          handleNotifyMe={handleNotifyMe}
-          notificationPermission={notificationPermission}
-        />
+        <Maintenance maintenanceMode={maintenanceMode} />
       ) : (
         <>
-          {handleMaintenanceEnd}
           <div>
             <BrowserRouter>
               <Title />

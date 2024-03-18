@@ -4,11 +4,7 @@ import Perfil from '../Main/Home/Perfil';
 import TextTyper from '../Main/Home/Typer';
 import { styled } from 'styled-components';
 
-const Maintenance = ({
-  handleNotifyMe,
-  maintenanceMode,
-  notificationPermission,
-}) => (
+const Maintenance = ({ maintenanceMode }) => (
   <>
     <MaintenanceContainer>
       <ContentContainer>
@@ -17,20 +13,11 @@ const Maintenance = ({
         <Spacer />
 
         <p>Em manutenção, em breve teremos novidades por aqui.</p>
-        {/* {maintenanceMode && !notificationPermission && (
-          <NotifyContent>
-            <p>
-              Quer ficar por dentro quando a página voltar? clique no botão a
-              baixo
-            </p>
-            <Button onClick={handleNotifyMe}>Notificar</Button>
-          </NotifyContent>
-        )} */}
       </ContentContainer>
 
       <FooterContainer>
         <p>
-          &copy; Guilherme <Highlight>Amaral</Highlight> - 2023
+          &copy; Guilherme <Highlight>Amaral</Highlight> - 2024
         </p>
       </FooterContainer>
     </MaintenanceContainer>

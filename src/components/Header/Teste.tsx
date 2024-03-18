@@ -1,70 +1,90 @@
-import React from 'react';
-import Box from '@mui/material/Box';
-import Drawer from '@mui/material/Drawer';
-import Button from '@mui/material/Button';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
-import { Link } from 'react-scroll';
+import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faBars,
+  faTimes,
+  faSun,
+  faMoon,
+} from '@fortawesome/free-solid-svg-icons';
 
-const SideBar = () => {
-  const [openDrawer, setOpenDrawer] = React.useState(false);
+function SideBar() {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
-  const toggleDrawer = (open: boolean) => event => {
-    if (
-      event.type === 'keydown' &&
-      (event.key === 'Tab' || event.key === 'Shift')
-    ) {
-      return;
-    }
-
-    setOpenDrawer(open);
+  const toggleNav = () => {
+    setIsNavOpen(!isNavOpen);
   };
 
-  const list = () => {
-    const links = ['Inicio', 'Sobre', 'Projetos'];
-
-    return (
-      <Box
-        sx={{ width: 259 }}
-        role="presentation"
-        onClick={toggleDrawer(false)}
-        onKeyDown={toggleDrawer(false)}
-      >
-        <List>
-          {links.map(link => (
-            <ListItem key={link} disablePadding>
-              <ListItemButton>
-                <Link
-                  to={link}
-                  spy={true}
-                  smooth={true}
-                  duration={500}
-                  title={`Pular para ${link}`}
-                >
-                  {link}
-                </Link>
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
-      </Box>
-    );
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
   };
 
   return (
-    <div>
-      <React.Fragment>
-        <Button onClick={toggleDrawer(true)}>
-          {<MenuRoundedIcon fontSize="large" />}
-        </Button>
-        <Drawer anchor={'left'} open={openDrawer} onClose={toggleDrawer(false)}>
-          {list()}
-        </Drawer>
-      </React.Fragment>
-    </div>
+    <header role="dialog" aria-labelledby="nav">
+      <nav>
+        <button
+          id="open-btn"
+          className="open-btn navbar-btn"
+          title="abrir barra de navegação lateral"
+          onClick={toggleNav}
+        >
+          <FontAwesomeIcon icon={faBars} />
+        </button>
+        <div
+          id="fadeNav"
+          className={`navHide ${isNavOpen ? '' : 'hidden'}`}
+        ></div>
+        <div id="nav" className={`nav ${isNavOpen ? '' : 'navHide'}`}>
+          <button
+            id="close-btn"
+            className="close-btn navbar-btn"
+            title="fechar barra de navegação lateral"
+            onClick={toggleNav}
+          >
+            <FontAwesomeIcon icon={faTimes} />
+          </button>
+          <ul className="navegacao">
+            <li>
+              <a href="#inicio" title="pular para início">
+                Início
+              </a>
+            </li>
+            <li>
+              <a href="#sobre" title="pular para sobre">
+                Sobre
+              </a>
+            </li>
+            <li>
+              <a href="#tecnologias" title="pular para sobre">
+                Tecnologias
+              </a>
+            </li>
+            <li>
+              <a href="#projetos" title="pular para projetos">
+                Projetos
+              </a>
+            </li>
+          </ul>
+          <div id="dark-mode-theme">
+            <input
+              type="checkbox"
+              name="theme"
+              id="theme"
+              className="checkbox"
+              title="alterar tema da página entre claro ou escuro"
+              checked={isDarkMode}
+              onChange={toggleDarkMode}
+            />
+            <label htmlFor="theme" className="dark-mode">
+              <FontAwesomeIcon icon={faSun} />
+              <FontAwesomeIcon icon={faMoon} />
+              <div className="ball"></div>
+            </label>
+          </div>
+        </div>
+      </nav>
+    </header>
   );
-};
+}
 
 export default SideBar;

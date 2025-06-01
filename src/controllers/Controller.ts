@@ -8,7 +8,7 @@ import { createProjects } from '../views/createProjects';
 export class Controller {
   public init(): void {
     try {
-      const model: Model = new Model();
+      const model = new Model();
       model.render();
 
       const githubApi: ApiGithub = ApiFactory.createGithubApi();

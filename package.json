@@ -1,7 +1,7 @@
 {
     "name": "portfolio",
     "version": "2.5.2",
-    "description": "Portfolio Dev | Guilherme Amaral - 2023",
+    "description": "Portfolio Dev | Guilherme Amaral - 2025",
     "main": "index.js",
     "scripts": {
         "start": "tsc && webpack serve --hot --mode development --config webpack.config.js",

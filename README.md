@@ -3,5 +3,5 @@
 </div>
 
 <div align="center">
-    <p> &copy; Guilherme Amaral - 2023 </p>
+    <p> &copy; Guilherme Amaral - 2025 </p>
 </div>

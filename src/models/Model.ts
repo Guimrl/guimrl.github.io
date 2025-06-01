@@ -30,16 +30,16 @@ export class Model {
 
     title();
 
-    const progress: Progress = new Progress();
+    const progress = new Progress();
     progress.scroll();
 
-    const nav: NavBarModel = new NavBarModel();
+    const nav = new NavBarModel();
     nav.togleNav();
     new ThemeSwitcher();
 
     scrollSmooth();
 
-    const typer: TextTyper = new TextTyper();
+    const typer = new TextTyper();
     typer.start(element, text, interval);
 
     // const modal: Modal = new Modal();

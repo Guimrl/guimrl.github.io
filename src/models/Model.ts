@@ -19,6 +19,7 @@ import { scrollSmooth } from '../utils/scrollSmooth';
 import { TextTyper } from '../utils/TextTyper';
 import { LoaderModel } from './LoaderModel';
 import { NavBarModel } from './NavBarModel';
+import { DownloadCV } from '../views/DownloadCv';
 
 export class Model {
   public render(): void {
@@ -26,24 +27,28 @@ export class Model {
     const text = 'Desenvolvedor web Full Stack.';
     const interval = 100;
 
+    const progress = new Progress();
+    const nav = new NavBarModel();
+    const downloadCV = new DownloadCV();
+    const typer = new TextTyper();
+
     LoaderModel.onLoad();
 
     title();
 
-    const progress = new Progress();
     progress.scroll();
 
-    const nav = new NavBarModel();
     nav.togleNav();
     new ThemeSwitcher();
 
     scrollSmooth();
 
-    const typer = new TextTyper();
     typer.start(element, text, interval);
 
     // const modal: Modal = new Modal();
     // createModal();
     // modal.togleModal();
+
+    downloadCV.render();
   }
 }

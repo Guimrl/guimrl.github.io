@@ -19,7 +19,7 @@ import { scrollSmooth } from '../utils/scrollSmooth';
 import { TextTyper } from '../utils/TextTyper';
 import { LoaderModel } from './LoaderModel';
 import { NavBarModel } from './NavBarModel';
-import { DownloadCV } from '../views/DownloadCv';
+import { DownloadCV } from '../views/DownloadCV';
 
 export class Model {
   public render(): void {
@@ -29,7 +29,6 @@ export class Model {
 
     const progress = new Progress();
     const nav = new NavBarModel();
-    const downloadCV = new DownloadCV();
     const typer = new TextTyper();
 
     LoaderModel.onLoad();
@@ -49,6 +48,9 @@ export class Model {
     // createModal();
     // modal.togleModal();
 
-    downloadCV.render();
+    document.addEventListener('DOMContentLoaded', () => {
+      const downloadCVInstance = new DownloadCV('#downloadCvBtn');
+      downloadCVInstance.render();
+    });
   }
 }

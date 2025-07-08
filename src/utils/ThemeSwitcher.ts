@@ -4,12 +4,15 @@ export class ThemeSwitcher {
   private input: HTMLInputElement | null;
   private root: HTMLElement;
   private ball: HTMLElement | null;
+  // private teste: HTMLElement | null;
+
   private lightTheme: Theme = {
     '--main-color': '#0B5ED7',
     '--main-text-color': '#333333',
     '--main-bg-color': '#EEEEEE',
     '--bg-color': '#FFFFFF',
   };
+
   private darkTheme: Theme = {
     '--main-color': '#F39C12',
     '--main-text-color': '#EEEEEE',
@@ -21,9 +24,26 @@ export class ThemeSwitcher {
     this.input = document.querySelector('#theme');
     this.root = document.documentElement;
     this.ball = document.querySelector('.dark-mode .ball');
+    // this.teste = document.querySelector('#teste');
 
     this.init();
+    // this.testeFn();
   }
+
+  // private testeFn(): void {
+  //   if (this.teste) {
+  //     this.teste.onclick = () => {
+  //       this.lightTheme['--main-color'] = '#005c00';
+
+  //       // this.changeTheme({
+  //       //   '--main-color': '#005c00',
+  //       //   '--main-text-color': '#EEEEEE',
+  //       //   '--main-bg-color': '#333333',
+  //       //   '--bg-color': '#262626',
+  //       // });
+  //     };
+  //   }
+  // }
 
   private init(): void {
     this.input?.addEventListener('change', () => {

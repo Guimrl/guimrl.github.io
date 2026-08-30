@@ -1,19 +1,23 @@
 {
-    "compilerOptions": {
-        "outDir": "src/js",
-        "module": "es2022",
-        "target": "es2017",
-        "noEmitOnError": true,
-        "noImplicitAny": true,
-        "removeComments": true,
-        "strictNullChecks": true,
-        "experimentalDecorators": true,
-        "moduleResolution": "node",
-        "baseUrl": ".",
-        "paths": {
-            "@axios/*": ["node_modules/axios/*"]
-        }
-        // "sourceMap": true
+  "compilerOptions": {
+    "outDir": "dist",
+    "module": "es2022",
+    "target": "es2017",
+    "jsx": "react-jsx",
+    "noEmitOnError": true,
+    "noImplicitAny": true,
+    "removeComments": true,
+    "strictNullChecks": true,
+    "skipLibCheck": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "paths": {
+      "@axios/*": ["node_modules/axios/*"]
     },
-    "include": ["src/**/*"]
+    "lib": ["dom", "es2020"]
+  },
+  "include": ["src/**/*"]
 }

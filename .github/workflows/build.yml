@@ -26,7 +26,18 @@ jobs:
       - name: Build web-app
         run: npm run build
 
+      - name: Check dist changes
+        id: dist
+        shell: bash
+        run: |
+          if git status --porcelain -- dist | grep -q .; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Deploy to gh-pages
+        if: steps.dist.outputs.changed == 'true'
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

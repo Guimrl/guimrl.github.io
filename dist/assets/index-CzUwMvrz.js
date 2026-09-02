@@ -279,6 +279,7 @@ To suppress this warning, you need to explicitly provide the \`palette.${t}Chann
     width: min(620px, 100%);
     border: 1px solid var(--border);
     border-radius: 16px;
+    background: rgba(17, 17, 19, 0.92);
   }
 `,a_=zg(Ud)`
   && {
@@ -384,4 +385,4 @@ To suppress this warning, you need to explicitly provide the \`palette.${t}Chann
   ::selection {
     background: rgba(255, 138, 61, 0.3);
   }
-`;up.init({resources:{"pt-BR":{maintenance:{badge:`portfólio em manutenção`,titleStart:`Uma nova versão`,titleEnd:`está a caminho.`,description:`Enquanto finalizo os próximos detalhes, você pode acompanhar meus projetos no GitHub.`,languageLabel:`Idioma`}},en:{maintenance:{badge:`portfolio under maintenance`,titleStart:`A new version`,titleEnd:`is on the way.`,description:`While I finish the next details, you can follow my projects on GitHub.`,languageLabel:`Language`}}},lng:(()=>{let e=Ug(`language`);return e===`en`||e===`pt-BR`?e:typeof navigator<`u`&&navigator.language.startsWith(`en`)?`en`:`pt-BR`})(),fallbackLng:`pt-BR`,defaultNS:`maintenance`,interpolation:{escapeValue:!1}});var g_=up;(0,Xe.createRoot)(document.getElementById(`root`)).render((0,L.jsx)(I.StrictMode,{children:(0,L.jsx)(()=>(0,L.jsx)(bs,{theme:m_,children:(0,L.jsxs)(Pp,{i18n:g_,children:[(0,L.jsx)(Qd,{}),(0,L.jsx)(h_,{}),(0,L.jsx)(p_,{})]})}),{})}));
+`,g_={maintenance:{badge:`portfolio under maintenance`,titleStart:`A new version`,titleEnd:`is on the way.`,description:`While I finish the next details, you can follow my projects on GitHub.`,languageLabel:`Language`}},__={maintenance:{badge:`portfólio em manutenção`,titleStart:`Uma nova versão`,titleEnd:`está a caminho.`,description:`Enquanto finalizo os próximos detalhes, você pode acompanhar meus projetos no GitHub.`,languageLabel:`Idioma`}},v_=`pt-BR`,y_=`en`,b_={[v_]:__,[y_]:g_};up.init({resources:b_,lng:(()=>{let e=Ug(`language`);return e===y_||e===v_?e:typeof navigator<`u`&&navigator.language.startsWith(`en`)?y_:v_})(),fallbackLng:v_,defaultNS:`maintenance`,interpolation:{escapeValue:!1}});var x_=up;(0,Xe.createRoot)(document.getElementById(`root`)).render((0,L.jsx)(I.StrictMode,{children:(0,L.jsx)(()=>(0,L.jsx)(bs,{theme:m_,children:(0,L.jsxs)(Pp,{i18n:x_,children:[(0,L.jsx)(Qd,{}),(0,L.jsx)(h_,{}),(0,L.jsx)(p_,{})]})}),{})}));

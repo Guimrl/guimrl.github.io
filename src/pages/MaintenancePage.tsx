@@ -1,21 +1,14 @@
-import {
-  Box,
-  Button,
-  Card,
-  CardContent,
-  Chip,
-  Container,
-  Typography,
-} from '@mui/material';
+import { Button, Card, CardContent, Chip, Typography } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import styled from 'styled-components';
+import { useTranslation } from 'react-i18next';
+import Header from '../components/Header';
+import { Page, PageContainer } from '../components/PageLayout';
 
-const Page = styled(Box)`
-  min-height: 100vh;
+const MaintenanceLayout = styled(Page)`
   display: grid;
   place-items: center;
-  overflow: hidden;
 `;
 
 const Panel = styled(Card)`
@@ -23,6 +16,7 @@ const Panel = styled(Card)`
     width: min(620px, 100%);
     border: 1px solid var(--border);
     border-radius: 16px;
+    background: rgba(17, 17, 19, 0.92);
   }
 `;
 
@@ -104,21 +98,21 @@ const Highlight = styled('span')<{ color?: string }>`
 `;
 
 const MaintenancePage = () => {
+  const { t } = useTranslation('maintenance');
+
   return (
-    <Page>
-      <Container maxWidth="sm">
+    <MaintenanceLayout>
+      <Header maintenance />
+      <PageContainer maxWidth="sm">
         <Panel>
           <Content>
-            <StatusChip label="PORTFÓLIO EM ATUALIZAÇÃO" />
+            <StatusChip label={t('badge').toUpperCase()} />
             <Title>
-              Uma nova versão
+              {t('titleStart')}
               <br />
-              <Highlight color="var(--muted)">está a caminho.</Highlight>
+              <Highlight color="var(--muted)">{t('titleEnd')}</Highlight>
             </Title>
-            <Description>
-              Enquanto finalizo os próximos detalhes, você pode acompanhar meus
-              projetos e experimentos no GitHub.
-            </Description>
+            <Description>{t('description')}</Description>
             <SocialButtons>
               <CustomButton
                 variant="contained"
@@ -141,8 +135,8 @@ const MaintenancePage = () => {
             </SocialButtons>
           </Content>
         </Panel>
-      </Container>
-    </Page>
+      </PageContainer>
+    </MaintenanceLayout>
   );
 };
 

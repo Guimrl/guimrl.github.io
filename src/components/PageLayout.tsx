@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export const Page = styled(Box)`
   position: relative;
-  min-height: 100vh;
+  min-height: calc(100dvh - 74px - 55px - 2px);
   overflow: hidden;
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.022) 1px, transparent 1px),
@@ -21,6 +21,10 @@ export const Page = styled(Box)`
     background: rgba(255, 138, 61, 0.12);
     filter: blur(120px);
     pointer-events: none;
+  }
+
+  @media (max-width: 640px) {
+    min-height: calc(100dvh - 66px - 55px);
   }
 `;
 

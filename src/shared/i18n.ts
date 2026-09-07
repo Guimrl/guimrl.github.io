@@ -1,6 +1,6 @@
 import i18n from 'i18next';
 import en from './locales/en';
-import { getLocalStorage } from './localStorage';
+import { getLocalStorage } from '../utils/localStorage';
 import ptBR from './locales/pt-BR';
 
 const portuguese = 'pt-BR';
@@ -11,10 +11,9 @@ const resources = {
   [english]: en,
 };
 
-const supportedLanguages = [portuguese, english] as const;
-type Language = (typeof supportedLanguages)[number];
+export type TLanguages = 'en' | 'pt-BR';
 
-const getInitialLanguage = (): Language => {
+const getInitialLanguage = (): TLanguages => {
   const storedLanguage = getLocalStorage<string>('language');
 
   if (storedLanguage === english || storedLanguage === portuguese) {

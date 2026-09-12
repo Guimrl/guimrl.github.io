@@ -58,7 +58,6 @@ const Description = styled(Typography)`
 
 const CustomButton = styled(Button)<{ target?: string }>`
   && {
-    margin-top: 24px;
     color: #17110d;
     box-shadow: none;
     line-height: normal;
